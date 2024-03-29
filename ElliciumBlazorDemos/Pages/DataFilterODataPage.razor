@@ -1,0 +1,10 @@
+﻿@page "/datafilter-odata"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    DataFilter with <strong>OData</strong> service.
+</ElliciumText>
+
+<ElliciumExample ComponentName="DataFilter" Example="DataFilterOData"
+               AdditionalSourceCodePages=@(new List<string>() { "MyCustomDataFilterProperty.razor", "MyCustomEnumerableDataFilterProperty.razor" })>
+    <DataFilterOData />
+</ElliciumExample>

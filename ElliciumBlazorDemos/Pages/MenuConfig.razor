@@ -1,0 +1,59 @@
+﻿<div class="rz-p-sm-12" style="margin-bottom: 200px;">
+        <ElliciumMenu Click="OnParentClicked">
+            <ElliciumMenuItem Text="General" Icon="home">
+                <ElliciumMenuItem Text="Buttons" Path="buttons" Icon="account_circle"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Menu" Path="menu" Icon="line_weight" Disabled="true"></ElliciumMenuItem>
+                <ElliciumMenuItem Click="OnChildClicked" Text="ChildClick" Icon="attach_file" Disabled="true"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Dialog" Path="dialog" Icon="perm_media"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Notification" Path="notification" Icon="announcement"></ElliciumMenuItem>
+            </ElliciumMenuItem>
+            <ElliciumMenuItem Text="Inputs" Icon="payment" Disabled="true">
+                <ElliciumMenuItem Text="CheckBox" Path="checkbox" Icon="check_circle"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="TextBox" Path="textbox" Icon="input"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="TextArea" Path="textarea" Icon="description"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Password" Path="password" Icon="payment"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Numeric" Path="numeric" Icon="aspect_ratio"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="DatePicker" Path="datepicker" Icon="date_range"></ElliciumMenuItem>
+            </ElliciumMenuItem>
+            <ElliciumMenuItem Text="Data" Icon="save">
+                <ElliciumMenuItem Text="DataGrid" Path="datagrid" Icon="grid_on"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="DataList" Path="datalist" Icon="list"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="DropDown" Path="dropdown" Icon="dns"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="DropDownDataGrid" Path="dropdown-datagrid" Icon="receipt"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="ListBox" Path="listbox" Icon="view_list"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="TemplateForm" Path="templateform" Icon="line_style"></ElliciumMenuItem>
+            </ElliciumMenuItem>
+            <ElliciumMenuItem Text="Containers" Icon="account_box">
+                <ElliciumMenuItem Text="Tabs" Path="tabs" Icon="tab"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Panel" Path="panel" Icon="content_paste"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Fieldset" Path="fieldset" Icon="account_balance_wallet"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Card" Path="card" Icon="line_style"></ElliciumMenuItem>
+            </ElliciumMenuItem>
+            <ElliciumMenuItem Text="More">
+                <ElliciumMenuItem Text="Item1"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="Item2"></ElliciumMenuItem>
+                <ElliciumMenuItem Text="More items">
+                    <ElliciumMenuItem Text="More sub items">
+                        <ElliciumMenuItem Text="Item1"></ElliciumMenuItem>
+                        <ElliciumMenuItem Text="Item2"></ElliciumMenuItem>
+                    </ElliciumMenuItem>
+                </ElliciumMenuItem>
+            </ElliciumMenuItem>
+    </ElliciumMenu>
+</div>
+
+<EventConsole @ref=@console />
+
+@code {
+    EventConsole console;
+
+    void OnParentClicked(MenuItemEventArgs args)
+    {
+        console.Log($"{args.Text} clicked from parent");
+    }
+
+    void OnChildClicked(MenuItemEventArgs args)
+    {
+        console.Log($"{args.Text} from child clicked");
+    }
+}

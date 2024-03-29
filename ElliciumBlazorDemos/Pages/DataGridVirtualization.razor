@@ -1,0 +1,36 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumDataGrid Data="@orderDetails" TItem="OrderDetail" AllowVirtualization="true" Style="height:400px"
+                AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.Or"
+                AllowSorting="true">
+    <Columns>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="OrderID" Title="OrderID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="ProductID" Title="ProductID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+            <Template Context="detail">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+            <Template Context="detail">
+                @String.Format("{0}%", detail.Discount * 100)
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    IEnumerable<OrderDetail> orderDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orderDetails = dbContext.OrderDetails;
+    }
+}

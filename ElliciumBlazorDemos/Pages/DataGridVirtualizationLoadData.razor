@@ -1,0 +1,69 @@
+﻿@using System.Linq.Dynamic.Core
+@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumButton Text="Refresh" Click="@(args => grid.Reload())" class="my-3" />
+
+<ElliciumDataGrid @ref=grid Data="@orderDetails" Count="@count" LoadData="@LoadData" TItem="OrderDetail" AllowVirtualization="true" Style="height:400px"
+                AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.Or"
+                AllowSorting="true">
+    <Columns>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="OrderID" Title="OrderID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="ProductID" Title="ProductID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+            <Template Context="detail">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+            <Template Context="detail">
+                @String.Format("{0}%", detail.Discount * 100)
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+<EventConsole @ref=@console />
+@code {
+    EventConsole console;
+    ElliciumDataGrid<OrderDetail> grid;
+    int count;
+    IEnumerable<OrderDetail> orderDetails;
+
+    string lastfilter;
+    async Task LoadData(LoadDataArgs args)
+    {
+        await Task.Yield();
+
+        if(!string.IsNullOrEmpty(args.Filter) && lastfilter != args.Filter)
+        {
+            args.Skip = 0;
+        }
+
+        console.Log($"Skip: {args.Skip}, Top: {args.Top}");
+
+        var query = dbContext.OrderDetails.AsQueryable();
+
+        if (!string.IsNullOrEmpty(args.Filter))
+        {
+            lastfilter = args.Filter;
+            query = query.Where(args.Filter);
+            count = await Task.FromResult(query.Count());
+        }
+        else
+        {
+            count = await Task.FromResult(dbContext.OrderDetails.Count());
+        }
+
+        if (!string.IsNullOrEmpty(args.OrderBy))
+        {
+            query = query.OrderBy(args.OrderBy);
+        }
+
+        orderDetails = await Task.FromResult(query.Skip(args.Skip.Value).Take(args.Top.Value).ToList());
+    }
+}

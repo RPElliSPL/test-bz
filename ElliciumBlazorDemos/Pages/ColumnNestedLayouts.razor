@@ -1,0 +1,57 @@
+﻿<ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H4" class="rz-mt-5">Auto-layout columns</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body2" class="rz-mb-3">Example with 3 levels of nesting. You can nest rows and columns indefinitely.</ElliciumText>
+<ElliciumRow class="rz-text-align-center rz-border-info-light" Gap="1rem">
+    <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+        Level 1
+    </ElliciumColumn>
+    <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter">
+        <ElliciumRow>
+            <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+                Level 2
+            </ElliciumColumn>
+            <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter">
+                <ElliciumRow>
+                    <ElliciumColumn class="rz-background-color-info-lighter rz-color-info-darker rz-py-5">
+                        Level 3
+                    </ElliciumColumn>
+                    <ElliciumColumn class="rz-background-color-info-lighter rz-color-info-darker rz-py-5">
+                        Level 3
+                    </ElliciumColumn>
+                </ElliciumRow>
+            </ElliciumColumn>
+            <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+                Level 2
+            </ElliciumColumn>
+        </ElliciumRow>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H4" class="rz-mt-5">Columns with a predefined Size</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body2" class="rz-mb-3">The second column contains a nested row with 4 columns.</ElliciumText>
+<ElliciumRow class="rz-text-align-center rz-border-info-light" Gap="1rem">
+    <ElliciumColumn Size="3" class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+        Size="3"
+    </ElliciumColumn>
+    <ElliciumColumn class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+        Auto size
+        <ElliciumRow class="rz-text-align-center rz-border-info-light rz-mt-5">
+            <ElliciumColumn Size="3" class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+                Size="3"
+            </ElliciumColumn>
+            <ElliciumColumn Size="6" class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+                Size="6"
+                <ElliciumRow class="rz-text-align-center rz-border-info-light rz-mt-5">
+                    <ElliciumColumn Size="6" class="rz-background-color-info-lighter rz-color-info-darker rz-py-5">
+                        Size="6"
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="6" class="rz-background-color-info-lighter rz-color-info-darker rz-py-5">
+                        Size="6"
+                    </ElliciumColumn>
+                </ElliciumRow>
+            </ElliciumColumn>
+            <ElliciumColumn Size="3" class="rz-background-color-info-lighter rz-color-on-info-lighter rz-py-5">
+                Size="3"
+            </ElliciumColumn>
+        </ElliciumRow>
+    </ElliciumColumn>
+</ElliciumRow>

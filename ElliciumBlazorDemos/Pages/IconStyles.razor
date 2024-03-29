@@ -1,0 +1,9 @@
+﻿<ElliciumDataList TItem="IconStyle" Data="@(Enum.GetValues<IconStyle>())" WrapItems="true" class="rz-p-12">
+    <Template Context="style">
+        <div>
+            <h5>@style.ToString()</h5>
+            <ElliciumIcon Icon="dashboard" IconStyle="@style" />
+            <ElliciumIcon Icon="open_with" IconStyle="@style" />
+        </div>
+    </Template>
+</ElliciumDataList>

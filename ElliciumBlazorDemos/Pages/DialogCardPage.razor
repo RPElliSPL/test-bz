@@ -1,0 +1,68 @@
+﻿@page "/dialogcard/{OrderID}"
+
+@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+@inject Ellicium.DialogService dialogService
+
+<ElliciumStack Gap="1rem" Orientation="Orientation.Vertical" JustifyContent="JustifyContent.SpaceBetween" Style="height: 100%;">
+    <ElliciumStack>
+    <ElliciumRow>
+        <ElliciumColumn Size="12" SizeMD="6" Class="rz-p-4 rz-border-radius-1" Style="border: var(--rz-grid-cell-border)">
+            <ElliciumText TextStyle="TextStyle.Subtitle1">Contact</ElliciumText>
+            <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                <ElliciumImage Path="@order.Employee?.Photo" Style="width: 80px; height: 80px; border-radius: 50%" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                <ElliciumStack Gap="0" Class="rz-text-truncate">
+                    <ElliciumText TextStyle="TextStyle.Overline" Class="rz-mt-2 rz-my-0" Style="color: var(--rz-text-tertiary-color);">Employee</ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Body1" Class="rz-text-truncate"><b>@(order?.Employee?.FirstName + " " + order?.Employee?.LastName)</b></ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Overline" Class="rz-mt-4 rz-mb-0" Style="color: var(--rz-text-tertiary-color);">Company</ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Body1" Class="rz-text-truncate"><b>@order.Customer?.CompanyName</b></ElliciumText>
+                </ElliciumStack>
+            </ElliciumStack>
+        </ElliciumColumn>
+        <ElliciumColumn Size="12" SizeMD="6" Class="rz-p-4 rz-border-radius-1" Style="border: var(--rz-grid-cell-border)">
+            <ElliciumText TextStyle="TextStyle.Subtitle1">Delivery Information</ElliciumText>
+            <ElliciumStack Gap="0" Class="rz-text-truncate">
+                <ElliciumText TextStyle="TextStyle.Overline" Class="rz-mt-2 rz-my-0" Style="color: var(--rz-text-tertiary-color);">Address</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body1" Class="rz-text-truncate"><b>@(order.ShipAddress), @(order.ShipCity), @(order.ShipCountry)</b></ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Overline" Class="rz-mt-2 rz-my-0" Style="color: var(--rz-text-tertiary-color);">Ship name</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body1" Class="rz-text-truncate"><b>@(order.ShipName)</b></ElliciumText>
+            </ElliciumStack>
+        </ElliciumColumn>
+    </ElliciumRow>
+    <ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.SpaceBetween" AlignItems="AlignItems.Center">
+        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Order @OrderID Details</ElliciumText>
+        <ElliciumBadge BadgeStyle="BadgeStyle.Secondary" Text=@($"{String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", order.Freight)}")/>
+    </ElliciumStack>
+    <ElliciumDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                Data="@(orderDetails.Where(o => o.OrderID == OrderID))" TItem="OrderDetail" ColumnWidth="200px" Density="Density.Compact" AllowAlternatingRows="false">
+        <Columns>
+            <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+            <ElliciumDataGridColumn TItem="OrderDetail" Property="Order.OrderDate" Title="Order Date" />
+            <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount" FormatString="{0:P}" />
+        </Columns>
+    </ElliciumDataGrid>
+    </ElliciumStack>
+    <ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+        <ElliciumButton Click="@((args) => dialogService.Close(true))" Variant="Variant.Flat" Text="Close" Style="width: 120px" />
+    </ElliciumStack>
+</ElliciumStack>
+@code {
+    [Parameter] public int OrderID { get; set; }
+
+    Order order;
+    IEnumerable<OrderDetail> orderDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        order = dbContext.Orders.Where(o => o.OrderID == OrderID)
+                          .Include("Customer")
+                          .Include("Employee").FirstOrDefault();
+
+        orderDetails = dbContext.OrderDetails.Include("Order").ToList();
+    }
+}

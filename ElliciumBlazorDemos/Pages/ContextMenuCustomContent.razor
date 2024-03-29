@@ -1,0 +1,32 @@
+﻿@inject ContextMenuService ContextMenuService
+
+<ElliciumStack Gap="1rem" Class="rz-p-sm-12">
+    <ElliciumButton Text="Right click me" ContextMenu=@(args => ShowContextMenuWithContent(args)) ButtonStyle="ButtonStyle.Secondary" Size="ButtonSize.Large" />
+    <EventConsole @ref=@console />
+</ElliciumStack>
+
+@code {
+    EventConsole console;
+
+    void ShowContextMenuWithContent(MouseEventArgs args) => ContextMenuService.Open(args, ds =>
+        @<ElliciumMenu Click="OnMenuItemClick">
+            <ElliciumMenuItem Text="Item1" Value="1"></ElliciumMenuItem>
+            <ElliciumMenuItem Text="Item2" Value="2"></ElliciumMenuItem>
+            <hr />
+            <ElliciumMenuItem Text="More items" Value="3">
+                <ElliciumMenuItem Text="More sub items" Value="4">
+                    <ElliciumMenuItem Text="Item1" Value="5"></ElliciumMenuItem>
+                    <ElliciumMenuItem Text="Item2" Value="6"></ElliciumMenuItem>
+                </ElliciumMenuItem>
+            </ElliciumMenuItem>
+        </ElliciumMenu>);
+
+    void OnMenuItemClick(MenuItemEventArgs args)
+    {
+        console.Log($"Menu item with Value={args.Value} clicked");
+        if(!args.Value.Equals(3) && !args.Value.Equals(4))
+        {
+            ContextMenuService.Close();
+        }
+    }
+}

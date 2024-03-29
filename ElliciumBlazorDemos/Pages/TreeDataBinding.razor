@@ -1,0 +1,77 @@
+@using Microsoft.EntityFrameworkCore
+@using ElliciumBlazorDemos.Models.Northwind
+
+@inherits DbContextPage
+
+<div class="container-fluid">
+    <div class="row my-5">
+        <div class="col-md-4">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Data-binding to Categories &#8250; Products</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body2" class="mb-2">Data from different tables.</ElliciumText>
+                <ElliciumTree Style="height: 300px" Data=@categories>
+                    <ElliciumTreeLevel TextProperty="CategoryName" ChildrenProperty="Products" />
+                    <ElliciumTreeLevel TextProperty="ProductName" HasChildren=@(product => false) />
+                </ElliciumTree>
+            </ElliciumCard>
+        </div>
+        <div class="col-md-4">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Data-binding to Employees</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body2" class="mb-2">Data from a single self-referencing table.</ElliciumText>
+                <ElliciumTree Data=@employees Style="height: 300px">
+                    <ElliciumTreeLevel TextProperty="LastName" ChildrenProperty="Employees1" 
+                        Expanded=@ShouldExpand HasChildren=@(e => (e as Employee).Employees1.Any()) 
+                    />
+                </ElliciumTree>
+            </ElliciumCard>
+        </div>
+        <div class="col-md-4">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Load children on demand</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body2" class="mb-2">Populate children on parent expand.</ElliciumText>
+                <ElliciumTree Data=@categories Expand=@OnExpand Style="height: 300px">
+                    <ElliciumTreeLevel TextProperty="CategoryName"/>
+                </ElliciumTree>
+            </ElliciumCard>
+        </div>
+    </div>
+</div>
+
+@code {
+    IEnumerable<Category> categories;
+    IEnumerable<Employee> employees;
+    
+    bool ShouldExpand(object data)
+    {
+        var employee = data as Employee;
+
+        return employee.LastName == "Fuller";
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+        var category = args.Value as Category;
+
+        args.Children.Data = category.Products;
+        args.Children.TextProperty = "ProductName";
+        args.Children.HasChildren = (product) => false;
+
+        /* Optional template
+        args.Children.Template = context => builder => {
+            builder.OpenElement(1, "strong");
+            builder.AddContent(2, (context.Value as Product).ProductName);
+            builder.CloseElement();
+        };
+        */
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        categories = dbContext.Categories.Include(c => c.Products);
+        var allEmployees = dbContext.Employees.Include(e => e.Employees1).ToList();
+        employees = allEmployees.Where(e => e.ReportsTo == null);
+    }
+}

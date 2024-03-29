@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Ellicium.Blazor
+@inherits LayoutComponentBase
+@inject ExampleService ExampleService
+@inject NavigationManager UriHelper
+@inject IJSRuntime JSRuntime
+
+<ElliciumComponents />
+
+<ElliciumContentContainer Name="main">
+    @Body
+</ElliciumContentContainer>
+
+@code {
+
+    IEnumerable<Example> examples;
+
+    protected override void OnInitialized()
+    {
+
+        examples = ExampleService.Examples;
+
+        System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+    }
+}

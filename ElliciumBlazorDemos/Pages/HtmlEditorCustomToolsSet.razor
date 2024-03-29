@@ -1,0 +1,73 @@
+﻿<ElliciumHtmlEditor @bind-Value=@value style="height: 500px;" UploadUrl="upload/image">
+    <ElliciumHtmlEditorUndo />
+    <ElliciumHtmlEditorRedo />
+    <ElliciumHtmlEditorSeparator />
+    <ElliciumHtmlEditorBold />
+    <ElliciumHtmlEditorItalic />
+    <ElliciumHtmlEditorUnderline />
+    <ElliciumHtmlEditorStrikeThrough />
+    <ElliciumHtmlEditorSeparator />
+    <ElliciumHtmlEditorColor />
+    <ElliciumHtmlEditorBackground />
+    <ElliciumHtmlEditorRemoveFormat />
+</ElliciumHtmlEditor>
+
+@code {
+    string value = @"
+    <h1>Ellicium.Blazor Getting Started Instructions</h1>
+    <h2>1. Install</h2>
+    <p>
+        Ellicium Blazor Components are distributed as the <a href=""https://www.nuget.org/packages/Ellicium.Blazor/"">Ellicium.Blazor</a> nuget package.
+    </p>
+    <p>
+        You can add them to your project in one of the following ways
+    </p>
+    <ul>
+        <li>Install the package from command line by running <code>dotnet add package Ellicium.Blazor</code></li>
+        <li>Add the project from the Visual Nuget Package Manager.</li>
+    </ul>
+    <h2>2. Import the namespace</h2>
+    <p>
+        Open the <code>_Imports.razor</code> file of your Blazor application and add these two lines <code>@using Ellicium</code> and <code>@using Ellicium.Blazor</code>.
+    </p>
+    <h2>3. Include a theme</h2>
+    <p>
+        Open <code>Pages\_Layout.cshtml</code> (Blazor Server .NET 6), <code>Pages\_Host.cshtml</code> (Blazor Server .NET 7) or <code>wwwroot/index.html</code> (Blazor WebAssembly)
+         and include a theme CSS file by adding this snippet
+        <code>&lt;link rel=""stylesheet"" href=""_content/Ellicium.Blazor/css/default-base.css""&gt;</code>
+        This version requires only the Ellicium Blazor CSS. Optionally you can include Bootstrap.
+    </p>
+    <p>
+        Alternatively you can include <code>&lt;link rel=""stylesheet"" href=""_content/Ellicium.Blazor/css/default.css""&gt;</code> which embeds Bootstrap.
+    </p>
+    <h2>4. Include Ellicium.Blazor.js</h2>
+    <p>
+        Open the <code>_Host.cshtml</code> file (server-side Blazor) or <code>wwwroot/index.html</code> (client-side WebAssembly Blazor) and include this snippet <code>&lt;script src=""_content/Ellicium.Blazor/Ellicium.Blazor.js?v=@(typeof(Ellicium.Colors).Assembly.GetName().Version)""&gt;&lt;/script&gt;</code>
+    </p>
+    <h2>5. Use a component</h2>
+    <p>
+        Use any Ellicium Blazor component by typing its tag name in a Blazor page e.g. <code>&lt;ElliciumButton Text=""Hi""&gt;&lt;/ElliciumButton&gt;</code>
+    </p>
+    <h4>Setting a property</h4>
+<pre>
+<code>
+&lt;ElliciumButton Text=""@text""&gt;&lt;/ElliciumButton&gt;
+@code {
+  string text = ""Hi"";
+}
+</code>
+</pre>
+    <h4>Handing events</h4>
+<pre>
+<code>
+&lt;ElliciumButton Click=""@ButtonClicked"" Text=""Hi""&gt;&lt;/ElliciumButton&gt;
+@code {
+  void ButtonClicked()
+  {
+    //
+  }
+}
+</code>
+</pre>
+    ";
+}

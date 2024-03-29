@@ -1,0 +1,12 @@
+﻿<ElliciumButton style="margin-bottom: 1rem" Click=@OnClick>Focus</ElliciumButton>
+<ElliciumHtmlEditor @ref=@htmlEditor @bind-Value=@htmlValue style="height: 300px;" UploadUrl="upload/image" />
+@code {
+    ElliciumHtmlEditor htmlEditor;
+
+    string htmlValue = "<h1>Hello World!</h1>";
+
+    async Task OnClick()
+    {
+        await htmlEditor.FocusAsync();
+    }
+}

@@ -1,0 +1,82 @@
+@page "/comparevalidator"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    CompareValidator
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    Demonstration and configuration of the Ellicium Blazor <strong>CompareValidator</strong> component.
+</ElliciumText>
+
+<ElliciumText Anchor="comparevalidator#basic-usage" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-8">
+    Basic Usage
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    ElliciumCompareValidator compares the user input against a predefined value or another component.
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    To use it perform these steps:
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+<ol>
+    <li>Add an input component and set its <code>Name</code>. Data-bind its value to a model property via <code>@@bind-Value=@@model.Property</code>.</li>
+    <li>Add ElliciumCompareValidator and set its <code>Component</code> property to the <code>Name</code> of the input component. Set its <code>Value</code> property to the value you want to compare with (usually another model property).</li>
+</ol>
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    <strong>Important!</strong> ElliciumCompareValidator works only inside  <ElliciumLink Path="/templateform" Text="ElliciumTemplateForm" Target="_blank" />.
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    Here is a typical user registration form which checks if the user entered the same password.
+</ElliciumText>
+
+<ElliciumExample ComponentName="CompareValidator" Example="CompareValidatorBasicUsage" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumCompareValidator.cs">
+    <CompareValidatorBasicUsage />
+</ElliciumExample>
+
+<ElliciumText Anchor="comparevalidator#conditional-validation" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Coditional Validation
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    To make the validator conditional you can set its <code>Visible</code> property. When set to <code>false</code> the validator will not run. In the example above <code>Visible</code> is set to <code>!string.IsNullOrEmpty(model.RepeatPassword)</code> - the validator will not run if RepeatPassword is empty.
+</ElliciumText>
+
+<pre>
+    <code>
+    &lt;ElliciumCompareValidator Visible=@@(!string.IsNullOrEmpty(model.RepeatPassword)) Value=@@model.Password Component="RepeatPassword" Text="Passwords should be the same" Popup=@@popup Style="position: absolute" /&gt;
+    </code>
+</pre>
+
+<ElliciumText Anchor="comparevalidator#comparison-operator" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Comparison operator
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    By default ElliciumCompareValidator checks if the component value is equal to <code>Value</code>. This can be changed via the <code>Operator</code> property.
+</ElliciumText>
+
+<ElliciumExample ComponentName="CompareValidator" Example="CompareValidatorComparisonOperator" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumCompareValidator.cs">
+    <CompareValidatorComparisonOperator />
+</ElliciumExample>
+
+<ElliciumText Anchor="comparevalidator#appearance" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Appearance
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+    By default ElliciumCompareValidator appears next to the component it validates. To make it appear below add <code>Style="display:block"</code>.
+</ElliciumText>
+<pre>
+    <code>
+    &lt;ElliciumNumeric Name="Count" @@bind-Value=@@model.Count /&gt;
+    &lt;ElliciumCompareValidator Style="display:block" Component="Count" Text="Count should be less than 10" Operator="CompareOperator.LessThan" Value="10" /&gt;
+    </code>
+</pre>
+
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-4">
+To make it appear as a styled popup set its <code>Popup</code> property to <code>true</code> and set its CSS <code>position</code> to <code>absolute</code>. The validated component should have <code>display: block</code> so the validation message appears right below it.
+</ElliciumText>
+<pre>
+    <code>
+    &lt;ElliciumNumeric Name="Count" @@bind-Value=@@model.Count Style="display:block" /&gt;
+    &lt;ElliciumCompareValidator Style="position:absolute" Popup="true" Component="Count" Text="Count should be less than 10" Operator="CompareOperator.LessThan" Value="10" /&gt;
+    </code>
+</pre>
+

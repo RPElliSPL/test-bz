@@ -1,0 +1,22 @@
+﻿<ElliciumHtmlEditor style="height: 200px;">
+    <ElliciumHtmlEditorCustomTool>
+        <Template Context="editor">
+            <ElliciumDatePicker Change=@(args => OnDateChange(args, editor)) TValue="DateTime" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select date" }})" />
+        </Template>
+    </ElliciumHtmlEditorCustomTool>
+</ElliciumHtmlEditor>
+
+@code {
+    async Task OnDateChange(DateTime? date, ElliciumHtmlEditor editor)
+    {
+        if (date != null)
+        {
+            await InsertDate(editor, date.Value);
+        }
+    }
+
+    async Task InsertDate(ElliciumHtmlEditor editor, DateTime date)
+    {
+        await editor.ExecuteCommandAsync(HtmlEditorCommands.InsertHtml, $"<strong>{date.ToLongDateString()}</strong>");
+    }
+}

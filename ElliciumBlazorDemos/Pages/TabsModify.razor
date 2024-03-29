@@ -1,0 +1,37 @@
+﻿<ElliciumTabs @ref="tabs" RenderMode="TabRenderMode.Client" @bind-SelectedIndex=@selectedIndex>
+    <Tabs>
+        @foreach (var item in items)
+        {
+            <ElliciumTabsItem Text="@(item)">
+                @item
+            </ElliciumTabsItem>
+        }
+    </Tabs>
+</ElliciumTabs>
+
+<ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="0.5rem" Class="rz-pt-4 rz-pb-8">
+    <ElliciumButton Click="AddItem">Add Item</ElliciumButton>
+    <ElliciumButton Click="RemoveItem">Remove Item</ElliciumButton>
+</ElliciumStack>
+
+
+@code {
+    ElliciumTabs tabs;
+    int selectedIndex = 0;
+
+    List<string> items = new List<string> { "Customers", "Orders", "Order Details" };
+    int i = 0;
+
+    void AddItem()
+    {
+        items.Add($"TabItem{++i}");
+        tabs.Reload();
+    }
+
+    void RemoveItem()
+    {
+        items.RemoveAt(selectedIndex);
+        if (selectedIndex >= items.Count) selectedIndex = items.Count - 1;
+        tabs.Reload();
+    }
+}

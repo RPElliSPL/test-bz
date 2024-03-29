@@ -1,0 +1,17 @@
+﻿<ElliciumTabs @bind-SelectedIndex=@selectedIndex>
+    <Tabs>
+        <ElliciumTabsItem Text="Customers">
+            Customers
+        </ElliciumTabsItem>
+        <ElliciumTabsItem Text="Orders">
+            Orders
+        </ElliciumTabsItem>
+        <ElliciumTabsItem Text="Order Details">
+            Order Details
+        </ElliciumTabsItem>
+    </Tabs>
+</ElliciumTabs>
+
+@code {
+    int selectedIndex = 0;
+}

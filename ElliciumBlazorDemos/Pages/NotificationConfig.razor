@@ -1,0 +1,90 @@
+﻿@inject NotificationService NotificationService
+
+<div class="container-fluid">
+    <div class="row px-3">
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Info</ElliciumText>
+                <ElliciumButton Text="Show info notification" class="w-100"
+                    ButtonStyle="ButtonStyle.Info"
+                    Click=@(args => ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Info Summary", Detail = "Info Detail", Duration = 4000 })) />
+            </ElliciumCard>
+        </div>
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Warning</ElliciumText>
+                <ElliciumButton Text="Show warning notification" class="w-100"
+                    ButtonStyle="ButtonStyle.Warning"
+                    Click=@(args => ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Warning Summary", Detail = "Warning Detail", Duration = 4000 })) />
+            </ElliciumCard>
+        </div>
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Error</ElliciumText>
+                <ElliciumButton Text="Show error notification" class="w-100"
+                    ButtonStyle="ButtonStyle.Danger"
+                    Click=@(args => ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error Summary", Detail = "Error Detail", Duration = 4000 })) />
+            </ElliciumCard>
+        </div>
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Success</ElliciumText>
+                <ElliciumButton Text="Show success notification" class="w-100"
+                    ButtonStyle="ButtonStyle.Success"
+                    Click=@(args => ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success Summary", Detail = "Success Detail", Duration = 4000 })) />
+            </ElliciumCard>
+        </div>
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Notification with custom position</ElliciumText>
+                <ElliciumButton Text="Show notification at custom position" class="w-100"
+                    Click=@(args => ShowNotification(new NotificationMessage { Style = "position: absolute; left: -1000px;", Severity = NotificationSeverity.Success, Summary = "Success Summary", Detail = "Success Detail", Duration = 40000 })) />
+            </ElliciumCard>
+        </div>
+         <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+               <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Info</ElliciumText>
+               <ElliciumButton Text="Show notification with custom click handler" class="w-100"
+                             ButtonStyle="ButtonStyle.Info"
+                             Click="@(args => ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Info Click Summary", Detail = "Click Me", Duration = 4000, Click=NotificationClick, CloseOnClick = true, Payload = DateTime.Now }))" />
+            </ElliciumCard>
+         </div>
+        <div class="col-lg-6 col-xl-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Notification with custom content</ElliciumText>
+                <ElliciumButton Text="Show notification with custom content" class="w-100"
+                              ButtonStyle="ButtonStyle.Info"
+                              Click="@(args => ShowNotificationWithCustomContent())" />
+            </ElliciumCard>
+        </div>
+    </div>
+</div>
+
+<EventConsole @ref=@console />
+
+@code {
+    EventConsole console;
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+
+        console.Log($"{message.Severity} notification");
+    }
+
+    void NotificationClick(NotificationMessage message)
+    {
+        console.Log($"{message.Summary} clicked, Payload = {message.Payload}");
+    }
+
+    void ShowNotificationWithCustomContent()
+    {
+        NotificationService.Notify(new NotificationMessage
+        {
+                Severity = NotificationSeverity.Warning,
+                Duration = 40000,
+                SummaryContent = ns =>@<ElliciumText TextStyle="TextStyle.H6">Custom summary: <br /> @DateTime.Now</ElliciumText>,
+                DetailContent = ns => @<ElliciumButton Text="Clear" Click="@(args => ns.Messages.Clear())" />
+        });
+    }
+}

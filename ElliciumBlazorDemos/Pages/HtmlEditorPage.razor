@@ -1,0 +1,156 @@
+﻿@page "/html-editor"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    HtmlEditor
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    Demonstration and configuration of the Ellicium Blazor <strong>HtmlEditor</strong> component.
+</ElliciumText>
+
+<ElliciumText Anchor="html-editor#get-set-value" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-8">
+    Get and set the value
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    As all Ellicium Blazor input components the HtmlEditor has a <code>Value</code> property which gets and sets the value of the component. Use <code>@@bind-Value</code> to get the user input.
+</ElliciumText>
+<ElliciumExample ComponentName="HtmlEditor" Example="HtmlEditorGetSetValue">
+    <HtmlEditorGetSetValue />
+</ElliciumExample>
+
+<ElliciumText Anchor="html-editor#all-tools" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    All tools
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+The Ellicium HtmlEditor supports the following tools:
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1">
+    <ul style="line-height: 2rem">
+        <li>ElliciumHtmlEditorUndo - allows the user to undo the last action (result of other tool, typing or pasting).</li>
+        <li>ElliciumHtmlEditorRedo - allows the use to redo the last undone action.</li>
+        <li>ElliciumHtmlEditorSeparator - displays a vertical separator used to delimit group of similar tools.</li>
+        <li>ElliciumHtmlEditorBold - toggles the bold style of the selected text.</li>
+        <li>ElliciumHtmlEditorItalic - toggles the italic style of the selected text.</li>
+        <li>ElliciumHtmlEditorUnderline - toggles the underline style of the selected text.</li>
+        <li>ElliciumHtmlEditorStrikeThrough - toggles the strikethrough style of the selected text.</li>
+        <li>ElliciumHtmlEditorAlignLeft - toggles left text alignment.</li>
+        <li>ElliciumHtmlEditorAlignCenter - toggles center text alignment.</li>
+        <li>ElliciumHtmlEditorAlignRight - toggles right text alignment.</li>
+        <li>ElliciumHtmlEditorJustify - toggles justified text alignment.</li>
+        <li>ElliciumHtmlEditorIndent - indents the selected text.</li>
+        <li>ElliciumHtmlEditorOutdent - outdents the selected text.</li>
+        <li>ElliciumHtmlEditorUnorderedList - inserts unordered (bullet) list.</li>
+        <li>ElliciumHtmlEditorOrderedList - inserts ordered (numbered) list.</li>
+        <li>ElliciumHtmlEditorColor - sets the foreground color of the selected text.</li>
+        <li>ElliciumHtmlEditorBackground - sets the background color of the selected text.</li>
+        <li>ElliciumHtmlEditorRemoveFormat - removes the visual styling of the selected text.</li>
+        <li>ElliciumHtmlEditorSubscript - converts the selected text to subscript.</li>
+        <li>ElliciumHtmlEditorSource - edit the HTML source as text.</li>
+        <li>ElliciumHtmlEditorSuperscript - converts the selected text to superscript</li>
+        <li>ElliciumHtmlEditorLink - inserts a hyperlink.</li>
+        <li>ElliciumHtmlEditorUnlink - removes a hyperlink.</li>
+        <li>ElliciumHtmlEditorImage - allows the user to insert an image by either uploading a file or selecting a URL. Requires File upload to be implemented and the UploadUrl property of the HtmlEditor to be set.</li>
+        <li>ElliciumHtmlEditorFontName - set the font of the selected text.</li>
+        <li>ElliciumHtmlEditorFontSize - set the font size of the selected text.</li>
+        <li>ElliciumHtmlEditorFormatBlock - allows the user to format the selected text as heading or paragraph.</li>
+        <li>ElliciumHtmlEditorCustomTool - allows the developer to implement a custom tool.</li>
+    </ul>
+</ElliciumText>
+
+<ElliciumText Anchor="html-editor#custom-set-of-tools" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Custom set of tools (text-editing only)
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Here is how to specify a custom set of tools.
+</ElliciumText>
+<ElliciumExample ComponentName="HtmlEditor" Example="HtmlEditorCustomToolsSet">
+    <HtmlEditorCustomToolsSet />
+</ElliciumExample>
+
+<ElliciumText Anchor="html-editor#get-set-value" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Upload files
+</ElliciumText>
+<ElliciumExample ComponentName="HtmlEditor" Example="HtmlEditorUploadUrl">
+    <HtmlEditorUploadUrl />
+</ElliciumExample>
+<ElliciumText Anchor="html-editor#focus" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Focus
+</ElliciumText>
+<ElliciumExample ComponentName="HtmlEditor" Example="HtmlEditorFocus">
+    <HtmlEditorFocus />
+</ElliciumExample>
+
+<ElliciumText Anchor="html-editor#keyboard-navigation" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Keyboard Navigation
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    The following keys or key combinations provide a way for users to navigate and interact with Ellicium Blazor HTMLEditor component.
+</ElliciumText>
+
+<div class="rz-data-grid rz-datatable rz-datatable-scrollable" style="width: 100%;">
+    <div class="rz-data-grid-data">
+        <table class="rz-grid-table">
+            <thead>
+                <tr>
+                    <th style="padding: var(--rz-grid-cell-padding)" colspan="2">Press this key</th>
+                    <th style="padding: var(--rz-grid-cell-padding)" rowspan="2">To do this</th>
+                </tr>
+                <tr>
+                    <th style="padding: var(--rz-grid-cell-padding)">Windows, Chrome OS</th>
+                    <th style="padding: var(--rz-grid-cell-padding)">Mac</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Tab" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Tab" /></span></td>
+                    <td><span class="rz-cell-data">Navigate to a HTMLEditor component.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="A" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="A" /></span></td>
+                    <td><span class="rz-cell-data">Select all text.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="C" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="C" /></span></td>
+                    <td><span class="rz-cell-data">Copy.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="V" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="V" /></span></td>
+                    <td><span class="rz-cell-data">Paste.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="B" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="B" /></span></td>
+                    <td><span class="rz-cell-data">Bold.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="I" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="I" /></span></td>
+                    <td><span class="rz-cell-data">Italic.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="U" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="U" /></span></td>
+                    <td><span class="rz-cell-data">Underline.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="K" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="K" /></span></td>
+                    <td><span class="rz-cell-data">Insert or edit a link.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="Z" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="Z" /></span></td>
+                    <td><span class="rz-cell-data">Undo.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Ctrl" /> + <ElliciumBadge Text="Shift" /> + <ElliciumBadge Text="Z" /></span></td>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="⌘" /> + <ElliciumBadge Text="Shift" /> + <ElliciumBadge Text="Z" /></span></td>
+                    <td><span class="rz-cell-data">Redo.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

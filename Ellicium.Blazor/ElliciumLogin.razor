@@ -1,0 +1,98 @@
+@inherits ElliciumComponent
+
+@if (Visible)
+{
+    <div @ref="@Element" @attributes="Attributes" class="@GetCssClass()" style="@Style" id="@GetId()">
+        @if (FormFieldVariant != null)
+        {
+            <ElliciumStack>
+                <ElliciumFormField Text="@UserText" Variant="@FormFieldVariant.Value">
+                    <ChildContent>
+                        <ElliciumTextBox AutoComplete=@AutoComplete AutoCompleteType=@UserNameAutoCompleteType id=@Id("username") Name="Username" @bind-Value=@username />
+                    </ChildContent>
+                    <Helper>
+                        <ElliciumRequiredValidator Component="Username" Text=@UserRequired />
+                    </Helper>
+                </ElliciumFormField>
+                <ElliciumFormField Text="@PasswordText" Variant="@FormFieldVariant.Value">
+                    <ChildContent>
+                        <ElliciumPassword id=@Id("password") AutoComplete=@AutoComplete AutoCompleteType=@PasswordAutoCompleteType Name="Password" @bind-Value=@password />
+                    </ChildContent>
+                    <Helper>
+                        <ElliciumRequiredValidator Component="Password" Text=@PasswordRequired />
+                    </Helper>
+                </ElliciumFormField>
+                @if (AllowRememberMe)
+                {
+                    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+                        <ElliciumSwitch @bind-Value="@rememberMe" id=@Id("rememberMe") Name="RememberMe" />
+                        <label class="rz-label" for="RememberMe">@RememberMeText</label>
+                    </ElliciumStack>
+                }
+            </ElliciumStack>
+            <ElliciumStack style="margin-top:1rem;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                @if(ShowLoginButton)
+                {
+                <ElliciumButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Text=@LoginText Click=@OnLogin />
+                }
+                @if (AllowResetPassword)
+                {
+                    <a tabindex="0" class="rz-link" @onclick=@OnReset>@ResetPasswordText</a>
+                }
+            </ElliciumStack>
+            @if (AllowRegister)
+            {
+                <div class="rz-register">
+                    @RegisterMessageText
+                    <ElliciumButton ButtonType="ButtonType.Button" Variant="Variant.Flat" ButtonStyle="ButtonStyle.Secondary" Shade="Shade.Lighter" Text=@RegisterText Click=@OnRegister />
+                </div>
+            }
+        }
+        else
+        {
+        <div class="rz-form">
+            <div class="rz-form-row">
+                <label class="rz-label" for=@Id("username")>@UserText</label>
+                <div class="rz-form-input-wrapper">
+                    <ElliciumTextBox AutoComplete=@AutoComplete AutoCompleteType=@UserNameAutoCompleteType id=@Id("username") Name="Username" @bind-Value=@username />
+                    <ElliciumRequiredValidator Component="Username" Text=@UserRequired />
+                </div>
+            </div>
+            <div class="rz-form-row">
+                <label class="rz-label" for=@Id("password")>@PasswordText</label>
+                <div class="rz-form-input-wrapper">
+                    <ElliciumPassword id=@Id("password") AutoComplete=@AutoComplete AutoCompleteType=@PasswordAutoCompleteType Name="Password" @bind-Value=@password />
+                    <ElliciumRequiredValidator Component="Password" Text=@PasswordRequired />
+                </div>
+            </div>
+@if (AllowRememberMe)
+{
+            <div class="rz-form-row">
+                <label class="rz-label"></label>
+                <div class="rz-form-input-wrapper">
+                    <ElliciumSwitch @bind-Value="@rememberMe" id=@Id("rememberMe") Name="RememberMe" />
+                    <label class="rz-label" for="RememberMe">@RememberMeText</label>
+                </div>
+            </div>
+}
+            <div class="rz-form-row">
+                <label class="rz-label"></label>
+                <div class="rz-form-input-wrapper rz-login-buttons">
+                    <ElliciumButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Text=@LoginText Click=@OnLogin />
+                    @if (AllowResetPassword)
+                    {
+                        <a tabindex="0" class="rz-link" @onclick=@OnReset>@ResetPasswordText</a>
+                    }
+                </div>
+            </div>
+        </div>
+        @if (AllowRegister)
+        {
+            <div class="rz-register">
+                @RegisterMessageText
+                <ElliciumButton ButtonType="ButtonType.Button" Variant="Variant.Flat" ButtonStyle="ButtonStyle.Secondary" Shade="Shade.Lighter" Text=@RegisterText Click=@OnRegister />
+            </div>
+        }
+        }
+    </div>
+}

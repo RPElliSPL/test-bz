@@ -1,0 +1,50 @@
+<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumLabel Text="Variant:" />
+        <ElliciumSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-sm-12">
+        <ElliciumFormField Text="Account" Variant="@variant">
+            <Start>
+                <ElliciumIcon Icon="account_circle" />
+            </Start>
+            <ChildContent>
+                <ElliciumTextBox @bind-Value="@value" />
+            </ChildContent>
+            <End>
+                <ElliciumIcon Icon="add_circle_outline" IconStyle="IconStyle.Secondary" />
+            </End>
+        </ElliciumFormField>
+        <ElliciumFormField Text="Credit Card Number" Variant="@variant">
+            <Start>
+                <ElliciumIcon Icon="credit_card" />
+            </Start>
+            <ChildContent>
+                <ElliciumMask Mask="**** **** **** ****" CharacterPattern="[0-9]" Placeholder="0000 0000 0000 0000" Name="CardNr" />
+            </ChildContent>
+        </ElliciumFormField>
+        <ElliciumFormField Text="Password" Variant="@variant">
+            <ChildContent>
+                <ElliciumTextBox @bind-Value="@passwordValue" Visible="@(!password)" />
+                <ElliciumPassword @bind-Value="@passwordValue" Visible="@password" />
+            </ChildContent>
+            <End>
+                <ElliciumButton Icon="@(password ? "visibility" : "visibility_off")" Click="TogglePassword" Variant="Variant.Text" Size="ButtonSize.Small" />
+            </End>
+        </ElliciumFormField>
+    </ElliciumStack>
+</div>
+
+@code {
+    string value = "";
+    string passwordValue = "password";
+    bool password = true;
+    Variant variant = Variant.Outlined;
+
+    void TogglePassword()
+    {
+        password = !password;
+    }
+}

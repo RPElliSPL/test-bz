@@ -1,0 +1,28 @@
+﻿@using ElliciumBlazorDemos.Models.Northwind
+
+@inherits DbContextPage
+
+<div class="rz-p-12 rz-text-align-center">
+    <ElliciumLabel Text="Select Value" Component="DropDownDataGridColumns" Style="margin-right: 8px; vertical-align: middle;" />
+    <ElliciumDropDownDataGrid @bind-Value=@value Data=@customers TextProperty="CompanyName" ValueProperty="CustomerID"
+                            AllowColumnResize="true" AllowFilteringByAllStringColumns="true" Name="DropDownDataGridColumns">
+        <Columns>
+            <ElliciumDropDownDataGridColumn Property="CustomerID" Title="CustomerID" Width="100px" />
+            <ElliciumDropDownDataGridColumn Property="CompanyName" Title="CompanyName" Width="200px" />
+            <ElliciumDropDownDataGridColumn Property="City" Title="City" Width="100px" />
+            <ElliciumDropDownDataGridColumn Property="Country" Title="Country" Width="100px" />
+        </Columns>
+    </ElliciumDropDownDataGrid>
+</div>
+
+@code {
+    string value = "AROUT";
+    IEnumerable<Customer> customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        customers = dbContext.Customers;
+    }
+}

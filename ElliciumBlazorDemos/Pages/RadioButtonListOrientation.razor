@@ -1,0 +1,13 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumRadioButtonList @bind-Value=@value TValue="int" Orientation=Orientation.Vertical class="mb-5">
+        <Items>
+            <ElliciumRadioButtonListItem Text="Orders" Value="1" />
+            <ElliciumRadioButtonListItem Text="Employees" Value="2" />
+            <ElliciumRadioButtonListItem Text="Customers" Value="3" />
+        </Items>
+    </ElliciumRadioButtonList>
+</div>
+
+@code {
+    int value = 1;
+}

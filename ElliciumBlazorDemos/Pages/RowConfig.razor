@@ -1,0 +1,38 @@
+﻿<ElliciumCard class="my-4">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start"  Wrap="FlexWrap.Wrap">
+        <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+            AlignItems
+            <ElliciumDropDown @bind-Value="@alignItems" TextProperty="Text" ValueProperty="Value" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "align items" }})"
+                        Data="@(Enum.GetValues(typeof(AlignItems)).Cast<AlignItems>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+        </ElliciumStack>
+        <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+            JustifyContent
+            <ElliciumDropDown @bind-Value="@justifyContent" TextProperty="Text" ValueProperty="Value" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "justify content" }})"
+                        Data="@(Enum.GetValues(typeof(JustifyContent)).Cast<JustifyContent>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+        </ElliciumStack>
+        <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+            Gap
+            <ElliciumTextBox @bind-Value="@gap" aria-label="gap" />
+        </ElliciumStack>
+    </ElliciumStack>
+</ElliciumCard>
+<ElliciumRow JustifyContent="@justifyContent" AlignItems="@alignItems" Gap="@gap" class="rz-border-info-light">
+    <ElliciumColumn Size="2" class="rz-background-color-info-lighter rz-color-on-info-lighter rz-text-align-center rz-p-2">
+        Column 1
+    </ElliciumColumn>
+    <ElliciumColumn Size="2" class="rz-background-color-success-lighter rz-color-on-success-lighter rz-text-align-center rz-p-2" style="height: 60px;">
+        Column 2
+    </ElliciumColumn>
+    <ElliciumColumn Size="2" class="rz-background-color-warning-lighter rz-color-on-warning-lighter rz-text-align-center rz-p-2" style="height: 120px;">
+        Column 3
+    </ElliciumColumn>
+    <ElliciumColumn Size="2" class="rz-background-color-danger-lighter rz-color-on-danger-lighter rz-text-align-center rz-p-2" style="height: 180px;">
+        Column 4
+    </ElliciumColumn>
+</ElliciumRow>
+
+@code {
+    AlignItems alignItems = AlignItems.Normal;
+    JustifyContent justifyContent = JustifyContent.Normal;
+    string gap = "1rem";
+}

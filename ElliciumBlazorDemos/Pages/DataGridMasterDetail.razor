@@ -1,0 +1,94 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+@if (orders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <ElliciumDataGrid ColumnWidth="200px" AllowFiltering="true" AllowPaging="true" PageSize="5" AllowSorting="true" Data="@orders" TItem="Order" @bind-Value="@SelectedOrders">
+                    <Columns>
+                        <ElliciumDataGridColumn TItem="Order" Property="OrderID" Title="Order ID" Width="120px" />
+                        <ElliciumDataGridColumn TItem="Order" Property="Customer.CompanyName" Title="Customer" Width="200px" />
+                        <ElliciumDataGridColumn TItem="Order" Property="Employee.LastName" Title="Employee" Width="200px" >
+                            <Template Context="order">
+                                <ElliciumImage Path="@order.Employee?.Photo" style="width: 32px; height: 32px; border-radius: 16px; margin-right: 6px;" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                                @order.Employee?.FirstName @order.Employee?.LastName
+                            </Template>
+                        </ElliciumDataGridColumn>
+                        <ElliciumDataGridColumn TItem="Order" Property="OrderDate" Title="Order Date" FormatString="{0:d}" Width="140px" />
+                        <ElliciumDataGridColumn TItem="Order" Property="RequiredDate" Title="Required Date" FormatString="{0:d}" Width="140px" />
+                        <ElliciumDataGridColumn TItem="Order" Property="ShippedDate" Title="Shipped Date" FormatString="{0:d}" Width="140px" />
+                        <ElliciumDataGridColumn TItem="Order" Property="ShipName" Title="Ship Name" />
+                        <ElliciumDataGridColumn TItem="Order" Property="ShipCountry" Title="Ship Country" />
+                    </Columns>
+                </ElliciumDataGrid>
+            </div>
+            <div class="col-md-6">
+                <ElliciumCard Style="margin-bottom:20px">
+                    Company:
+                    <b>@SelectedOrders.FirstOrDefault()?.Customer?.CompanyName</b>
+                </ElliciumCard>
+                <ElliciumTabs>
+                    <Tabs>
+                        <ElliciumTabsItem Text="Order Details">
+                            <ElliciumDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@(SelectedOrders.FirstOrDefault()?.OrderDetails)" TItem="OrderDetail">
+                                <Columns>
+                                    <ElliciumDataGridColumn TItem="OrderDetail" Property="Order.CustomerID" Title="Order" />
+                                    <ElliciumDataGridColumn TItem="OrderDetail" Property="Product.ProductName" Title="Product" />
+                                    <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+                                        <Template Context="detail">
+                                            @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+                                        </Template>
+                                    </ElliciumDataGridColumn>
+                                    <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+                                    <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+                                        <Template Context="detail">
+                                            @String.Format("{0}%", detail.Discount * 100)
+                                        </Template>
+                                    </ElliciumDataGridColumn>
+                                </Columns>
+                            </ElliciumDataGrid>
+                        </ElliciumTabsItem>
+                        <ElliciumTabsItem Text="Products">
+                            <ElliciumDataList WrapItems="true" AllowPaging="true" Data="@(SelectedOrders.FirstOrDefault()?.OrderDetails)" TItem="OrderDetail" PageSize="10">
+                                <Template Context="detail">
+                                    <ElliciumCard Style="width:100px;height:100px">
+                                        Product:
+                                        <b>@detail?.Product?.ProductName</b>
+                                    </ElliciumCard>
+                                </Template>
+                            </ElliciumDataList>
+                        </ElliciumTabsItem>
+                    </Tabs>
+                </ElliciumTabs>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    IList<Order> SelectedOrders { get; set; }
+
+    IQueryable<Order> orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orders = dbContext.Orders
+            .Include("Customer")
+            .Include("Employee")
+            .Include("OrderDetails")
+            .Include("OrderDetails.Product");
+
+        SelectedOrders = new List<Order>(){ orders.FirstOrDefault() };
+    }
+}

@@ -1,0 +1,73 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-2">
+        <ElliciumCheckBox @bind-Value="@allowVirtualization" Name="allowVirtualization"  />
+        <ElliciumLabel Text="Allow virtualization" Component="allowVirtualization" />
+    </ElliciumStack>
+
+    <ElliciumDataList AllowVirtualization=@allowVirtualization Style="@(allowVirtualization ? "height:400px;overflow:auto;" : "")" 
+                    WrapItems="@(!allowVirtualization)" AllowPaging="@(!allowVirtualization)"
+                    Data="@products" TItem="Product" PageSize="5" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+        <Template Context="product">
+            <ElliciumCard Style="width: 100%; padding: 0;">
+                <ElliciumRow Gap="0">
+                    <ElliciumColumn Size="12" SizeLG="3" Class="rz-p-4 product-title">
+                        <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H5" class="rz-color-secondary">@(product.ProductName)</ElliciumText>
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeLG="7" Class="rz-p-4">
+                        <ElliciumRow Gap="0">
+                            <ElliciumColumn Size="12" SizeMD="6" SizeLG="2">
+                                <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H5" Class="rz-mb-0">In Stock</ElliciumText>
+                                <ElliciumText TextStyle="TextStyle.Body2">@(product.UnitsInStock)</ElliciumText>
+                            </ElliciumColumn>
+                            <ElliciumColumn Size="12" SizeMD="6" SizeLG="2">
+                                <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H5" Class="rz-mb-0">Origin</ElliciumText>
+                                <ElliciumText TextStyle="TextStyle.Body2">@(product.Supplier?.Country)</ElliciumText>
+                            </ElliciumColumn>
+                            <ElliciumColumn Size="12" SizeMD="6" SizeLG="5">
+                                <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H5" Class="rz-mb-0">Sold by</ElliciumText>
+                                <ElliciumText TextStyle="TextStyle.Body2">@(product.Supplier?.CompanyName)</ElliciumText>
+                            </ElliciumColumn>
+                            <ElliciumColumn Size="12" SizeMD="6" SizeLG="3" Class="rz-text-align-start rz-text-align-lg-end">
+                                <ElliciumBadge BadgeStyle="BadgeStyle.Secondary" Shade="Shade.Lighter" class="price-badge" Text=@($"{String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", product.UnitPrice)}") />
+                            </ElliciumColumn>
+                        </ElliciumRow>
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeLG="2" Class="rz-p-4">
+                        <ElliciumButton Text="Order now" Style="width: 100%" />
+                    </ElliciumColumn>
+                </ElliciumRow>
+            </ElliciumCard>
+        </Template>
+    </ElliciumDataList>
+
+<style>
+.product-title {
+    min-height: 72px;
+    background-color: var(--rz-secondary-lighter);
+}
+.price-badge {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 8px;
+}
+</style>
+
+@code {
+    bool allowVirtualization;
+
+    IQueryable<Product> products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        products = dbContext.Products.Include("Category").Include("Supplier");
+    }
+}

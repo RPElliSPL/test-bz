@@ -1,0 +1,17 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumStack Orientation="Orientation.Horizontal">
+        <ElliciumStack>
+            <ElliciumLabel Text="Select Date, bound to DateOnly" Component="DatePickerDateOnlyType" Style="margin-right: 8px; vertical-align: middle;"/>
+            <ElliciumDatePicker @bind-Value="@value" DateFormat="MM/dd/yyyy" Name="DatePickerDateOnlyType"/>
+        </ElliciumStack>
+        <ElliciumStack>
+            <ElliciumLabel Text="Select Time, bound to TimeOnly" Component="DatePickerTimeOnlyType" Style="margin-right: 8px; vertical-align: middle;" />
+            <ElliciumDatePicker @bind-Value="@timeValue" ShowSeconds="true" DateFormat="HH:mm" Name="DatePickerTimeOnlyType" />
+        </ElliciumStack>
+    </ElliciumStack>
+</div>
+
+@code {
+    DateOnly value = DateOnly.FromDateTime(DateTime.Now);
+    TimeOnly timeValue = TimeOnly.FromDateTime(DateTime.Now);
+}

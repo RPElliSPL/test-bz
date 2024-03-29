@@ -1,0 +1,32 @@
+@using Ellicium
+@using System.Globalization;
+@using System.Linq.Dynamic.Core;
+@using Microsoft.JSInterop
+@inherits ElliciumComponent
+
+@typeparam TItem
+@implements IScheduler
+
+@if (Visible)
+{
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+<div @ref=Element  style=@Style @attributes=@Attributes class=@GetCssClass() id=@GetId()>
+    <div class="rz-scheduler-nav">
+        <div class="rz-scheduler-nav-prev-next">
+            <button tabindex="0" class="rz-button rz-prev" @onclick=@OnPrev><ElliciumIcon Icon="chevron_left" /></button>
+            <button tabindex="0" class="rz-button rz-next" @onclick=@OnNext><ElliciumIcon Icon="chevron_right" /></button>
+            <button tabindex="0" class="rz-button rz-today" @onclick=@OnToday>@TodayText</button>
+        </div>
+        <div class="rz-scheduler-nav-title">@SelectedView?.Title</div>
+        <div class="rz-scheduler-nav-views">
+        @foreach (var view in Views)
+        {
+            <ElliciumButton Click=@(args => OnChangeView(view)) Icon=@view.Icon Text=@view.Text class="@($"{(IsSelected(view)? " rz-state-active" : "")}")" />
+        }
+        </div>
+    </div>
+    @SelectedView?.Render()
+</div>
+}

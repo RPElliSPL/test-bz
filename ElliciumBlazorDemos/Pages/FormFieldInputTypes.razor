@@ -1,0 +1,73 @@
+@inherits DbContextPage
+
+<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumLabel Text="Variant:" />
+        <ElliciumSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumRow Gap="1rem">
+        <ElliciumColumn Size="12" SizeSM="6">
+            <ElliciumStack>
+                <ElliciumFormField Text="ElliciumTextBox" Variant="@variant">
+                    <ElliciumTextBox @bind-Value="@value" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumNumeric" Variant="@variant">
+                    <ElliciumNumeric @bind-Value="@intValue" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumPassword" Variant="@variant">
+                    <ElliciumPassword @bind-Value="@value" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumDropDown" Variant="@variant">
+                    <ElliciumDropDown Data=@companyNames @bind-Value="@dropDownValue" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumDropDownDataGrid" Variant="@variant">
+                    <ElliciumDropDownDataGrid Data=@companyNames @bind-Value="@dropDownDataGridValue" />
+                </ElliciumFormField>
+            </ElliciumStack>
+        </ElliciumColumn>
+        <ElliciumColumn Size="12" SizeSM="6">
+            <ElliciumStack>
+                <ElliciumFormField Text="ElliciumAutoComplete" Variant="@variant">
+                    <ElliciumAutoComplete Data=@companyNames @bind-Value="@autoCompleteValue" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumColorPicker" Variant="@variant">
+                    <ElliciumColorPicker @bind-Value="@color" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumTextArea" Variant="@variant">
+                    <ElliciumTextArea @bind-Value="@value" />
+                </ElliciumFormField>
+                <ElliciumFormField Text="ElliciumRadioButtonList" Variant="@variant">
+                    <ElliciumRadioButtonList @bind-Value=@radioButtonValue TValue="int" class="rz-m-4 rz-mt-8">
+                        <Items>
+                            <ElliciumRadioButtonListItem Text="Orders" Value="1" />
+                            <ElliciumRadioButtonListItem Text="Employees" Value="2" />
+                            <ElliciumRadioButtonListItem Text="Customers" Value="3" />
+                        </Items>
+                    </ElliciumRadioButtonList>
+                </ElliciumFormField>
+            </ElliciumStack>
+        </ElliciumColumn>
+    </ElliciumRow>
+</div>
+
+@code {
+    Variant variant = Variant.Outlined;
+
+    string value = "Text";
+    int intValue = 123;
+    int radioButtonValue = 1;
+    string dropDownValue = "Around the Horn";
+    string dropDownDataGridValue = "";
+    string autoCompleteValue = "";
+    string color = "rgb(68, 58, 110)";
+
+    IEnumerable<string> companyNames;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        companyNames = dbContext.Customers.Select(c => c.CompanyName).Distinct();
+    }
+}

@@ -1,0 +1,26 @@
+<ElliciumLayout Style="grid-template-columns: 1fr auto; grid-template-areas: 'rz-header rz-sidebar' 'rz-body rz-sidebar'">
+    <ElliciumHeader>
+        <ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" AlignItems="AlignItems.Center" Gap="1rem">
+            <ElliciumLabel Text="Header" />
+            <ElliciumSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" Class="rz-m-0" />
+        </ElliciumStack>
+    </ElliciumHeader>
+    <ElliciumSidebar @bind-Expanded="@sidebarExpanded">
+        <ElliciumPanelMenu>
+            <ElliciumPanelMenuItem Text="Home" Icon="home" />
+            <ElliciumPanelMenuItem Text="Users" Icon="account_box" />
+        </ElliciumPanelMenu>
+        <div class="rz-p-4">
+            Sidebar
+        </div>
+    </ElliciumSidebar>
+    <ElliciumBody>
+        <div class="rz-p-4">
+            Body
+        </div>
+    </ElliciumBody>
+</ElliciumLayout>
+
+@code {
+    bool sidebarExpanded = true;
+}

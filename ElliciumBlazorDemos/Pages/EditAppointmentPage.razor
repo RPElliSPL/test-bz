@@ -1,0 +1,53 @@
+@inject DialogService DialogService
+
+<ElliciumTemplateForm TItem="Appointment" Data="@model" Submit=@OnSubmit>
+<div class="row" style="margin-bottom: 16px">
+    <div class="col-md-3">
+        <ElliciumLabel Text="Text" />
+    </div>
+    <div class="col">
+        <ElliciumTextBox @bind-Value="@model.Text" Name="Text" />
+        <ElliciumRequiredValidator Text="Title is required" Component="Text" />
+    </div>
+</div>
+<div class="row" style="margin-bottom: 16px">
+    <div class="col-md-3">
+        <ElliciumLabel Text="Start" />
+    </div>
+    <div class="col">
+        <ElliciumDatePicker @bind-Value="@model.Start" Name="Start" ShowTime="true" />
+        <ElliciumRequiredValidator Text="Start is required" Component="Start" />
+    </div>
+</div>
+<div class="row" style="margin-bottom: 16px">
+    <div class="col-md-3">
+        <ElliciumLabel Text="End" />
+    </div>
+    <div class="col">
+        <ElliciumDatePicker Name="End" @bind-Value="@model.End" ShowTime="true" />
+        <ElliciumRequiredValidator Component="End" Text="End is required" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col">
+        <ElliciumButton ButtonType="ButtonType.Submit" Text="Save" />
+    </div>
+</div>
+</ElliciumTemplateForm>
+@code {
+    [Parameter]
+    public Appointment Appointment { get; set; }
+
+    Appointment model = new Appointment();
+
+    protected override void OnParametersSet()
+    {
+        model = Appointment;
+    }
+
+    void OnSubmit(Appointment model)
+    {
+        DialogService.Close(model);
+    }
+}

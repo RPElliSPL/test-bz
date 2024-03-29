@@ -1,0 +1,40 @@
+﻿@using ElliciumBlazorDemos.Models.Northwind
+
+@inherits DbContextPage
+
+<div class="rz-p-12 rz-text-align-center">
+    <ElliciumLabel Text="Select Values" Component="DropDownDataGridMultiple" Style="margin-right: 8px; vertical-align: middle;" />
+    <ElliciumDropDownDataGrid @ref="grid" Chips="true" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowClear="true" @bind-Value=@values
+                            Multiple="true" Placeholder="Select..." Data=@customers TextProperty="CompanyName" ValueProperty="CustomerID" Name="DropDownDataGridMultiple">
+        <Columns>
+            <ElliciumDropDownDataGridColumn Width="60px" Sortable="false">
+                <HeaderTemplate>
+                    <ElliciumCheckBox InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select all" }})" Disabled="@(!grid.AllowSelectAll)" TriState="false" TValue="bool" Value="@(customers.Any(c => values != null && values.Contains(c.CustomerID)))"
+                                    Change="@(args => values = args ? grid.View.Cast<Customer>().Select(c => c.CustomerID) : values = Enumerable.Empty<string>())" />
+                </HeaderTemplate>
+                <Template Context="data">
+                    <ElliciumCheckBox InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select item" }})" TriState="false" Value="@(values != null && values.Contains(((Customer) data).CustomerID))"
+                                    TValue="bool" Change=@(args => grid.SelectItem(data)) @onclick:stopPropagation/>
+                </Template>
+            </ElliciumDropDownDataGridColumn>
+            <ElliciumDropDownDataGridColumn Property="CustomerID" Title="CustomerID" Width="80px" />
+            <ElliciumDropDownDataGridColumn Property="CompanyName" Title="CompanyName" Width="200px" />
+            <ElliciumDropDownDataGridColumn Property="City" Title="City" Width="100px" />
+            <ElliciumDropDownDataGridColumn Property="Country" Title="Country" Width="100px" />
+        </Columns>
+    </ElliciumDropDownDataGrid>
+</div>
+
+@code {
+    ElliciumDropDownDataGrid<IEnumerable<string>> grid;
+    IEnumerable<Customer> customers;
+
+    IEnumerable<string> values = new string[] { "ALFKI", "AROUT" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        customers = dbContext.Customers;
+    }
+}

@@ -1,0 +1,146 @@
+﻿@page "/splitbutton"
+<style>
+    .splitbutton-demo .rz-splitbutton {
+        margin: 0 0.25rem 0.5rem 0;
+    }
+
+    .splitbutton-demo h3 {
+        margin-bottom: 1rem;
+    }
+</style>
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    SplitButton
+</ElliciumText>
+<ElliciumText SplitButtonTextStyle="TextStyle.Subtitle1" class="rz-pb-4">
+    Demonstration and configuration of the Ellicium Blazor <strong>SplitButton</strong> component.
+</ElliciumText>
+
+<ElliciumText Anchor="splitbutton#filled" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-8">
+    Filled SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    These are the default Ellicium SplitButton.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonFilled">
+    <SplitButtonFilled />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#outlined" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Outlined SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use <code>Variant="Variant.Outlined"</code> for outlined split button variant.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonOutlined">
+    <SplitButtonOutlined />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#text" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Text SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use <code>Variant="Variant.Text"</code> for text split button variant.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonText">
+    <SplitButtonText />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#content" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Content in SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Text, icons and images can be added to a split button.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonContent">
+    <SplitButtonContent />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#sizes" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    SplitButton Sizes
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use the <code>Size</code> property to set split button size. Available sizes are ExtraSmall, Small, Medium (default), and Large.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonSizes">
+    <SplitButtonSizes />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#disabled" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Disabled SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use <code>Disabled="true"</code> to disable a split button.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonDisabled">
+    <SplitButtonDisabled />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#busy"TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Busy SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use <code>IsBusy="true"</code> to show the busy indicator.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonBusy">
+    <SplitButtonBusy />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#always-open-popup"  TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    AlwaysOpenPopup SplitButton
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Use <code>AlwaysOpenPopup="true"</code> to open popup with items on click.
+</ElliciumText>
+<ElliciumExample ComponentName="SplitButton" Example="SplitButtonAlwaysOpenPopup">
+    <SplitButtonAlwaysOpenPopup />
+</ElliciumExample>
+
+<ElliciumText Anchor="splitbutton#keyboard-navigation" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Keyboard Navigation
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    The following keys or key combinations provide a way for users to navigate and interact with Ellicium Blazor SplitButton component.
+</ElliciumText>
+
+<div class="rz-data-grid rz-datatable rz-datatable-scrollable" style="width: 100%;">
+    <div class="rz-data-grid-data">
+        <table class="rz-grid-table">
+            <thead>
+                <tr>
+                    <th style="padding: var(--rz-grid-cell-padding)">Press this key</th>
+                    <th style="padding: var(--rz-grid-cell-padding)">To do this</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Tab" /></span></td>
+                    <td><span class="rz-cell-data">Navigate to the SplitButton.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Alt" /> + <ElliciumBadge Text="Down Arrow" /></span></td>
+                    <td><span class="rz-cell-data">Open/Close SplitButton popup.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Down Arrow" /> on closed popup</span></td>
+                    <td><span class="rz-cell-data">Select next SplitButton item.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Up Arrow" /> on closed popup</span></td>
+                    <td><span class="rz-cell-data">Select previous SplitButton item.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Space" /> or <ElliciumBadge Text="Enter" /> on opened popup</span></td>
+                    <td><span class="rz-cell-data">Selects the focused SplitButton item and closes the popup.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Escape" /></span></td>
+                    <td><span class="rz-cell-data">Closes the SplitButton popup.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Space" /> or <ElliciumBadge Text="Enter" /></span></td>
+                    <td><span class="rz-cell-data">Clicks SplitButton.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

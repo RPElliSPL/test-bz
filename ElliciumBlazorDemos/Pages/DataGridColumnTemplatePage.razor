@@ -1,0 +1,17 @@
+﻿@page "/datagrid-column-template"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    DataGrid <strong>Column Template</strong>
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    The <strong>Template</strong> allows you to customize the way data is displayed.
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body2" class="my-4">
+    Common uses: Record numbering, displaying an image depending on property value, 
+    displaying multiple properties in the same column, linking to other pages,
+    data formatting and HTML embedding.
+</ElliciumText>
+
+<ElliciumExample ComponentName="DataGrid" Example="DataGridColumnTemplate" AdditionalSourceCodePages=@(new List<string>() { "DialogCardPage.razor" })>
+    <DataGridColumnTemplate/>
+</ElliciumExample>

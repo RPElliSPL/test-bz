@@ -1,0 +1,13 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumSelectBar @bind-Value=@values TValue="IEnumerable<int>" Multiple="true">
+        <Items>
+            <ElliciumSelectBarItem Text="Orders" Value="1" />
+            <ElliciumSelectBarItem Text="Employees" Value="2" />
+            <ElliciumSelectBarItem Text="Customers" Value="3" />
+        </Items>
+    </ElliciumSelectBar>
+</div>
+
+@code {
+    IEnumerable<int> values = new int[] { 1, 2 };
+}

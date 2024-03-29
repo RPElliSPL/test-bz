@@ -1,0 +1,59 @@
+﻿<div class="container-fluid">
+    <div class="row px-3">
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Default TextBox</ElliciumText>
+                <ElliciumTextBox Change=@(args => OnChange(args, "TextBox")) class="w-100" aria-label="Default TextBox" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Placeholder</ElliciumText>
+                <ElliciumTextBox Placeholder="Search..." Change=@(args => OnChange(args, "TextBox with placeholder")) class="w-100" aria-label="TextBox with placeholder" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">5 characters maximum</ElliciumText>
+                <ElliciumTextBox @bind-Value=@value MaxLength="5" Change=@(args => OnChange(args, "TextBox with 5 maximum characters")) class="w-100" aria-label="TextBox with 5 maximum characters" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Change on every input</ElliciumText>
+                <ElliciumTextBox @oninput=@(args => OnChange(args.Value.ToString(), "TextBox with change on every input")) class="w-100" aria-label="TextBox with change on every input" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Disabled TextBox</ElliciumText>
+                <ElliciumTextBox Disabled="true" class="w-100" aria-label="Disabled TextBox" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">TextBox with disabled AutoComplete</ElliciumText>
+                <ElliciumTextBox AutoComplete="false" class="w-100" aria-label="Disabled AutoComplete TextBox" />
+            </ElliciumCard>
+        </div>
+        <div class="col-md-6 col-lg-4 p-3">
+            <ElliciumCard>
+                <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">TextBox with custom AutoComplete</ElliciumText>
+                <ElliciumTextBox autocomplete="custom" class="w-100" aria-label="Custom AutoComplete TextBox" />
+            </ElliciumCard>
+        </div>
+    </div>
+</div>
+
+<EventConsole @ref=@console />
+
+@code {
+    string value;
+
+    EventConsole console;
+
+    void OnChange(string value, string name)
+    {
+        console.Log($"{name} value changed to {value}");
+    }
+}

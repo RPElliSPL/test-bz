@@ -1,0 +1,46 @@
+@inject NavigationManager navigationManager;
+@if (!Example.New && !Example.Updated)
+{
+    <ElliciumPanelMenuItem @bind-Expanded=@Expanded Text="@Example.Name" Path="@GetUrl()" Icon="@Example.Icon" aria-label="@Example.Name">
+        @ChildContent
+    </ElliciumPanelMenuItem>
+}
+else
+{
+    <ElliciumPanelMenuItem @bind-Expanded=@Expanded Text="@Example.Name" Path="@GetUrl()" Icon="@Example.Icon" aria-label="@Example.Name">
+        <Template>
+            @Example.Name
+            <ElliciumBadge Text="Updated" Visible=@Example.Updated BadgeStyle="BadgeStyle.Info"/>
+            <ElliciumBadge Text="New" Visible=@Example.New BadgeStyle="BadgeStyle.Success"/>
+        </Template>
+        <ChildContent>@ChildContent</ChildContent>
+    </ElliciumPanelMenuItem>
+}
+@code {
+    [Parameter]
+    public Example Example { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool Expanded
+    {
+        get
+        {
+            return Example.Expanded;
+        }
+        set
+        {
+            Example.Expanded = value;
+        }
+    }
+
+    string GetUrl()
+    {
+        return Example.Path == null ? Example.Path : $"{Example.Path}{new Uri(navigationManager.Uri).Query}";
+    }
+
+    [Parameter]
+    public EventCallback<bool> ExpandedChanged { get; set; }
+}

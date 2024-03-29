@@ -1,0 +1,33 @@
+@inject NotificationService NotificationService
+
+<ElliciumStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Gap="2rem" Wrap="FlexWrap.Wrap" class="rz-p-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Shade="Shade.Lighter" ToggleShade="Shade.Default" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" 
+            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter" }})" />
+        <ElliciumToggleButton Shade="Shade.Light" ToggleShade="Shade.Dark" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light" }})" />
+        <ElliciumToggleButton ToggleShade="Shade.Darker" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Toggle Shade" }})" />
+        <ElliciumToggleButton Shade="Shade.Dark" ToggleShade="Shade.Default" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Shade" }})" />
+        <ElliciumToggleButton Shade="Shade.Darker" ToggleShade="Shade.Light" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Shade" }})" />
+    </ElliciumStack>
+
+    <ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.H3">Light and Dark button styles don't have Shades</ElliciumText>
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Click=@(args => OnClick("Light button")) Text="Light" ButtonStyle="ButtonStyle.Light" ToggleButtonStyle="ButtonStyle.Dark"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light button" }})" />
+        <ElliciumToggleButton Click=@(args => OnClick("Dark button")) Text="Dark" ButtonStyle="ButtonStyle.Dark" ToggleButtonStyle="ButtonStyle.Light"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark button" }})" />
+    </ElliciumStack>
+</ElliciumStack>
+
+
+
+@code {
+    private void OnClick(string text)
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "ToggleButton Clicked", Detail = text });
+    }
+}

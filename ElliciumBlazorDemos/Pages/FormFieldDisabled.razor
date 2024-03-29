@@ -1,0 +1,48 @@
+@inherits DbContextPage
+
+<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Vertical" Gap="1rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Disable form fields:" />
+            <ElliciumSwitch @bind-Value="disabled" />
+        </ElliciumStack>
+        <ElliciumStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Variant:" />
+            <ElliciumSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+            <ElliciumDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+        </ElliciumStack>
+    </ElliciumStack>
+
+    <ElliciumStack Orientation="Orientation.Horizontal" Wrap="FlexWrap.Wrap" Gap="1rem">
+        <ElliciumFormField Text="ElliciumTextBox" Variant="@variant" Style="flex: 1;">
+            <ElliciumTextBox @bind-Value="@value" Disabled="@disabled" />
+        </ElliciumFormField>
+        <ElliciumFormField Text="ElliciumNumeric" Variant="@variant" Style="flex: 1;">
+            <ElliciumNumeric @bind-Value="@intValue" Disabled="@disabled" />
+        </ElliciumFormField>
+        <ElliciumFormField Text="ElliciumPassword" Variant="@variant" Style="flex: 1;">
+            <ElliciumPassword @bind-Value="@value" Disabled="@disabled" />
+        </ElliciumFormField>
+        <ElliciumFormField Text="ElliciumDropDown" Variant="@variant" Style="flex: 1;">
+            <ElliciumDropDown Data=@companyNames @bind-Value="@dropDownValue"  Disabled="@disabled" />
+        </ElliciumFormField>
+    </ElliciumStack>
+</div>
+
+@code {
+    bool disabled = true;
+    Variant variant = Variant.Outlined;
+
+    string value = "Text";
+    int intValue = 123;
+    string dropDownValue = "Around the Horn";
+
+    IEnumerable<string> companyNames;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        companyNames = dbContext.Customers.Select(c => c.CompanyName).Distinct();
+    }
+}

@@ -1,0 +1,55 @@
+@using Ellicium
+@using System.Text.Json
+
+<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumLabel Text="Variant:" />
+        <ElliciumSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumTemplateForm TItem="Model" Data=@model Submit=@OnSubmit InvalidSubmit=@OnInvalidSubmit>
+        <ElliciumStack Gap="1rem" Class="rz-p-sm-12">
+            <ElliciumFormField Text="First Name" Variant="@variant">
+                <ChildContent>
+                    <ElliciumTextBox Name="FirstName" @bind-Value=@model.FirstName />
+                </ChildContent>
+                <Helper>
+                    <ElliciumRequiredValidator Component="FirstName" Text="First name is required." />
+                </Helper>
+            </ElliciumFormField>
+            <ElliciumFormField Text="Last Name" Variant="@variant">
+                <ChildContent>
+                    <ElliciumTextBox Name="LastName" @bind-Value=@model.LastName />
+                </ChildContent>
+                <Helper>
+                    <ElliciumRequiredValidator Component="LastName" Text="Last name is required." />
+                </Helper>
+            </ElliciumFormField>
+            <ElliciumButton ButtonType="ButtonType.Submit" Text="Submit" ></ElliciumButton>
+        </ElliciumStack>
+    </ElliciumTemplateForm>
+    <EventConsole @ref=@console />
+</div>
+
+@code {
+    Variant variant = Variant.Outlined;
+
+    class Model
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+
+    Model model = new Model();
+    EventConsole console;
+
+    void OnSubmit(Model model)
+    {
+        console.Log($"Submit: {JsonSerializer.Serialize(model, new JsonSerializerOptions() {  WriteIndented = true })}");
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        console.Log($"InvalidSubmit: {JsonSerializer.Serialize(args, new JsonSerializerOptions() {  WriteIndented = true })}");
+    }
+}

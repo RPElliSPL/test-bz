@@ -1,0 +1,51 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumButton Text="Change page state" Click="@((args) => { StateHasChanged(); })" class="my-3" />
+<ElliciumDataGrid AllowColumnReorder="true" ColumnReordered="@OnColumnReordered"
+    AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" AllowColumnResize="true" FilterMode="FilterMode.Advanced" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@employees" TItem="Employee" ColumnWidth="160px" LogicalFilterOperator="LogicalFilterOperator.Or">
+    <Columns>
+        <ElliciumDataGridColumn TItem="Employee" Property="EmployeeID" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" Reorderable="false" Resizable="false" />
+        <ElliciumDataGridColumn TItem="Employee" Title="Photo" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+            <Template Context="data">
+                <ElliciumImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="FirstName" Title="First Name" OrderIndex="2" />
+        <ElliciumDataGridColumn TItem="Employee" Property="LastName" Title="Last Name" OrderIndex="1" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Title" Title="Title" />
+        <ElliciumDataGridColumn TItem="Employee" Property="BirthDate" Title="Birth Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HireDate" Title="Hire Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Address" Title="Address" />
+        <ElliciumDataGridColumn TItem="Employee" Property="City" Title="City" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Region" Title="Region" />
+        <ElliciumDataGridColumn TItem="Employee" Property="PostalCode" Title="Postal Code" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Country" Title="Country" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HomePhone" Title="Home Phone" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Extension" Title="Extension" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Notes" Title="Notes" />
+    </Columns>
+</ElliciumDataGrid>
+
+<EventConsole @ref=@console />
+
+@code {
+    EventConsole console;
+
+    IEnumerable<Employee> employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        employees = dbContext.Employees;
+    }
+
+    void OnColumnReordered(DataGridColumnReorderedEventArgs<Employee> args)
+    {
+        console.Log($"Reordered {args.Column.Title}. Old index: {args.OldIndex}, New index: {args.NewIndex}");
+    }
+}

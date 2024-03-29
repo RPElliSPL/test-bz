@@ -1,0 +1,43 @@
+﻿@using System.IO
+@inject DialogService DialogService
+
+<div style="display: flex">
+    <ElliciumTree Change=@(args => selectedFile = args.Value.ToString()) Style="width: 50%; height: 300px">
+        <ElliciumTreeItem Text="Images" Expanded="true" Icon="">
+            <ElliciumTreeItem Text="Ellicium-blazor-components.png" Value="@($"/images/Ellicium-blazor-components.png")" />
+            <ElliciumTreeItem Text="Ellicium-blazor-studio.png" Value="@($"/images/Ellicium-blazor-studio.png")" />
+        </ElliciumTreeItem>
+    </ElliciumTree>
+    <div style="width: 50%; padding: 16px; text-align: center;">
+    @if (!string.IsNullOrEmpty(Path.GetExtension(selectedFile)))
+    {
+        <h4>Preview</h4>
+        <ElliciumImage Path=@(selectedFile) style="max-width: 100%" AlternateText="Selected image file preview" />
+    }
+    </div>
+</div>
+
+<div style="text-align: right">
+    <ElliciumButton Text="OK" Click=@OnOkClick />
+    <ElliciumButton Text="Cancel" Click=@OnCancelClick ButtonStyle="ButtonStyle.Secondary"  />
+</div>
+@code {
+    string selectedFile;
+
+    void OnCancelClick()
+    {
+        DialogService.Close(null);
+    }
+
+    void OnOkClick()
+    {
+        string result = null;
+
+        if (selectedFile != null && !string.IsNullOrEmpty(Path.GetExtension(selectedFile)))
+        {
+            result = selectedFile;
+        }
+
+        DialogService.Close(result);
+    }
+}

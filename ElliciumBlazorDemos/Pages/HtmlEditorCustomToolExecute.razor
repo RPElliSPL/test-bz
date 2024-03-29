@@ -1,0 +1,18 @@
+﻿<ElliciumHtmlEditor style="height: 200px;" Execute=@OnExecute>
+    <ElliciumHtmlEditorCustomTool CommandName="InsertToday" Icon="today" Title="Insert today" />
+</ElliciumHtmlEditor>
+
+@code {
+    async Task OnExecute(HtmlEditorExecuteEventArgs args)
+    {
+        if (args.CommandName == "InsertToday")
+        {
+            await InsertDate(args.Editor, DateTime.Now);
+        }
+    }
+
+    async Task InsertDate(ElliciumHtmlEditor editor, DateTime date)
+    {
+        await editor.ExecuteCommandAsync(HtmlEditorCommands.InsertHtml, $"<strong>{date.ToLongDateString()}</strong>");
+    }
+}

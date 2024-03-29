@@ -1,0 +1,38 @@
+﻿@using System.Linq.Expressions
+@typeparam TItem
+@inherits ElliciumComponent
+
+@if (Properties != null)
+{
+    <CascadingValue Value=this>
+        @Properties
+    </CascadingValue>
+}
+
+@if (Visible)
+{
+    <div @ref="@Element" style="@Style" @attributes="Attributes" class="@GetCssClass()" id="@GetId()">
+        <ElliciumSelectBar @bind-Value=LogicalFilterOperator Change="@((LogicalFilterOperator args) => { InvokeAsync(ChangeState); if(Auto) { InvokeAsync(Filter); } })" Size="ButtonSize.Small" class="rz-datafilter-operator-bar">
+            <Items>
+                <ElliciumSelectBarItem Text="@AndOperatorText" Value="LogicalFilterOperator.And" title="@AndOperatorText" />
+                <ElliciumSelectBarItem Text="@OrOperatorText" Value="LogicalFilterOperator.Or" title="@OrOperatorText" />
+            </Items>
+        </ElliciumSelectBar>
+        <ElliciumButton title="@ClearFilterText" class="rz-datafilter-item-clear rz-datafilter-all-items-clear" Icon="clear" Click="@(args => ClearFilters())" Visible=@(Filters.Any()) Variant="Variant.Text" Size="ButtonSize.Small" ButtonStyle="ButtonStyle.Dark" />
+
+        <ul class="rz-datafilter-group">
+            @foreach(var filter in Filters)
+            {
+                <li class="rz-datafilter-item @(filter.Filters != null ? "rz-datafilter-group-item" : "")">
+                <ElliciumDataFilterItem @key=@filter.GetHashCode() DataFilter="@this" Filter="@filter" />
+              </li>
+            }
+            <li class="rz-datafilter-item rz-datafilter-bar">
+                <ElliciumSplitButton Icon="add" Click="@(args => AddFilter(args?.Value == "group"))" Size="ButtonSize.Small" Variant="Variant.Flat" ButtonStyle="ButtonStyle.Primary" Shade="Shade.Lighter">
+                    <ElliciumSplitButtonItem Icon="add" Text="@AddFilterText" />
+                    <ElliciumSplitButtonItem Icon="playlist_add" Value="group" Text="@AddFilterGroupText" />
+                </ElliciumSplitButton>
+            </li>
+        </ul>
+    </div>
+}

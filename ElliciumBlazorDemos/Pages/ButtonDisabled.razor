@@ -1,0 +1,18 @@
+@inject NotificationService NotificationService
+
+<ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Gap="1rem" Wrap="FlexWrap.Wrap" class="rz-p-12">
+    <ElliciumButton Disabled="true" Text="Primary" ButtonStyle="ButtonStyle.Primary" />
+    <ElliciumButton Disabled="true" Text="Secondary" ButtonStyle="ButtonStyle.Secondary" />
+    <ElliciumButton Disabled="true" Text="Light" ButtonStyle="ButtonStyle.Light" />
+    <ElliciumButton Disabled="true" Text="Info" ButtonStyle="ButtonStyle.Info" />
+    <ElliciumButton Disabled="true" Text="Success" ButtonStyle="ButtonStyle.Success" />
+    <ElliciumButton Disabled="true" Text="Warning" ButtonStyle="ButtonStyle.Warning" />
+    <ElliciumButton Disabled="true" Text="Danger" ButtonStyle="ButtonStyle.Danger" />
+</ElliciumStack>
+
+@code {
+    private void OnClick(string text)
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Button Clicked", Detail = text });
+    }
+}

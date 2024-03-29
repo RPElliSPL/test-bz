@@ -1,0 +1,64 @@
+﻿<ElliciumStack AlignItems="AlignItems.Center" Class="rz-p-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+        <ElliciumCheckBox @bind-Value=@multiple Name="CheckBox1" TValue="bool" />
+        <ElliciumLabel Text="Allow multiple expand" Component="CheckBox1" />
+    </ElliciumStack>
+
+    <ElliciumPanelMenu Click="OnParentClicked" Style="width:300px" Multiple="@multiple">
+        <ElliciumPanelMenuItem Text="General" Icon="home">
+            <ElliciumPanelMenuItem Text="Buttons" Path="buttons" Icon="account_circle"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Menu" Path="menu" Icon="line_weight"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="FileInput" Path="fileinput" Icon="attach_file"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Dialog" Path="dialog" Icon="perm_media"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Notification" Path="notification" Icon="announcement"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Inputs" Icon="payment">
+            <ElliciumPanelMenuItem Text="CheckBox" Path="checkbox" Icon="check_circle"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TextBox" Path="textbox" Icon="input"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TextArea" Path="textarea" Icon="description"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Password" Path="password" Icon="payment"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Numeric" Path="numeric" Icon="aspect_ratio"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DatePicker" Path="datepicker" Icon="date_range"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Data" Icon="save">
+            <ElliciumPanelMenuItem Text="DataGrid" Path="datagrid" Icon="grid_on"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DataList" Path="datalist" Icon="list"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DropDown" Path="dropdown" Icon="dns"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DropDownDataGrid" Path="dropdown-datagrid" Icon="receipt"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="ListBox" Path="listbox" Icon="view_list"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TemplateForm" Path="templateform" Icon="line_style"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Containers" Icon="account_box">
+            <ElliciumPanelMenuItem Text="Tabs" Path="tabs" Icon="tab"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Panel" Path="panel" Icon="content_paste"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Fieldset" Path="fieldset" Icon="account_balance_wallet"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Card" Path="card" Icon="line_style"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="More">
+            <ElliciumPanelMenuItem Click="OnChildClicked" Text="Item1"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Click="OnChildClicked" Text="Item2"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="More items">
+                <ElliciumPanelMenuItem Text="More sub items">
+                    <ElliciumPanelMenuItem Click="OnChildClicked" Text="Item3"></ElliciumPanelMenuItem>
+                    <ElliciumPanelMenuItem Click="OnChildClicked" Text="Item4"></ElliciumPanelMenuItem>
+                </ElliciumPanelMenuItem>
+            </ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+    </ElliciumPanelMenu>
+
+</ElliciumStack>
+<EventConsole @ref=@console />
+@code {
+    bool multiple = true;
+    EventConsole console;
+    
+    void OnParentClicked(MenuItemEventArgs args)
+    {
+        console.Log($"{args.Text} clicked from parent");
+    }
+
+    void OnChildClicked(MenuItemEventArgs args)
+    {
+        console.Log($"{args.Text} from child clicked");
+    }
+}

@@ -1,0 +1,22 @@
+@using Ellicium.Blazor.Rendering
+
+<EditorDropDown Title=@Title Value=@Editor.State.FontName Change=@OnChange Placeholder="@Placeholder"
+    PopupStyle="width: 200px; max-height: 200px; overflow: auto;">
+    <CascadingValue Value=@this>
+        @if (ChildContent != null)
+        {
+            @ChildContent
+        }
+        else
+        {
+            <ElliciumHtmlEditorFontNameItem Text="Arial" Value="Arial" />
+            <ElliciumHtmlEditorFontNameItem Text="Georgia" Value="Georgia" />
+            <ElliciumHtmlEditorFontNameItem Text="Helvetica" Value="Helvetica" />
+            <ElliciumHtmlEditorFontNameItem Text="Monospace" Value="monospace" />
+            <ElliciumHtmlEditorFontNameItem Text="Segoe UI" Value='"Segoe UI"' />
+            <ElliciumHtmlEditorFontNameItem Text="Tahoma" Value="Tahoma" />
+            <ElliciumHtmlEditorFontNameItem Text="Times New Roman" Value='"Times New Roman"' />
+            <ElliciumHtmlEditorFontNameItem Text="Verdana" Value="Verdana" />
+        }
+    </CascadingValue>
+</EditorDropDown>

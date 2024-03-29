@@ -1,0 +1,86 @@
+﻿<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Gap="1rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Orientation:" Style="width: 6rem;" Component="TimelineStylingOrientation" />
+            <ElliciumSelectBar @bind-Value="@orientation" Name="TimelineStylingOrientation" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Orientation)).Cast<Orientation>().Select(t => new { Text = $"{t}", Value = t }))" PointSize="ButtonPointSize.Small" Class="rz-display-none rz-display-xl-flex" />
+            <ElliciumDropDown @bind-Value="@orientation" Name="TimelineStylingOrientation" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Orientation)).Cast<Orientation>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+        </ElliciumStack>
+    </ElliciumStack>
+    <ElliciumStack Orientation="Orientation.Horizontal" FlexWrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-4 rz-mb-6">
+        <ElliciumTimeline Orientation="@orientation" LinePosition="LinePosition.Start"
+            style="--rz-timeline-line-width: 36px;
+                   max-width: 600px;
+                   margin: 0 auto;">
+            <Items>
+                <ElliciumTimelineItem PointVariant="Variant.Flat" PointSize="PointSize.Small" PointStyle="PointStyle.Info">
+                    <PointContent><ElliciumIcon Icon="check" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 1</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Register Your Account</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Flat" PointSize="PointSize.Small" PointStyle="PointStyle.Info">
+                    <PointContent><ElliciumIcon Icon="check" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 2</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Verify Your Identity</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Text" PointStyle="PointStyle.Info">
+                    <PointContent><ElliciumIcon Icon="more_horiz" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 3</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Complete Self-Certification</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Text" PointSize="PointSize.Small">
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 4</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Complete Your Profile</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+            </Items>
+        </ElliciumTimeline>
+
+        <ElliciumTimeline Orientation="@orientation" LinePosition="LinePosition.Start"
+            style="--rz-timeline-line-width: 3px;
+                   --rz-timeline-line-color: var(--rz-info);
+                   --rz-timeline-axis-size: 72px;
+                   max-width: 600px;
+                   margin: 0 auto;">
+            <Items>
+                <ElliciumTimelineItem PointVariant="Variant.Outlined" PointStyle="PointStyle.Info" PointShadow="0">
+                    <PointContent><ElliciumIcon Icon="how_to_reg" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 1</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Register Your Account</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Outlined" PointStyle="PointStyle.Info" PointShadow="0">
+                    <PointContent><ElliciumIcon Icon="fingerprint" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 2</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Verify Your Identity</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Outlined" PointSize="PointSize.Large" PointStyle="PointStyle.Info" PointShadow="0">
+                    <PointContent><ElliciumIcon Icon="workspace_premium" /></PointContent>
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0 rz-color-info">Step 3</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0 rz-color-info">Complete Self-Certification</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+                <ElliciumTimelineItem PointVariant="Variant.Outlined" PointSize="PointSize.Small" PointStyle="PointStyle.Info" PointShadow="0">
+                    <ChildContent>
+                        <ElliciumText TextStyle="TextStyle.Subtitle1" Class="rz-m-0">Step 4</ElliciumText>
+                        <ElliciumText TextStyle="TextStyle.Body2" Class="rz-m-0">Complete Your Profile</ElliciumText>
+                    </ChildContent>
+                </ElliciumTimelineItem>
+            </Items>
+        </ElliciumTimeline>
+    </ElliciumStack>
+</div>
+
+@code {
+    Orientation orientation = Orientation.Vertical;
+}

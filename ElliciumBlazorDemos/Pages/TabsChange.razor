@@ -1,0 +1,15 @@
+﻿<ElliciumTabs>
+    <Tabs>
+        <ElliciumTabsItem Text="Tab1">
+            Tab1
+            <ElliciumButton Text="Enable/disable second tab" Click="@(args => disabled = !disabled)" />
+        </ElliciumTabsItem>
+        <ElliciumTabsItem Text="Tab2" Disabled=@disabled>
+            Tab2
+        </ElliciumTabsItem>
+    </Tabs>
+</ElliciumTabs>
+
+@code {
+    bool disabled = true;
+}

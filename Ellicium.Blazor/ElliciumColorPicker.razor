@@ -1,0 +1,121 @@
+@using Ellicium.Blazor.Rendering
+@using System.Text.RegularExpressions
+@using Microsoft.JSInterop
+@inherits FormComponent<string>
+
+@if (Visible)
+{
+    <div @ref=@Element style=@Style @onclick=@Toggle @attributes=@Attributes class=@GetCssClass() id=@GetId() tabindex="@(Disabled ? -1 : TabIndex)" @onkeypress="@(args => OnKeyPress(args, Toggle()))" @onkeypress:preventDefault=preventKeyPress @onkeypress:stopPropagation>
+        @if (Icon != null)
+        {
+            <i class="rzi" style="@(!string.IsNullOrEmpty(IconColor) ? $"color:{IconColor}" : null)">@Icon</i>
+        }
+        <div class="rz-colorpicker-value" style="background-color: @Value" ></div>
+        <button type="button" tabindex="-1" class="rz-colorpicker-trigger" disabled=@Disabled @onclick:preventDefault><i class="rzi" /></button>
+        <Popup Lazy=@(PopupRenderMode == PopupRenderMode.OnDemand) @ref=@Popup class="rz-colorpicker-popup" Close=@OnClosePopup Open=@Open>
+            @if (ShowHSV)
+            {
+                <Draggable class="rz-saturation-picker rz-colorpicker-section" style=@($"background-color: hsl({(HueHandleLeft * 360).ToInvariantString()}, 100%, 50%)") Drag=@OnSaturationMove
+                           id=@(GetId() + "hsl" ) tabindex="@(Disabled ? -1 : 0)" @onkeydown="@(args => OnHslKeyPress(args))">
+                    <div class="rz-saturation-white">
+                        <div class="rz-saturation-black"></div>
+                        <div class="rz-saturation-handle" style=@($"top: {(SaturationHandleTop * 100).ToInvariantString()}%; left: {(SaturationHandleLeft * 100).ToInvariantString()}%")></div>
+                    </div>
+                </Draggable>
+                <div class="rz-colorpicker-preview-area rz-colorpicker-section">
+                    <div class="rz-hue-and-alpha">
+                        <Draggable class="rz-hue-picker" Drag=@OnHueMove 
+                            id=@(GetId() + "hue" ) tabindex="@(Disabled ? -1 : 0)" @onkeydown="@(args => OnHueKeyPress(args))">
+                            <div class="rz-hue-handle" style=@($"top: 0; left: {(HueHandleLeft * 100).ToInvariantString()}%")></div>
+                        </Draggable>
+                        <Draggable style=@($"background-image: linear-gradient(to right, {AlphaGradientStart} 0%, {AlphaGradientEnd} 100%)") class="rz-alpha-picker" Drag=@OnAlphaMove
+                            id=@(GetId() + "alpha" ) tabindex="@(Disabled ? -1 : 0)" @onkeydown="@(args => OnAlphaKeyPress(args))">
+                            <div class="rz-alpha-handle" style=@($"top: 0; left: {(AlphaHandleLeft * 100).ToInvariantString()}%")></div>
+                        </Draggable>
+                    </div>
+                    <div class="rz-colorpicker-preview" style=@($"background-color: {Color}")></div>
+                </div>
+            }
+            @if (ShowRGBA)
+            {
+                <div class="rz-colorpicker-rgba rz-colorpicker-section" @onmousedown:stopPropagation> 
+                    <div class="rz-color-box">
+                        <ElliciumTextBox Value=@Hex @oninput=@(args => ChangeRGB(args.Value)) aria-label=@HexText />
+                        @HexText
+                    </div>
+                    <div class="rz-color-box">
+                        <ElliciumNumeric TValue="double" Value=@Red Min="0" Max="255" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", RedText }})"
+                            @oninput=@(args => ChangeColor(args.Value, (color, value) => color.Red = value)) 
+                            Change=@(red => ChangeColor(red, (color, value) => color.Red = value)) 
+                        />
+                        @RedText
+                    </div>
+                    <div class="rz-color-box">
+                        <ElliciumNumeric TValue="double" Value=@Green Min="0" Max="255" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", GreenText }})"
+                            @oninput=@(args => ChangeColor(args.Value, (color, value) => color.Green = value)) 
+                            Change=@(green => ChangeColor(green, (color, value) => color.Green = value)) 
+                        />
+                        @GreenText
+                    </div>
+                    <div class="rz-color-box">
+                        <ElliciumNumeric TValue="double" Value=@Blue Min="0" Max="255" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", BlueText }})"
+                            @oninput=@(args => ChangeColor(args.Value, (color, value) => color.Blue = value)) 
+                            Change=@(blue => ChangeColor(blue, (color, value) => color.Blue = value)) 
+                        />
+                        @BlueText
+                    </div>
+                    <div class="rz-color-box">
+                        <ElliciumNumeric TValue="double" Value=@Alpha Min="0" Max="100" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", AlphaText }})"
+                            @oninput=@(args => ChangeAlpha(args.Value)) 
+                            Change=@(alpha => ChangeAlpha(alpha)) 
+                        />
+                        @AlphaText
+                    </div>
+                </div>
+            }
+            @if (ShowColors)
+            {
+                <div class="rz-colorpicker-colors rz-colorpicker-section">
+                    <CascadingValue Value=@this>
+                    @if (ChildContent != null)
+                    {
+                        @ChildContent
+                    }
+                    else
+                    {
+                        <ElliciumColorPickerItem Value="ff2800" />
+                        <ElliciumColorPickerItem Value="fe9300" />
+                        <ElliciumColorPickerItem Value="fefb00" />
+                        <ElliciumColorPickerItem Value="02f900" />
+                        <ElliciumColorPickerItem Value="00fdff" />
+                        <ElliciumColorPickerItem Value="0433ff" />
+                        <ElliciumColorPickerItem Value="ff40ff" />
+                        <ElliciumColorPickerItem Value="942292" />
+                        <ElliciumColorPickerItem Value="aa7942" />
+                        <ElliciumColorPickerItem Value="ffffff" />
+                        <ElliciumColorPickerItem Value="000000" />
+                        <ElliciumColorPickerItem Value="53d5fd" />
+                        <ElliciumColorPickerItem Value="73a7fe" />
+                        <ElliciumColorPickerItem Value="874efe" />
+                        <ElliciumColorPickerItem Value="d357fe" />
+                        <ElliciumColorPickerItem Value="ed719e" />
+                        <ElliciumColorPickerItem Value="ff8c82" />
+                        <ElliciumColorPickerItem Value="ffa57d" />
+                        <ElliciumColorPickerItem Value="ffc677" />
+                        <ElliciumColorPickerItem Value="fff995" />
+                        <ElliciumColorPickerItem Value="ebf38f" />
+                        <ElliciumColorPickerItem Value="b1dd8c" />
+                    }
+                    </CascadingValue>
+                </div>
+
+            }
+            @if (ShowButton)
+            {
+                <div class="rz-colorpicker-button rz-colorpicker-section">
+                    <ElliciumButton ButtonStyle="ButtonStyle.Primary" Click=@OnClick Text=@ButtonText @onclick:preventDefault />
+                </div>
+            }
+        </Popup>
+    </div>
+}

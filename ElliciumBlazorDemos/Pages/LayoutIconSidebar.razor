@@ -1,0 +1,30 @@
+<ElliciumLayout>
+    <ElliciumHeader>
+        <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <ElliciumSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <ElliciumLabel Text="Header" />
+        </ElliciumStack>
+    </ElliciumHeader>
+    <ElliciumSidebar Responsive="false" Style="width: max-content">
+        <ElliciumPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
+            <ElliciumPanelMenuItem Text="Overview" Icon="home" />
+            <ElliciumPanelMenuItem Text="Dashboard" Icon="dashboard" />
+            <ElliciumPanelMenuItem Text="UI Fundamentals" Icon="auto_awesome">
+                <ElliciumPanelMenuItem Text="Themes" Icon="color_lens" />
+                <ElliciumPanelMenuItem Text="Colors" Icon="invert_colors" />
+            </ElliciumPanelMenuItem>
+        </ElliciumPanelMenu>
+    </ElliciumSidebar>
+    <ElliciumBody>
+        <div class="rz-p-4">
+            Body
+        </div>
+    </ElliciumBody>
+    <ElliciumFooter>
+        Footer
+    </ElliciumFooter>
+</ElliciumLayout>
+
+@code {
+    bool sidebarExpanded = true;
+}

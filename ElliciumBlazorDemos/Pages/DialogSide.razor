@@ -1,0 +1,31 @@
+﻿@inject DialogService DialogService
+
+<div class="rz-p-12 rz-text-align-center">
+    <ElliciumStack Orientation="Orientation.Horizontal" Gap="1rem" AlignItems="AlignItems.Center" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);" Wrap="FlexWrap.Wrap">
+        <ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Position:" Component="Position" />
+            <ElliciumSelectBar @bind-Value="@position" TextProperty="Text" ValueProperty="Value" Name="Position"
+                            Data="@(Enum.GetValues(typeof(DialogPosition)).Cast<DialogPosition>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+        </ElliciumStack>
+        <ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Show mask:" Component="Mask" />
+            <ElliciumSwitch @bind-Value="@showMask" Name="Mask" />
+        </ElliciumStack>
+        <ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Close on overlay click:" Component="Close" />
+            <ElliciumSwitch @bind-Value="@closeDialogOnOverlayClick" Disabled=@(!showMask) Name="Close" />
+        </ElliciumStack>
+    </ElliciumStack>
+    <ElliciumButton Text="Dialog on Side" ButtonStyle="ButtonStyle.Secondary" Click="@OpenSideDialog" />
+</div>
+
+@code {
+    DialogPosition position;
+    bool closeDialogOnOverlayClick;
+    bool showMask;
+
+    async Task OpenSideDialog()
+    {
+        await DialogService.OpenSideAsync<DialogSideContent>("Side Panel", options: new SideDialogOptions { CloseDialogOnOverlayClick = closeDialogOnOverlayClick, Position = position, ShowMask = showMask });
+    }
+}

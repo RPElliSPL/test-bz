@@ -1,0 +1,42 @@
+﻿<ElliciumStack Gap="1rem">
+    <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+        <ElliciumLabel Text="AlertStyle:" Style="width: 5rem;" Component="AlertStyle" />
+        <ElliciumSelectBar @bind-Value="@alertStyle" Name="AlertStyle" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(AlertStyle)).Cast<AlertStyle>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@alertStyle" Name="AlertStyle" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(AlertStyle)).Cast<AlertStyle>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+        <ElliciumLabel Text="Size:" Style="width: 5rem;" Component="Size" />
+        <ElliciumSelectBar @bind-Value="@size" Name="Size" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(AlertSize)).Cast<AlertSize>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@size" Name="Size" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(AlertSize)).Cast<AlertSize>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+        <ElliciumLabel Text="Variant:" Style="width: 5rem;" Component="Variant" />
+        <ElliciumSelectBar @bind-Value="@variant" Name="Variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@variant" Name="Variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumAlert Variant="Variant.Flat" AlertStyle="AlertStyle.Warning" Icon="info_outline" Shade="Shade.Lighter" Size="AlertSize.Small" AllowClose=false>
+        Base, Light and Dark alert styles don't have Shades
+    </ElliciumAlert>
+</ElliciumStack>
+
+<ElliciumAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Lighter" AllowClose=false>
+    Alert Shade Lighter
+</ElliciumAlert>
+<ElliciumAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Light" AllowClose=false>
+        Alert Shade Light
+</ElliciumAlert>
+<ElliciumAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" AllowClose=false>
+    Alert Shade Default
+</ElliciumAlert>
+<ElliciumAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Dark" AllowClose=false>
+    Alert Shade Dark
+</ElliciumAlert>
+<ElliciumAlert Variant="@variant" AlertStyle="@alertStyle" Size="@size" Shade="Shade.Darker" AllowClose=false>
+    Alert Shade Darker
+</ElliciumAlert>
+
+@code {
+    Variant variant = Variant.Filled;
+    AlertSize size = AlertSize.Medium;
+    AlertStyle alertStyle = AlertStyle.Primary;
+}

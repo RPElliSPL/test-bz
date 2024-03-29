@@ -1,0 +1,12 @@
+﻿@page "/datagrid-odata"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    DataGrid <strong>OData</strong>
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    Use the <code>LoadData</code> event to get data from a REST service.
+</ElliciumText>
+
+<ElliciumExample ComponentName="DataGrid" Example="DataGridOData" Heading="false" AdditionalSourceCodePages="@(new [] {"../Services/NorthwindODataService.cs"})" Documentation="false">
+    <DataGridOData />
+</ElliciumExample>

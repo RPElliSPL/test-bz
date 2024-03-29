@@ -1,0 +1,22 @@
+@inject NotificationService NotificationService
+
+
+<ElliciumStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Gap="2rem" Wrap="FlexWrap.Wrap" class="rz-p-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Variant="Variant.Filled" Shade="Shade.Default" ToggleShade="Shade.Darker" Click=@(args => OnClick("Filled button")) Text="Filled"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Filled" }})" />
+        <ElliciumToggleButton Variant="Variant.Flat" Shade="Shade.Default" ToggleShade="Shade.Darker" Click=@(args => OnClick("Flat button")) Text="Flat"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Flat" }})" />
+        <ElliciumToggleButton Variant="Variant.Outlined" Shade="Shade.Default" ToggleShade="Shade.Darker" Click=@(args => OnClick("Outlined button")) Text="Outlined"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Outlined" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Default" ToggleShade="Shade.Darker" Click=@(args => OnClick("Text button ")) Text="Text"
+                            InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Text" }})" />
+    </ElliciumStack>
+</ElliciumStack>
+
+@code {
+    private void OnClick(string text)
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "ToggleButton Clicked", Detail = text });
+    }
+}

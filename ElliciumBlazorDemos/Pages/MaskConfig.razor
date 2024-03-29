@@ -1,0 +1,46 @@
+﻿@using System.Text.Json;
+
+<ElliciumTemplateForm TItem="MyObject" Data=@obj Submit=@OnSubmit>
+    <ElliciumCard class="my-5 mx-auto" Style="max-width: 400px;">
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Telephone</ElliciumText>
+    <ElliciumMask Mask="(***) ***-****" CharacterPattern="[0-9]" Placeholder="(000) 000-0000" Name="Phone" @bind-Value=@obj.Phone Change=@(args => OnChange(args, "Telephone")) 
+        Style="width: 100%;" aria-label="Phone" />
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mt-4">Credit Card</ElliciumText>
+    <ElliciumMask Mask="**** **** **** ****" CharacterPattern="[0-9]" Placeholder="0000 0000 0000 0000" Name="CardNr" @bind-Value=@obj.CardNr
+        Change=@(args => OnChange(args, "Credit Card")) Style="width: 100%;" aria-label="Credit Card" />
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mt-4">SSN</ElliciumText>
+    <ElliciumMask Mask="***-**-****" CharacterPattern="[0-9]" Placeholder="000-00-0000" Name="SSN" @bind-Value=@obj.SSN Change=@(args => OnChange(args, "SSN")) 
+        Style="width: 100%;" aria-label="SSN"/>
+    <div class="row">
+        <div class="col-md-12 d-flex align-items-end justify-content-left mt-4">
+            <ElliciumButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />
+            <ElliciumButton ButtonStyle="ButtonStyle.Light" Icon="cancel" style="margin-left: 10px;" Text="Cancel" />
+        </div>
+    </div>
+    </ElliciumCard>
+</ElliciumTemplateForm>
+
+<EventConsole @ref=@console />
+
+@code { 
+    public class MyObject
+    {
+        public string Phone { get; set; }
+        public string CardNr { get; set; }
+        public string SSN { get; set; }
+    }
+
+    MyObject obj = new MyObject();
+
+    EventConsole console;
+
+    void OnChange(string value, string name)
+    {
+        console.Log($"{name} value changed to {value}");
+    }
+
+    void OnSubmit(MyObject arg)
+    {
+        console.Log($"Form submitted with values {JsonSerializer.Serialize(arg)}");
+    }
+}

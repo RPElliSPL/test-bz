@@ -1,0 +1,65 @@
+@using System.IO
+@using Microsoft.EntityFrameworkCore
+@using ElliciumBlazorDemos.Models.Northwind
+
+<ElliciumCard class="my-5 mx-auto" style="max-width: 400px;">
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Inline definition</ElliciumText>
+    <ElliciumTree Expand=@OnExpand Collapse=@OnCollapse Change=@OnChange Style="width: 100%; height: 300px">
+        <ElliciumTreeItem Text="BMW">
+            <ChildContent>
+                <ElliciumTreeItem Text="M3" />
+                <ElliciumTreeItem Text="M5" />
+            </ChildContent>
+            <Template>
+                <img alt="BMW" src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" style="width: 20px; margin-right: 8px;" />
+                <b>@context.Text</b>
+            </Template>
+        </ElliciumTreeItem>
+        <ElliciumTreeItem Text="Audi">
+            <ChildContent>
+                <ElliciumTreeItem Text="RS4" />
+                <ElliciumTreeItem Text="RS6" />
+            </ChildContent>
+            <Template>
+                <img alt="Audi" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg" style="width: 20px; margin-right: 8px;" />
+                <b>@context.Text</b>
+            </Template>
+        </ElliciumTreeItem>
+        <ElliciumTreeItem Text="Mercedes">
+            <Template>
+                <img alt="Mercedes" src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" style="width: 20px; margin-right: 8px;" />
+                <b>@context.Text</b>
+            </Template>
+            <ChildContent>
+                <ElliciumTreeItem Text="C63 AMG" />
+                <ElliciumTreeItem Text="S63 AMG" />
+            </ChildContent>
+        </ElliciumTreeItem>
+    </ElliciumTree>
+</ElliciumCard>
+
+<EventConsole @ref=@console />
+
+@code {
+    EventConsole console;
+
+    void Log(string eventName, string value)
+    {
+        console.Log($"{eventName}: {value}");
+    }
+
+    void OnChange(TreeEventArgs args)
+    {
+        Log("Change", $"Item Text: {args.Text}");
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+        Log("Expand", $"Text: {args.Text}");
+    }
+
+    void OnCollapse(TreeEventArgs args)
+    {
+        Log("Collapse", $"Text: {args.Text}");
+    }
+}

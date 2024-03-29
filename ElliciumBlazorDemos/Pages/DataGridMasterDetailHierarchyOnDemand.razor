@@ -1,0 +1,78 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true" RowRender="@RowRender" ExpandMode="DataGridExpandMode.Single"
+            Data="@orders" TItem="Order" RowExpand="RowExpand">
+    <Template Context="order">
+        <ElliciumDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@order.OrderDetails" TItem="OrderDetail">
+            <Columns>
+                <ElliciumDataGridColumn TItem="OrderDetail" Property="Order.CustomerID" Title="Order" />
+                <ElliciumDataGridColumn TItem="OrderDetail" Property="Product.ProductName" Title="Product" />
+                <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+                    <Template Context="detail">
+                        @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+                    </Template>
+                </ElliciumDataGridColumn>
+                <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+                <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+                    <Template Context="detail">
+                        @String.Format("{0}%", detail.Discount * 100)
+                    </Template>
+                </ElliciumDataGridColumn>
+            </Columns>
+        </ElliciumDataGrid>
+    </Template>
+    <Columns>
+        <ElliciumDataGridColumn TItem="Order" Property="OrderID" Title="Order ID" Width="120px" />
+        <ElliciumDataGridColumn TItem="Order" Property="Customer.CompanyName" Title="Customer" Width="200px" />
+        <ElliciumDataGridColumn TItem="Order" Property="Employee.LastName" Title="Employee" Width="200px" >
+            <Template Context="order">
+                <ElliciumImage Path="@order.Employee?.Photo" style="width: 32px; height: 32px; border-radius: 16px; margin-right: 6px;" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                @order.Employee?.FirstName @order.Employee?.LastName
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="OrderDate" Title="Order Date" FormatString="{0:d}" Width="140px" />
+        <ElliciumDataGridColumn TItem="Order" Property="RequiredDate" Title="Required Date" FormatString="{0:d}" Width="140px" />
+        <ElliciumDataGridColumn TItem="Order" Property="ShippedDate" Title="Shipped Date" FormatString="{0:d}" Width="140px" />
+        <ElliciumDataGridColumn TItem="Order" Property="ShipName" Title="Ship Name" />
+        <ElliciumDataGridColumn TItem="Order" Property="ShipCountry" Title="Ship Country" />
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    IEnumerable<Order> orders;
+    ElliciumDataGrid<Order> grid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orders = dbContext.Orders.Include("Customer").Include("Employee").ToList();
+    }
+
+    void RowRender(RowRenderEventArgs<Order> args)
+    {
+        args.Expandable = args.Data.ShipCountry == "France" || args.Data.ShipCountry == "Brazil";
+    }
+
+    void RowExpand(Order order)
+    {
+        if (order.OrderDetails == null)
+        {
+            order.OrderDetails = dbContext.OrderDetails.Include("Product").Where(o => o.OrderID == order.OrderID).ToList();
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        if (firstRender)
+        {
+            await grid.ExpandRow(orders.FirstOrDefault());
+        }
+    }
+}

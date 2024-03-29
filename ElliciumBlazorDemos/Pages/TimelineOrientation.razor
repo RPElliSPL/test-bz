@@ -1,0 +1,60 @@
+﻿<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Gap="1rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Orientation:" Style="width: 6rem;" Component="orientation" />
+            <ElliciumSelectBar @bind-Value="@orientation" Name="orientation" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Orientation)).Cast<Orientation>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+            <ElliciumDropDown @bind-Value="@orientation" Name="orientation" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Orientation)).Cast<Orientation>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+        </ElliciumStack>
+        <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="LinePosition:" Style="width: 6rem;" Component="position" />
+            <ElliciumSelectBar @bind-Value="@position" Name="position" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(LinePosition)).Cast<LinePosition>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+            <ElliciumDropDown @bind-Value="@position" Name="position" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(LinePosition)).Cast<LinePosition>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+        </ElliciumStack>
+        <ElliciumStack Gap="1rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+            <ElliciumLabel Text="Reverse:" Style="width: 6rem;" Component="Reverse" />
+            <ElliciumSwitch @bind-Value="@reverse" Style="margin-top: 4px;" Name="Reverse" />
+        </ElliciumStack>
+    </ElliciumStack>
+    <ElliciumTimeline Orientation="@orientation" LinePosition="@position" Reverse="@reverse" Class="rz-m-4">
+        <Items>
+            <ElliciumTimelineItem PointStyle="PointStyle.Primary">
+                <LabelContent>
+                    <ElliciumText TextStyle="TextStyle.Subtitle2" Class="rz-m-0 rz-color-primary">NOV 2022</ElliciumText>
+                </LabelContent>
+                <ChildContent>
+                    Celebrating the official release of Ellicium Blazor Studio.
+                </ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem>
+                <LabelContent>
+                    <ElliciumText TextStyle="TextStyle.Subtitle2" Class="rz-m-0 rz-color-primary">JAN 2021</ElliciumText>
+                </LabelContent>
+                <ChildContent>
+                    Ellicium Blazor components open sourced under the MIT license.
+                </ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem>
+                <LabelContent>
+                    <ElliciumText TextStyle="TextStyle.Subtitle2" Class="rz-m-0 rz-color-primary">JUN 2018</ElliciumText>
+                </LabelContent>
+                <ChildContent>
+                    Ellicium 2.0 is a fact.
+                </ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem>
+                <LabelContent>
+                    <ElliciumText TextStyle="TextStyle.Subtitle2" Class="rz-m-0 rz-color-primary">APR 2017</ElliciumText>
+                </LabelContent>
+                <ChildContent>
+                    Ellicium 1.0 is out the door - automatic page generation and MS SQL support.
+                </ChildContent>
+            </ElliciumTimelineItem>
+        </Items>
+    </ElliciumTimeline>
+</div>
+
+@code {
+    Orientation orientation = Orientation.Vertical;
+    LinePosition position = LinePosition.Center;
+    bool reverse;
+}

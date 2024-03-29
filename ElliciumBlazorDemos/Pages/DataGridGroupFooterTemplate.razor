@@ -1,0 +1,67 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumDataGrid @ref="ordersGrid" ColumnWidth="220px" AllowGrouping="false" AllowFiltering="true" AllowPaging="true" AllowSorting="true" 
+        Data="@orders" TItem="Order" Render="@OnRender">
+    <GroupHeaderTemplate>
+        @context.GroupDescriptor.GetTitle(): @(context.Data.Key ?? ""), Group items count: @context.Data.Count, Last order date: @(context.Data.Items.Cast<Order>().OrderByDescending(o => o.OrderDate).FirstOrDefault()?.OrderDate)
+    </GroupHeaderTemplate>
+    <Columns>
+        <ElliciumDataGridColumn Width="50px" TItem="Order" Title="#" Filterable="false" Sortable="false" TextAlign="TextAlign.Center">
+            <Template>
+                @(orders.IndexOf(context) + 1)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="OrderID" Title="Order ID">
+            <FooterTemplate>
+                Displayed orders: <b>@ordersGrid.View.Count()</b> of <b>@orders.Count()</b>
+            </FooterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="Freight" Title="Freight">
+            <Template Context="order">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", order.Freight)
+            </Template>
+            <FooterTemplate>
+                Total amount: <b>@String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", orders.Sum(o => o.Freight))</b>
+            </FooterTemplate>
+            <GroupFooterTemplate>
+                Group amount: <b>@String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", context.Data.Items.Cast<Order>().Sum(o => o.Freight))</b>
+            </GroupFooterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="OrderDate" Title="Order Date" FormatString="{0:d}">
+            <FooterTemplate>
+                Last order date: <b>@String.Format("{0:d}", orders.OrderByDescending(o => o.OrderDate).LastOrDefault()?.OrderDate)</b>
+            </FooterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn Width="160px" TItem="Order" Property="ShipName" Title="Ship Name" />
+        <ElliciumDataGridColumn Width="160px" TItem="Order" Property="Employee.LastName" Title="Employee">
+            <Template Context="order">
+                @order.Employee?.FirstName @order.Employee?.LastName
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    IList<Order> orders;
+    ElliciumDataGrid<Order> ordersGrid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orders = dbContext.Orders.Include("Customer").Include("Employee").ToList();
+    }
+
+    void OnRender(DataGridRenderEventArgs<Order> args)
+    {
+        if(args.FirstRender)
+        {
+            args.Grid.Groups.Add(new GroupDescriptor(){ Property = "Employee.LastName", Title = "Employee" });
+            StateHasChanged();
+        }
+    }
+}

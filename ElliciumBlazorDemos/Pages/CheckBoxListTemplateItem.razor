@@ -1,0 +1,25 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumCheckBoxList @bind-Value=@values TValue="int" class="mb-5">
+        <Items>
+            <ElliciumCheckBoxListItem Value="1">
+                <Template>
+                    <span style="color: green;">Orders</span>
+                </Template>
+            </ElliciumCheckBoxListItem>
+            <ElliciumCheckBoxListItem Value="2">
+                <Template>
+                    <span style="color: orange;">Employees</span>
+                </Template>
+            </ElliciumCheckBoxListItem>
+            <ElliciumCheckBoxListItem Value="3">
+                <Template>
+                    <span style="color: red;">Customers</span>
+                </Template>
+            </ElliciumCheckBoxListItem>
+        </Items>
+    </ElliciumCheckBoxList>
+</div>
+
+@code {
+    IEnumerable<int> values = new int[] { 1 };
+}

@@ -1,0 +1,16 @@
+﻿<div class="rz-m-12">
+    <ElliciumBreadCrumb>
+        <Template Context="item">
+            <ElliciumLink Path="@item.Path" Icon="@item.Icon" Text="@item.Text" />
+            (Template)
+        </Template>
+        <ChildContent>
+            <ElliciumBreadCrumbItem Path="/" Text="Components" />
+            <ElliciumBreadCrumbItem>
+                <ElliciumLink Path="/badge" Icon="bolt" Text="Badge" />
+                (Child Content)
+            </ElliciumBreadCrumbItem>
+            <ElliciumBreadCrumbItem Text="Add" />
+        </ChildContent>
+    </ElliciumBreadCrumb>
+</div>

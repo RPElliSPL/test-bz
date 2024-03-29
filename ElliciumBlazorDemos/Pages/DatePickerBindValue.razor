@@ -1,0 +1,8 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumLabel Text="Select Date" Component="ElliciumDatePickerBindValue" Style="margin-right: 8px; vertical-align: middle;" />
+    <ElliciumDatePicker @bind-Value=@value Name="ElliciumDatePickerBindValue" ShowCalendarWeek />
+</div>
+
+@code {
+    DateTime? value;
+}

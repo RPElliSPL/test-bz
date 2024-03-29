@@ -1,0 +1,12 @@
+<ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-sm-12">
+    <ElliciumFormField Text="Floating label" >
+        <ElliciumTextBox @bind-Value="@value" />
+    </ElliciumFormField>
+    <ElliciumFormField AllowFloatingLabel="false" Text="Fixed label" >
+        <ElliciumTextBox @bind-Value="@value" />
+    </ElliciumFormField>
+</ElliciumStack>
+
+@code {
+    string value = "";
+}

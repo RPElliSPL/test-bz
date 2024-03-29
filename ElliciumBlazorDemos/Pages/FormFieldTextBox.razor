@@ -1,0 +1,26 @@
+<ElliciumRow AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-sm-12">
+    <ElliciumColumn Size="12" SizeMD="6" SizeLG="3">
+        <ElliciumFormField Text="Outlined/Default" Style="width: 100%;">
+            <ElliciumTextBox @bind-Value="@value" Style="width: 100%;" />
+        </ElliciumFormField>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeMD="6" SizeLG="3">
+        <ElliciumFormField Text="Text" Variant="Variant.Text" Style="width: 100%;">
+            <ElliciumTextBox @bind-Value="@value" Style="width: 100%;" />
+        </ElliciumFormField>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeMD="6" SizeLG="3">
+        <ElliciumFormField Text="Flat" Variant="Variant.Flat" Style="width: 100%;">
+            <ElliciumTextBox @bind-Value="@value" Style="width: 100%;" />
+        </ElliciumFormField>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeMD="6" SizeLG="3">
+        <ElliciumFormField Text="Filled" Variant="Variant.Filled" Style="width: 100%;">
+            <ElliciumTextBox @bind-Value="@value" Style="width: 100%;" />
+        </ElliciumFormField>
+    </ElliciumColumn>
+</ElliciumRow>
+
+@code {
+    string value = "";
+}

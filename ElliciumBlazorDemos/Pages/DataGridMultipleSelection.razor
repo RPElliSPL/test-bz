@@ -1,0 +1,54 @@
+﻿@using Ellicium
+@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumCard class="m-4" style="display: flex; align-items: center; gap: 0.5rem">
+    <ElliciumCheckBox @bind-Value=@allowRowSelectOnRowClick Name="CheckBox1" />
+    <ElliciumLabel Text="Allow row select on row click" Component="CheckBox1" />
+    <ElliciumButton Text="Clear selected rows" Click="@(args => selectedEmployees = null)" />
+</ElliciumCard>
+<ElliciumDataGrid @ref="grid" AllowRowSelectOnRowClick="@allowRowSelectOnRowClick" AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="4"
+            AllowSorting="true" Data="@employees" TItem="Employee" ColumnWidth="200px"
+            SelectionMode="DataGridSelectionMode.Multiple" @bind-Value=@selectedEmployees class="m-4">
+    <Columns>
+        <ElliciumDataGridColumn TItem="Employee" Width="60px" Sortable="false" Filterable="false">
+            <HeaderTemplate>
+                <ElliciumCheckBox TabIndex="-1" TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
+                   Value="@(selectedEmployees == null || selectedEmployees?.Any() != true ? false : !employees.All(i => selectedEmployees.Contains(i)) ? null : employees.Any(i => selectedEmployees.Contains(i)))"
+                   Change="@(args => selectedEmployees = args == true ? employees.ToList() : null)" />
+            </HeaderTemplate>
+            <Template Context="data">
+                <ElliciumCheckBox TabIndex="-1" TriState="false" Value="@(selectedEmployees != null && selectedEmployees.Contains(data))" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select item" }})"
+                    TValue="bool" Change=@(args => { if(!allowRowSelectOnRowClick) { grid.SelectRow(data); }}) />
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="Photo" Title="Employee" Sortable="false" Filterable="false">
+            <Template Context="data">
+                <ElliciumImage Path="@data.Photo" style="width: 40px; height: 40px; border-radius: 8px; margin-right: 8px;" AlternateText="@(data.FirstName + " " + data.LastName)" />
+                @data.FirstName @data.LastName
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="Title" Title="Title" />
+        <ElliciumDataGridColumn TItem="Employee" Property="EmployeeID" Title="Employee ID" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HireDate" Title="Hire Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="City" Title="City" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Country" Title="Country" />
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    bool allowRowSelectOnRowClick = true;
+    IEnumerable<Employee> employees;
+    IList<Employee> selectedEmployees;
+    ElliciumDataGrid<Employee> grid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        employees = dbContext.Employees;
+    }
+}

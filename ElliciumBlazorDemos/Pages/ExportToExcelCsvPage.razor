@@ -1,0 +1,12 @@
+﻿@page "/export-excel-csv"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    Export to Excel and CSV
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    This page demonstrates how to export a Ellicium Blazor DataGrid to Excel and CSV.
+</ElliciumText>
+
+<ElliciumExample ComponentName="DataGrid" Example="ExportToExcelCsv" AdditionalSourceCodePages="@(new [] {"../Services/NorthwindService.cs", "../../ElliciumBlazorDemos.Host/Controllers/ExportNorthwindController.cs", "../../ElliciumBlazorDemos.Host/Controllers/ExportController.cs"})">
+    <ExportToExcelCsv />
+</ElliciumExample>

@@ -1,0 +1,260 @@
+@page "/get-started"
+
+<PageTitle>Get Started | Free UI Components by Ellicium</PageTitle>
+<HeadContent>
+    <meta name="description" content="How to get started with the Ellicium Blazor Components library.">
+</HeadContent>
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8 rz-mb-12">
+    Get started
+</ElliciumText>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 924.76626 641.9894" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/quickstart.svg#quickstart"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">Quickstart Video</ElliciumText>
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                margin-bottom: 3rem;
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+                }
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                }
+        </style>
+    <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/q6PDQ-mXtf8?loop=0&rel=0" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 777.00073 407.99846" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/install.svg#install"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">1. Install</ElliciumText>
+        <ElliciumText>
+            Ellicium Blazor Components are distributed as the <a href="https://www.nuget.org/packages/Ellicium.Blazor/">Ellicium.Blazor</a> nuget package.
+        </ElliciumText>
+        <ElliciumText>
+            You can add them to your project in one of the following ways
+        </ElliciumText>
+        <ul class="rz-text-body1">
+            <li>Install the package from command line by running <code>dotnet add package Ellicium.Blazor</code></li>
+            <li>Add the project from the Visual Nuget Package Manager <img class="rz-ml-0" src="images/nuget-explorer.png" alt="NuGet explorer"></li>
+            <li>Manually edit the .csproj file and add a project reference <code></code></li>
+        </ul>
+        <ElliciumAlert AlertStyle="AlertStyle.Info" Shade="Shade.Lighter">
+            If you want to use the Ellicium.Blazor components in Blazor 8 static rendering mode (SSR) you should be aware that:
+            <ul>
+                <li>
+                    Static rendering mode <a target="_blank" href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes">does not support</a> events and all component interactivity will not be available (e.g. opening a dropdown, sorting a datagrid, opening a dialog).
+                </li>
+                <li>
+                    Applications created using the Blazor 8 template use static rendering mode by default and only some pages (Counter.razor) have interactivity enabled.
+                </li>
+                <li>
+                    The layout is not interactive by default (MainLayout.razor). Blazor components added to it will not be interactive as a result.
+                </li>
+                <li>
+                    You can <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#apply-a-render-mode-to-a-component-instance" target="_blank">enable interactivity per component basis</a> via the <code>@@rendermode</code> attribute e.g. <code>&lt;ElliciumDialog @@rendermode="@@RenderMode.InteractiveServer" /&gt;</code>.
+                    Components that have child content cannot use that approach. You will need a <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#child-component-with-a-serializable-parameter" target="_blank">wrapper component</a> with render mode set as an attribute.
+                </li>
+                <li>
+                    You can <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#set-the-render-mode-for-the-entire-app" target="_blank">enable interactivity</a> for the entire application.
+                </li>
+            </ul>
+        </ElliciumAlert>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 924.76626 641.9894" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/import.svg#import"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">2. Import the namespace</ElliciumText>
+        <ElliciumText>
+            Open the <code>_Imports.razor</code> file of your Blazor application and add these two lines <code>@@using Ellicium</code> and <code>@@using Ellicium.Blazor</code>.
+        </ElliciumText>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 776.36327 516.12769" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/theme.svg#theme"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">3. Include a theme</ElliciumText>
+        <ElliciumText>
+            Open <code>Pages\_Layout.cshtml</code> (Blazor Server .NET 6), <code>Pages\_Host.cshtml</code> (Blazor Server .NET 7), <code>wwwroot/index.html</code> (Blazor WebAssembly)
+            or <code>Components\App.razor</code> (Blazor .NET 8) and include a theme CSS file by adding this snippet:
+        </ElliciumText>
+<pre>
+<code>&lt;link rel="stylesheet" href="_content/Ellicium.Blazor/css/material-base.css"&gt;</code>
+</pre>
+        <ElliciumText>
+            To include a different theme (i.e. Standard) just change the name of the CSS file:
+        </ElliciumText>
+<pre>
+<code>&lt;link rel="stylesheet" href="_content/Ellicium.Blazor/css/standard-base.css"&gt;</code>
+</pre>
+        <ElliciumText>
+           Make sure you have also bootstrap CSS:
+        </ElliciumText>
+<pre>
+<code>&lt;link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"&gt;</code>
+</pre>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 909.75363 730.11005" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/include-Ellicium.svg#include-Ellicium"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">4. Include Ellicium.Blazor.js</ElliciumText>
+        <ElliciumText>
+            Open <code>Pages\_Layout.cshtml</code> (Blazor Server .NET 6), <code>Pages\_Host.cshtml</code> (Blazor Server .NET 7), <code>wwwroot/index.html</code> (Blazor WebAssembly)
+            or <code>Components\App.razor</code> (Blazor .NET 8) and include this snippet
+        </ElliciumText>
+<pre>
+<code>&lt;script src="_content/Ellicium.Blazor/Ellicium.Blazor.js?v=@@(typeof(Ellicium.Colors).Assembly.GetName().Version)"&gt;&lt;/script&gt;</code>
+</pre>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 868.10999 522.45083" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/use-component.svg#use-component"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">5. Use a component</ElliciumText>
+        <ElliciumText>
+            Use any Ellicium Blazor component by typing its tag name in a Blazor page e.g. <code>&lt;ElliciumButton Text="Hi"&gt;&lt;/ElliciumButton&gt;</code>
+        </ElliciumText>
+        <h4 class="rz-my-2">Setting a property</h4>
+<pre>
+<code>
+&lt;ElliciumButton Text="@@text"&gt;&lt;/ElliciumButton&gt;
+@@code {
+  string text = "Hi";
+}
+</code>
+</pre>
+    <h4 class="rz-my-2">Handing events</h4>
+<pre>
+<code>
+&lt;ElliciumButton Click="@@ButtonClicked" Text="Hi"&gt;&lt;/ElliciumButton&gt;
+@@code {
+  void ButtonClicked()
+  {
+    //
+  }
+}
+</code>
+</pre>
+        <ElliciumAlert AlertStyle="AlertStyle.Warning">
+            All Ellicium Blazor components with events are interactive and cannot work in .NET 8 Static @@rendermode. Make sure the components @@rendermode is set to InteractiveServer or InteractiveWebAssembly or they are nested inside interactive parent.
+        </ElliciumAlert>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 943 601.74159" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/premium.svg#premium"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">6. Use Dialog, Notification, ContextMenu and Tooltip components</ElliciumText>
+        <ElliciumText>
+            Open the <code>Shared\MainLayout.razor</code> file and include:
+        </ElliciumText>
+        <ul class="rz-text-body1">
+            <li><code>&lt;ElliciumComponents/&gt;</code></li>
+        </ul>
+        <ElliciumAlert AlertStyle="AlertStyle.Warning">
+            Make sure that you do not nest ElliciumComponents inside a positioned element (i.e. with position: relative, position: absolute or position: fixed).
+            To be safe you can add them at the end of the layout file after all other elements.
+        </ElliciumAlert>
+        <ElliciumText>
+            Open <code>Startup.cs</code> file (Blazor Server before .NET 6) or <code>Program.cs</code> (Blazor WebAssembly or Blazor Server after .NET 6) and add required services:
+        </ElliciumText>
+        <ElliciumText TextStyle="TextStyle.H5" TagName="TagName.H3" class="rz-my-6">Startup.cs (Blazor Server before .NET 6)</ElliciumText>
+<pre>
+    <code>
+    using Ellicium;
+    ...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        ...
+        services.AddElliciumComponents();
+        ...
+    }
+    </code>
+</pre>
+<ElliciumText TextStyle="TextStyle.H5" TagName="TagName.H3" class="rz-my-6">Program.cs (Blazor WebAssembly Blazor and Blazor Server after .NET 6)</ElliciumText>
+<pre>
+    <code>
+    using Ellicium;
+    ...
+    public static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add&lt;App&gt;("app");
+
+        builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+        ...
+
+        builder.Services.AddElliciumComponents();
+        ...
+
+        await builder.Build().RunAsync();
+    }
+    </code>
+</pre>
+    </ElliciumColumn>
+</ElliciumRow>
+
+<ElliciumRow class="docu">
+    <ElliciumColumn Size="12" SizeLG="4" class="rz-text-align-center">
+        <svg viewBox="0 0 680.83858 584.23207" class="rz-display-none rz-display-md-inline-block rz-mt-12 illustration">
+            <use xlink:href="images/success.svg#success"></use>
+        </svg>
+    </ElliciumColumn>
+    <ElliciumColumn Size="12" SizeLG="8">
+        <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">Next: Explore Demos</ElliciumText>
+        <ElliciumText>
+            Hooray! You have successfuly added Ellicium Blazor Components to your Blazor app. Now let's take a deeper look and explore more components and demos.
+        </ElliciumText>
+        <ElliciumText class="rz-text-align-center rz-text-align-lg-start rz-mt-8">
+            <a class="rz-button rz-button-lg rz-primary" href="/datagrid">Explore Demos</a>
+        </ElliciumText>
+    </ElliciumColumn>
+</ElliciumRow>

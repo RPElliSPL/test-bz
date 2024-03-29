@@ -1,0 +1,47 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<div style="display: flex; align-items: center; margin-bottom: 16px">
+    <div style="white-space:nowrap; margin-right: 16px">Logical filter operator:</div>
+    <ElliciumDropDown @bind-Value="@logicalFilterOperator" TextProperty="Text" ValueProperty="Value" Change=@(args => grid.Reload())
+                    Data="@(Enum.GetValues(typeof(LogicalFilterOperator)).Cast<LogicalFilterOperator>().Select(t => new { Text = $"{t}", Value = t }))" />
+    <div style="white-space:nowrap; margin-left: 16px;margin-right: 16px">Filter case sensitivity:</div>
+    <ElliciumDropDown @bind-Value="@filterCaseSensitivity" TextProperty="Text" ValueProperty="Value" Change=@(args => grid.Reload())
+                    Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)).Cast<FilterCaseSensitivity>().Select(t => new { Text = $"{t}", Value = t }))" />
+</div>
+<ElliciumDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true" 
+    FilterMode="FilterMode.Simple" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@employees" TItem="Employee" ColumnWidth="300px"
+    FilterCaseSensitivity="@filterCaseSensitivity" LogicalFilterOperator="@logicalFilterOperator">
+    <Columns>
+        <ElliciumDataGridColumn TItem="Employee" Property="EmployeeID" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="TextAlign.Center" />
+        <ElliciumDataGridColumn TItem="Employee" Title="Photo" Sortable="false" Filterable="false" Width="200px" >
+            <Template Context="data">
+                <ElliciumImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="FirstName" Title="First Name" />
+        <ElliciumDataGridColumn TItem="Employee" Property="LastName" Title="Last Name" Width="150px"/>
+        <ElliciumDataGridColumn TItem="Employee" Property="BirthDate" Title="Birth Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Country" Title="Country" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Notes" Title="Notes" />
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    ElliciumDataGrid<Employee> grid;
+
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.And;
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+
+    IEnumerable<Employee> employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        employees = dbContext.Employees;
+    }
+}

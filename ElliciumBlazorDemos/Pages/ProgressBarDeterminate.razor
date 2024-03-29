@@ -1,0 +1,21 @@
+﻿@using Ellicium
+
+<div class="rz-m-12">
+    <ElliciumProgressBar @bind-Value="@value" />
+</div>
+
+<ElliciumStack Gap="1rem" Class="rz-m-12">
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">ProgressBar with <strong>ProgressBarStyle</strong> property and <strong>ShowValue="false"</strong></ElliciumText>
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Primary" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Secondary" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Light" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Dark" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Success" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Danger" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Warning" @bind-Value="@value" ShowValue="false" />
+    <ElliciumProgressBar ProgressBarStyle="ProgressBarStyle.Info" @bind-Value="@value" ShowValue="false" />
+</ElliciumStack>
+
+@code {
+    double value = 55;
+}

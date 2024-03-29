@@ -1,0 +1,44 @@
+﻿<ElliciumStack class="rz-p-0 rz-p-md-12">
+    <ElliciumCard class="rz-p-4" Variant="Variant.Outlined">
+        <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" Wrap="FlexWrap.Wrap">
+            <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+                Count
+                <ElliciumNumeric @bind-Value="@count" aria-label="count" Min="1" Max="8" />
+            </ElliciumStack>
+            <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+                Gap
+                <ElliciumTextBox @bind-Value="@gap" aria-label="gap" />
+            </ElliciumStack>
+            <ElliciumStack Orientation="Orientation.Vertical" Gap="4px">
+                Disabled
+                <ElliciumSwitch @bind-Value="@disabled" Style="margin-top: 4px;" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "disabled" }})" />
+            </ElliciumStack>
+        </ElliciumStack>
+    </ElliciumCard>
+    <ElliciumCard>
+        <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Default SecurityCode</ElliciumText>
+        <ElliciumSecurityCode @bind-Value=@value Count="@count" Disabled="@disabled" Gap="@gap" />
+    </ElliciumCard>
+    <ElliciumCard>
+        <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Numeric SecurityCode</ElliciumText>
+        <ElliciumSecurityCode @bind-Value=@numbersOnlyValue Type="SecurityCodeType.Numeric" Count="@count" Disabled="@disabled" Gap="@gap" />
+    </ElliciumCard>
+    <ElliciumCard>
+        <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Password SecurityCode</ElliciumText>
+        <ElliciumSecurityCode @bind-Value=@passwordValue Type="SecurityCodeType.Password" Count="@count" Disabled="@disabled" Gap="@gap" />
+    </ElliciumCard>
+    <ElliciumCard>
+        <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Bind SecurityCode value</ElliciumText>
+        <ElliciumSecurityCode @bind-Value=@valueBind Count="@count" Disabled="@disabled" Gap="@gap" />
+    </ElliciumCard>
+</ElliciumStack>
+@code{
+    string value;
+    string numbersOnlyValue;
+    string passwordValue;
+    string valueBind = "sa4f";
+
+    string gap = "0.5rem";
+    bool disabled;
+    int count = 4;
+}

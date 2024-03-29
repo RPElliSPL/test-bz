@@ -1,0 +1,105 @@
+@page "/scheduler"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    Scheduler
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    Demonstration and configuration of the Ellicium Blazor <strong>Scheduler</strong> component.
+</ElliciumText>
+
+<ElliciumExample ComponentName="Scheduler" Example="SchedulerConfig" AdditionalSourceCodePages=@(new [] { "../Models/Appointment.cs", "AddAppointmentPage.razor", "EditAppointmentPage.razor" })>
+    <SchedulerConfig />
+</ElliciumExample>
+
+<ElliciumText Anchor="scheduler#timeline" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Year Planner and Timeline views
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    Plan out the whole year with <code>&lt;ElliciumYearPlannerView /&gt;</code> and <code>&lt;ElliciumYearTimelineView /&gt;</code>.
+</ElliciumText>
+
+<ElliciumExample ComponentName="Scheduler" Example="SchedulerPlannerTimeline" AdditionalSourceCodePages=@(new [] { "../Models/Appointment.cs", "AddAppointmentPage.razor", "EditAppointmentPage.razor" })>
+    <SchedulerPlannerTimeline />
+</ElliciumExample>
+
+<ElliciumText Anchor="scheduler#tooltips" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Display additional content when the user hovers an appointment
+</ElliciumText>
+
+<ElliciumExample ComponentName="Scheduler" Example="SchedulerTooltips" AdditionalSourceCodePages=@(new [] { "../Models/Appointment.cs" })>
+    <SchedulerTooltips />
+</ElliciumExample>
+
+<ElliciumText Anchor="scheduler#keyboard-navigation" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12">
+    Keyboard Navigation
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body1" class="rz-mb-8">
+    The following keys or key combinations provide a way for users to navigate and interact with Ellicium Blazor Scheduler component.
+</ElliciumText>
+
+<div class="rz-data-grid rz-datatable rz-datatable-scrollable" style="width: 100%;">
+    <div class="rz-data-grid-data">
+        <table class="rz-grid-table">
+            <thead>
+                <tr>
+                    <th style="padding: var(--rz-grid-cell-padding)">Press this key</th>
+                    <th style="padding: var(--rz-grid-cell-padding)">To do this</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Tab" /></span></td>
+                    <td><span class="rz-cell-data">Navigate to a Scheduler component.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Tab" /> on focused Scheduler</span></td>
+                    <td><span class="rz-cell-data">Navigate forward across available scheduler components.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Shift" /> + <ElliciumBadge Text="Tab" /> on focused Scheduler</span></td>
+                    <td><span class="rz-cell-data">Navigate backward across available scheduler components.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Right Arrow" /> on week/month view or year view selected month</span></td>
+                    <td><span class="rz-cell-data">Focus previous day.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Left Arrow" /> on week/month view or year view selected month</span></td>
+                    <td><span class="rz-cell-data">Focus next day.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Up Arrow" /> on week/month view or year view selected month</span></td>
+                    <td><span class="rz-cell-data">Focus same day from previous week.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Down Arrow" /> on week/month view or year view selected month</span></td>
+                    <td><span class="rz-cell-data">Focus same day from next week.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Up Arrow" /> on day view</span></td>
+                    <td><span class="rz-cell-data">Focus previous hour.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Down Arrow" /> on day view</span></td>
+                    <td><span class="rz-cell-data">Focus next hour.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Up Arrow" /> on appoinment</span></td>
+                    <td><span class="rz-cell-data">Focus previous appoinment.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Down Arrow" /> on appoinment</span></td>
+                    <td><span class="rz-cell-data">Focus next appoinment.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Space" /> on appoinment</span></td>
+                    <td><span class="rz-cell-data">Edit appoinment.</span></td>
+                </tr>
+                <tr>
+                    <td><span class="rz-cell-data"><ElliciumBadge Text="Enter" /></span></td>
+                    <td><span class="rz-cell-data">Add appoinment.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

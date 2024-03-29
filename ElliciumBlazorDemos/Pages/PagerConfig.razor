@@ -1,0 +1,57 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumDataList WrapItems="true" AllowPaging="false" Data="@orders" TItem="Order">
+    <Template Context="order">
+        <ElliciumCard Style="width:300px;">
+            <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                <ElliciumImage Path="@order.Employee?.Photo" Style="width: 80px; height: 80px; border-radius: 50%" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                <ElliciumStack Gap="0">
+                    <ElliciumText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-2 rz-my-0">Employee</ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Body1"><b>@(order?.Employee?.FirstName + " " + order?.Employee?.LastName)</b></ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-4 rz-mb-0">City</ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Body1"><b>@(order.ShipCity), @(order.ShipCountry)</b></ElliciumText>
+                </ElliciumStack>
+            </ElliciumStack>
+            <hr style="border: none; background-color: rgba(0,0,0,.2); height: 1px; margin: 1rem 0;" />
+            <ElliciumRow>
+                <ElliciumColumn Size="8" Class="rz-text-truncate">
+                    <b>@(order.ShipName)</b>
+                </ElliciumColumn>
+                <ElliciumColumn Size="4" Class="rz-text-align-end">
+                    <ElliciumBadge BadgeStyle="BadgeStyle.Secondary" Text=@($"{String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", order.Freight)}") />
+                </ElliciumColumn>
+            </ElliciumRow>
+        </ElliciumCard>
+    </Template>
+</ElliciumDataList>
+
+<ElliciumPager ShowPagingSummary="true" PagingSummaryFormat="@pagingSummaryFormat" HorizontalAlign="HorizontalAlign.Right" Count="count" PageSize="@pageSize" PageNumbersCount="5" PageChanged="@PageChanged" />
+
+@code {
+    string pagingSummaryFormat = "Displaying page {0} of {1} (total {2} records)";
+    int pageSize = 6;
+    int count;
+    IEnumerable<Order> orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        count = dbContext.Orders.Count();
+        orders = GetOrders(0, pageSize);
+    }
+
+    void PageChanged(PagerEventArgs args)
+    {
+        orders = GetOrders(args.Skip, args.Top);
+    }
+
+    IEnumerable<Order> GetOrders(int skip, int take)
+    {
+        return dbContext.Orders.Include("Customer").Include("Employee").Skip(skip).Take(take).ToList();
+    }
+}

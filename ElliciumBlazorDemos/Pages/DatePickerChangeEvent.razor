@@ -1,0 +1,8 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumLabel Text="Select Date" Component="ElliciumDatePickerChangeEvent" Style="margin-right: 8px; vertical-align: middle;" />
+    <ElliciumDatePicker TValue="DateTime?" Value=@value Change="@(args => value = args)" Name="ElliciumDatePickerChangeEvent" />
+</div>
+
+@code {
+    DateTime? value = DateTime.Now;
+}

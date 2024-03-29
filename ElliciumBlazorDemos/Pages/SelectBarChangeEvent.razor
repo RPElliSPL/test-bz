@@ -1,0 +1,12 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumSelectBar @bind-Value=@value TValue="bool" class="mb-5">
+        <Items>
+            <ElliciumSelectBarItem Text="On" Value="true" />
+            <ElliciumSelectBarItem Text="Off" Value="false" />
+        </Items>
+    </ElliciumSelectBar>
+</div>
+
+@code {
+    bool value;
+}

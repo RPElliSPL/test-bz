@@ -1,0 +1,37 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumLabel Text="Variant:" />
+        <ElliciumSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+
+    <ElliciumCard Variant="@variant" Class="rz-my-12 rz-mx-auto" Style="max-width: 420px">
+        <ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" Class="rz-p-4">
+            <ElliciumImage Path="@order?.Employee?.Photo" Style="width: 100px; height: 100px; border-radius: 50%;" />
+            <ElliciumStack Gap="0">
+                <ElliciumText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-2 rz-my-0">Employee</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body1"><b>@(order?.Employee?.FirstName + " " + order?.Employee?.LastName)</b></ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-4 rz-mb-0">Company</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Body1"><b>@order?.Customer?.CompanyName</b></ElliciumText>
+            </ElliciumStack>
+        </ElliciumStack>
+    </ElliciumCard>
+</div>
+
+@code {
+    Order order;
+
+    Variant variant = Variant.Filled;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        order = dbContext.Orders.Include("Customer").Include("Employee").FirstOrDefault();
+    }
+}

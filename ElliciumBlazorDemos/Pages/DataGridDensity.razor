@@ -1,0 +1,41 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumCard class="my-4" style="display: flex; align-items: center; gap: 0.5rem">
+    <div style="white-space:nowrap; margin-right: 16px">Density:</div>
+    <ElliciumSelectBar @bind-Value="@Density" TextProperty="Text" ValueProperty="Value"
+                        Data="@(Enum.GetValues(typeof(Density)).Cast<Density>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+</ElliciumCard>
+<ElliciumDataGrid Data="@orderDetails" TItem="OrderDetail" Density="@Density" AllowPaging="true" AllowSorting="true">
+    <Columns>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="OrderID" Title="OrderID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="ProductID" Title="ProductID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+            <Template Context="detail">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+            <Template Context="detail">
+                @String.Format("{0}%", detail.Discount * 100)
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    Density Density = Density.Default;
+
+    IEnumerable<OrderDetail> orderDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orderDetails = dbContext.OrderDetails;
+    }
+}

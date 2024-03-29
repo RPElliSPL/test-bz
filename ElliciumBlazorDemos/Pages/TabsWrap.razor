@@ -1,0 +1,15 @@
+﻿<style>
+    ul[role=tablist] {
+        flex-wrap: wrap;
+    }
+</style>
+<ElliciumTabs>
+    <Tabs>
+        @foreach (var i in Enumerable.Range(0,20))
+        {
+            <ElliciumTabsItem Text="@("Tab" + i)">
+                @("Tab" + i)
+            </ElliciumTabsItem>
+        }
+    </Tabs>
+</ElliciumTabs>

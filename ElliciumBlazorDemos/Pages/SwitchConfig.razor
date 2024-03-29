@@ -1,0 +1,15 @@
+﻿<ElliciumStack Class="rz-p-sm-12">
+    <ElliciumSwitch @bind-Value=@value Change=@(args => OnChange(args, "Switch")) InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Switch value" }})" />
+    <EventConsole @ref=@console Style="width: 100%;" />
+</ElliciumStack>
+
+@code {
+    bool value;
+
+    EventConsole console;
+
+    void OnChange(bool? value, string name)
+    {
+        console.Log($"{name} value changed to {value}");
+    }
+}

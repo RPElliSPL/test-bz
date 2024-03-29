@@ -1,0 +1,60 @@
+@using Ellicium
+@using Ellicium.Blazor
+@using Ellicium.Blazor.Rendering
+@using Microsoft.JSInterop
+@inherits FormComponent<string>
+
+@if(Visible)
+{
+    <div @ref=Element style=@Style @attributes=@Attributes class=@GetCssClass() id=@GetId()>
+        @if (ShowToolbar)
+        {
+        <div class="rz-html-editor-toolbar">
+            <CascadingValue Value=@this>
+            @if (ChildContent != null)
+            {
+                @ChildContent
+            }
+            else
+            {
+                <ElliciumHtmlEditorUndo />
+                <ElliciumHtmlEditorRedo />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorBold />
+                <ElliciumHtmlEditorItalic />
+                <ElliciumHtmlEditorUnderline />
+                <ElliciumHtmlEditorStrikeThrough />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorAlignLeft />
+                <ElliciumHtmlEditorAlignCenter />
+                <ElliciumHtmlEditorAlignRight />
+                <ElliciumHtmlEditorJustify />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorIndent />
+                <ElliciumHtmlEditorOutdent />
+                <ElliciumHtmlEditorUnorderedList />
+                <ElliciumHtmlEditorOrderedList />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorColor />
+                <ElliciumHtmlEditorBackground />
+                <ElliciumHtmlEditorRemoveFormat />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorSubscript />
+                <ElliciumHtmlEditorSuperscript />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorLink />
+                <ElliciumHtmlEditorUnlink />
+                <ElliciumHtmlEditorImage />
+                <ElliciumHtmlEditorFontName />
+                <ElliciumHtmlEditorFontSize />
+                <ElliciumHtmlEditorFormatBlock />
+                <ElliciumHtmlEditorSeparator />
+                <ElliciumHtmlEditorSource />
+            }
+            </CascadingValue>
+        </div>
+        }
+        <ElliciumTextArea @ref=@TextArea spellcheck="false" Visible=@(mode == HtmlEditorMode.Source) class="rz-html-editor-source" Value=@Html Change=@SourceChanged />
+        <div hidden="@(mode != HtmlEditorMode.Design)" @ref=@ContentEditable class="rz-html-editor-content" contenteditable=@(!Disabled) @onfocus=@OnFocus @onblur=@OnBlur></div>
+    </div>
+}

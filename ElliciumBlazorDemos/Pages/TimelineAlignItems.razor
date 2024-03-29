@@ -1,0 +1,37 @@
+﻿<div Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack  Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumLabel Text="AlignItems:" Component="AlignItems" />
+        <ElliciumSelectBar @bind-Value="@alignItems" TextProperty="Text" ValueProperty="Value" Name="AlignItems"
+                    Data="@(Enum.GetValues(typeof(AlignItems)).Cast<AlignItems>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" Class="rz-display-none rz-display-xl-flex" />
+        <ElliciumDropDown @bind-Value="@alignItems" TextProperty="Text" ValueProperty="Value" Name="AlignItems"
+                    Data="@(Enum.GetValues(typeof(AlignItems)).Cast<AlignItems>().Select(t => new { Text = $"{t}", Value = t }))" Class="rz-display-inline-flex rz-display-xl-none" />
+    </ElliciumStack>
+    <ElliciumTimeline AlignItems="@alignItems" LinePosition="LinePosition.Alternate" style="max-width: 600px; margin: 0 auto;">
+        <Items>
+            <ElliciumTimelineItem Size="PointSize.Medium" PointStyle="PointStyle.Warning">
+                <LabelContent><ElliciumBadge BadgeStyle="BadgeStyle.Warning" IsPill="true" Text="6th century BC" /></LabelContent>
+                <ChildContent><ElliciumText TextStyle="TextStyle.H6" Class="rz-m-0">Persian soldiers baked flatbreads with cheese and dates</ElliciumText></ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem Size="PointSize.Medium" PointStyle="PointStyle.Danger">
+                <LabelContent><ElliciumBadge BadgeStyle="BadgeStyle.Danger" IsPill="true" Text="19 BC" /></LabelContent>
+                <ChildContent><ElliciumText TextStyle="TextStyle.H6" Class="rz-m-0">An early reference to a pizza-like food</ElliciumText></ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem Size="PointSize.Medium" PointStyle="PointStyle.Warning">
+                <LabelContent><ElliciumBadge BadgeStyle="BadgeStyle.Warning" IsPill="true" Text="997 AD" /></LabelContent>
+                <ChildContent><ElliciumText TextStyle="TextStyle.H6" Class="rz-m-0">The word pizza was first documented</ElliciumText></ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem Size="PointSize.Medium" PointStyle="PointStyle.Danger">
+                <LabelContent><ElliciumBadge BadgeStyle="BadgeStyle.Danger" IsPill="true" Text="16th century" /></LabelContent>
+                <ChildContent><ElliciumText TextStyle="TextStyle.H6" Class="rz-m-0">A galette flatbread was referred to as a pizza in Naples</ElliciumText></ChildContent>
+            </ElliciumTimelineItem>
+            <ElliciumTimelineItem Size="PointSize.Medium" PointStyle="PointStyle.Warning">
+                <LabelContent><ElliciumBadge BadgeStyle="BadgeStyle.Warning" IsPill="true" Text="1843" /></LabelContent>
+                <ChildContent><ElliciumText TextStyle="TextStyle.H6" Class="rz-m-0">Alezandre Dumans described the diversity of pizza toppings</ElliciumText></ChildContent>
+            </ElliciumTimelineItem>
+        </Items>
+    </ElliciumTimeline>
+</div>
+
+@code {
+    AlignItems alignItems = AlignItems.Center;
+}

@@ -1,0 +1,20 @@
+﻿@using Ellicium
+
+<ElliciumStack AlignItems="AlignItems.Center" Class="rz-m-12" Gap="2rem">
+    <ElliciumProgressBarCircular @bind-Value="@value" />
+    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">ProgressBarCircular with <strong>ProgressBarStyle</strong> property</ElliciumText>
+    <ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap">
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Primary" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Secondary" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Light" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Dark" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Success" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Danger" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Warning" @bind-Value="@value" />
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Info" @bind-Value="@value" />
+    </ElliciumStack>
+</ElliciumStack>
+
+@code {
+    double value = 55;
+}

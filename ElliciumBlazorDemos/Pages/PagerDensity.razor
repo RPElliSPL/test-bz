@@ -1,0 +1,54 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+    <ElliciumText TextStyle="TextStyle.Body1">Density:</ElliciumText>
+    <ElliciumSelectBar @bind-Value="@Density" TextProperty="Text" ValueProperty="Value"
+                    Data="@(Enum.GetValues(typeof(Density)).Cast<Density>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+</ElliciumStack>
+
+<ElliciumPager Density="@Density" HorizontalAlign="HorizontalAlign.Center" Count="count" PageSize="@pageSize" PageNumbersCount="6" PageChanged="@PageChanged" />
+
+<ElliciumDataList WrapItems="true" AllowPaging="false" Data="@orders" TItem="Order">
+    <Template Context="order">
+        <ElliciumCard Style="flex: 1;">
+            <ElliciumStack AlignItems="AlignItems.Center" Gap="1rem">
+                <ElliciumImage Path="@order.Employee?.Photo" Style="width: 80px; height: 80px; border-radius: 50%" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                <ElliciumStack Gap="0">
+                    <ElliciumText TextStyle="TextStyle.Subtitle2" TagName="TagName.P" TextAlign="TextAlign.Center">@(order?.Employee?.FirstName + " " + order?.Employee?.LastName)</ElliciumText>
+                    <ElliciumText TextStyle="TextStyle.Body2" TextAlign="TextAlign.Center">@(order.ShipCity), @(order.ShipCountry)</ElliciumText>
+                </ElliciumStack>
+            </ElliciumStack>
+        </ElliciumCard>
+    </Template>
+</ElliciumDataList>
+
+<ElliciumPager Density="@Density" HorizontalAlign="HorizontalAlign.Center" Count="count" PageSize="@pageSize" PageNumbersCount="6" PageChanged="@PageChanged" />
+
+@code {
+    Density Density = Density.Compact;
+    int pageSize = 5;
+    int count;
+    IEnumerable<Order> orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        count = dbContext.Orders.Count();
+        orders = GetOrders(0, pageSize);
+    }
+
+    void PageChanged(PagerEventArgs args)
+    {
+        orders = GetOrders(args.Skip, args.Top);
+    }
+
+    IEnumerable<Order> GetOrders(int skip, int take)
+    {
+        return dbContext.Orders.Include("Customer").Include("Employee").Skip(skip).Take(take).ToList();
+    }
+}

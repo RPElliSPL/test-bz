@@ -1,0 +1,29 @@
+﻿<ElliciumStack Gap="1rem" Class="rz-p-sm-12">
+    <ElliciumAccordion Multiple="true"
+                    Collapse=@(args => Change(args, "Accordion", "collapsed"))
+                    Expand=@(args => Change(args, "Accordion", "expanded"))>
+        <Items>
+            <ElliciumAccordionItem Text="Orders" Icon="account_balance_wallet">
+                Details for Orders
+            </ElliciumAccordionItem>
+            <ElliciumAccordionItem Text="Employees" Icon="account_box">
+                Details for Employees
+            </ElliciumAccordionItem>
+            <ElliciumAccordionItem Text="Customers" Icon="accessibility">
+                Details for Customers
+            </ElliciumAccordionItem>
+        </Items>
+    </ElliciumAccordion>
+
+    <EventConsole @ref=@console />
+</ElliciumStack>
+
+
+
+@code {
+    EventConsole console;
+    void Change(object value, string name, string action)
+    {
+        console.Log($"{name} item with index {value} {action}");
+    }
+}

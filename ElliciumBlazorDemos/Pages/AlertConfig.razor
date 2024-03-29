@@ -1,0 +1,35 @@
+﻿@inject NotificationService NotificationService
+
+<ElliciumStack Gap="0" class="rz-py-8 rz-px-12">
+    <ElliciumAlert AlertStyle="AlertStyle.Warning" Variant="Variant.Flat" Shade="Shade.Lighter">
+        Alert with close button
+    </ElliciumAlert>
+    <ElliciumAlert  AllowClose="false" AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+        Alert without close button
+    </ElliciumAlert>
+    <ElliciumAlert Title="Alert with Title" AlertStyle="AlertStyle.Info" Variant="Variant.Flat" Shade="Shade.Lighter">
+        Alert with title
+    </ElliciumAlert>
+    <ElliciumAlert AlertStyle="AlertStyle.Danger" ShowIcon="false" Variant="Variant.Flat" Shade="Shade.Lighter">
+        Alert without message icon
+    </ElliciumAlert>
+    <ElliciumAlert @bind-Visible="visible" Close=@OnClose>
+        Toggle alert visibility and handle the <code>Close</code> event.
+    </ElliciumAlert>
+    <ElliciumButton Text="@ToggleButtonText" Click="@OnToggle" />
+</ElliciumStack>
+@code {
+    bool visible = true;
+
+    string ToggleButtonText => visible ? "Hide alert" : "Show alert";
+
+    void OnToggle()
+    {
+        visible = !visible;
+    }
+
+    void OnClose()
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Closed", Detail = "Info" });
+    }
+}

@@ -1,0 +1,109 @@
+@using System.Globalization
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ElliciumCard class="w-100 mb-4" >
+                <ElliciumCheckBox @bind-Value="@showDataLabels" Name="dataLabels"></ElliciumCheckBox>
+                <ElliciumLabel Text="Show Data Labels" Component="dataLabels" Style="margin-left: 8px; vertical-align: middle;" />
+            </ElliciumCard>
+            <h4>Auto-size stacked bar series</h4>
+            <ElliciumChart SeriesClick=@OnSeriesClick style="height: 400px">
+                <ElliciumStackedBarSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed" ValueProperty="Revenue">
+                    <ElliciumSeriesDataLabels Visible="@showDataLabels" />
+                </ElliciumStackedBarSeries>
+                <ElliciumStackedBarSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue">
+                    <ElliciumSeriesDataLabels Visible="@showDataLabels" />
+                </ElliciumStackedBarSeries>
+                <ElliciumValueAxis Formatter="@FormatAsUSD" Min="0" Max="800000" Step="100000">
+                    <ElliciumGridLines Visible="true" />
+                    <ElliciumAxisTitle Text="Revenue in USD" />
+                </ElliciumValueAxis>
+                <ElliciumBarOptions Radius="5" />
+            </ElliciumChart>
+            <h4>Custom size stacked bar series</h4>
+            <ElliciumChart SeriesClick=@OnSeriesClick style="height: 400px">
+                <ElliciumStackedBarSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed" ValueProperty="Revenue" />
+                <ElliciumStackedBarSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue" />
+                <ElliciumValueAxis Formatter="@FormatAsUSD" Min="0" Max="800000" Step="100000">
+                    <ElliciumGridLines Visible="true" />
+                    <ElliciumAxisTitle Text="Revenue in USD" />
+                </ElliciumValueAxis>
+                <ElliciumBarOptions Radius="5" Height="20" />
+            </ElliciumChart>
+        </div>
+    </div>
+</div>
+
+<EventConsole @ref=@console />
+
+@code {
+    EventConsole console;
+    bool showDataLabels;
+
+    void OnSeriesClick(SeriesClickEventArgs args)
+    {
+        console.Log(args);
+    }
+
+    class DataItem
+    {
+        public string Quarter { get; set; }
+        public double Revenue { get; set; }
+    }
+
+    string FormatAsUSD(object value)
+    {
+        double num = (double)value / 1000;
+
+        return num.ToString("$0K");
+    }
+
+    DataItem[] revenue2023 = new DataItem[]
+    {
+    new DataItem
+    {
+        Quarter = "Q1",
+        Revenue = 234000
+    },
+    new DataItem
+    {
+        Quarter = "Q2",
+        Revenue = 284000
+    },
+    new DataItem
+    {
+        Quarter = "Q3",
+        Revenue = 274000
+    },
+    new DataItem
+    {
+        Quarter = "Q4",
+        Revenue = 294000
+    },
+    };
+
+    DataItem[] revenue2024 = new DataItem[] {
+    new DataItem
+    {
+    Quarter = "Q1",
+    Revenue = 254000
+    },
+    new DataItem
+    {
+    Quarter = "Q2",
+    Revenue = 324000
+    },
+    new DataItem
+    {
+    Quarter = "Q3",
+    Revenue = 354000
+    },
+    new DataItem
+    {
+    Quarter = "Q4",
+    Revenue = 394000
+    },
+
+    };
+}

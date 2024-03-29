@@ -1,0 +1,36 @@
+﻿@inject NotificationService NotificationService
+<div class="container-fluid splitbutton-demo">
+    <div class="row mb-4">
+        <div class="col">
+            <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H3">Disabled SplitButton</ElliciumText>
+            <ElliciumSplitButton Disabled="true" Click=@(args => OnClick(args, "Disabled SplitButton")) Text="SplitButton">
+                <ChildContent>
+                    <ElliciumSplitButtonItem Text="Item1" Value="1" />
+                    <ElliciumSplitButtonItem Text="Item2" Value="2" />
+                </ChildContent>
+            </ElliciumSplitButton>
+
+            <ElliciumSplitButton Click=@(args => OnClick(args, "Disabled SplitButton item")) Text="SplitButton Item Disabled">
+                <ChildContent>
+                    <ElliciumSplitButtonItem Text="Item1" Value="1" />
+                    <ElliciumSplitButtonItem Text="Disabled Item2" Value="2" Disabled=true />
+                </ChildContent>
+            </ElliciumSplitButton>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    void OnClick(ElliciumSplitButtonItem item, string buttonName)
+    {
+        if (item != null)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "SplitButton Item Clicked", Detail = $"{buttonName}, item with value {item.Value} clicked" });
+        }
+        else
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "SplitButton Clicked", Detail = $"{buttonName} clicked" });
+        }
+    }
+}

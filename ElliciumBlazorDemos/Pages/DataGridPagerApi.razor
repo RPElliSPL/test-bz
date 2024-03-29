@@ -1,0 +1,65 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<div style="margin-bottom: 16px">
+    <ElliciumButton Click="@FirstPage" Text="First page" class="me-2" ButtonStyle="ButtonStyle.Secondary" />
+    <ElliciumButton Click="@TenthPage" Text="10th page" class="me-2" ButtonStyle="ButtonStyle.Secondary" />
+    <ElliciumButton Click="@LastPage" Text="Last page" class="me-2" ButtonStyle="ButtonStyle.Secondary" />
+    <ElliciumCheckBox @bind-Value=@showPagerSummary Name="CheckBox1" Style="margin-left: 5px;" />
+    <ElliciumLabel Text="Show pager summary" Component="CheckBox1" Style="margin-left: 5px;" />
+</div>
+<ElliciumDataGrid @ref=@dataGrid Data="@orderDetails" TItem="OrderDetail" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Center" AllowSorting="true" 
+PageSizeOptions="@pageSizeOptions" ShowPagingSummary="@showPagerSummary" PagingSummaryFormat="@pagingSummaryFormat" Page="@OnPage">
+    <Columns>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="OrderID" Title="OrderID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="ProductID" Title="ProductID" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="UnitPrice" Title="Unit Price">
+            <Template Context="detail">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", detail.UnitPrice)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Quantity" Title="Quantity" />
+        <ElliciumDataGridColumn TItem="OrderDetail" Property="Discount" Title="Discount">
+            <Template Context="detail">
+                @String.Format("{0}%", detail.Discount * 100)
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    string pagingSummaryFormat = "Displaying page {0} of {1} <b>(total {2} records)</b>";
+
+    ElliciumDataGrid<OrderDetail> dataGrid;
+    IEnumerable<int> pageSizeOptions = new int[] { 10, 20, 30 };
+    IEnumerable<OrderDetail> orderDetails;
+    bool showPagerSummary = true;
+
+    async Task FirstPage()
+    {
+        await dataGrid.FirstPage();
+    }
+    async Task TenthPage()
+    {
+        await dataGrid.GoToPage(9);
+    }
+    async Task LastPage()
+    {
+        await dataGrid.LastPage();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+ 
+        orderDetails = dbContext.OrderDetails;
+    }
+
+    void OnPage(PagerEventArgs args)
+    {
+        //
+    }
+}

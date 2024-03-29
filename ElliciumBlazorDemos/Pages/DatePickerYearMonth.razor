@@ -1,0 +1,13 @@
+﻿<div class="rz-p-12 rz-text-align-center">
+    <ElliciumLabel Text="Select Year/Month" Component="DatePickerYearMonth" Style="margin-right: 8px; vertical-align: middle;" />
+    <ElliciumDatePicker @bind-Value=@value ShowDays=false DateFormat="yyyy/MM" CurrentDateChanged=@OnCurrentDateChanged Name="DatePickerYearMonth" />
+</div>
+
+@code {
+    DateTime value = DateTime.Now;
+
+    void OnCurrentDateChanged(DateTime args)
+    {
+        value = new DateTime(args.Year, args.Month, 1);
+    }
+}

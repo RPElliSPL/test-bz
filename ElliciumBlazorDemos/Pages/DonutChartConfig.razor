@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 offset-lg-3 my-5">
+            <ElliciumCard class="w-100 mb-4" >
+                <ElliciumCheckBox @bind-Value="@showDataLabels" Name="dataLabels"></ElliciumCheckBox>
+                <ElliciumLabel Text="Show Data Labels" Component="dataLabels" Style="margin-left: 8px; vertical-align: middle;" />
+            </ElliciumCard>
+            <ElliciumChart>
+                <ElliciumDonutSeries Data="@revenue" CategoryProperty="Quarter" ValueProperty="Revenue" TotalAngle="180" StartAngle="180">
+                    <ChildContent>
+                        <ElliciumSeriesDataLabels Visible="@showDataLabels" />
+                    </ChildContent>
+                    <TitleTemplate>
+                        <div class="rz-donut-content">
+                            <div>Revenue</div>
+                            <div>for 2024</div>
+                        </div>
+                    </TitleTemplate>
+                </ElliciumDonutSeries>
+            </ElliciumChart>
+        </div>
+    </div>
+</div>
+
+@code {
+    bool showDataLabels = false;
+
+    class DataItem
+    {
+        public string Quarter { get; set; }
+        public double Revenue { get; set; }
+    }
+
+    DataItem[] revenue = new DataItem[] {
+    new DataItem
+    {
+    Quarter = "Q1",
+    Revenue = 30000
+    },
+    new DataItem
+    {
+    Quarter = "Q2",
+    Revenue = 40000
+    },
+    new DataItem
+    {
+    Quarter = "Q3",
+    Revenue = 50000
+    },
+    new DataItem
+    {
+    Quarter = "Q4",
+    Revenue = 80000
+    },
+    };
+}

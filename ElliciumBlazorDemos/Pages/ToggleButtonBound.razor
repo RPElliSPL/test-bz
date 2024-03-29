@@ -1,0 +1,23 @@
+@inject NotificationService NotificationService
+
+<ElliciumStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Gap="2rem" Wrap="FlexWrap.Wrap" class="rz-p-12">
+    <ElliciumToggleButton @bind-Value=@value Change=@OnChange Text="@(value ? "Turn off Notifications" : "Turn on Notifications" )" ButtonStyle="ButtonStyle.Light" 
+        ToggleButtonStyle="ButtonStyle.Dark" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Turn off Notifications" }})" />
+    
+    <ElliciumIcon Icon="south" />
+    <ElliciumCard style="width: 220px;">
+        <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween" Gap="1rem" Wrap="FlexWrap.Wrap">
+            <ElliciumText Text="Notifications" TextStyle="TextStyle.Body2" />
+            <ElliciumBadge BadgeStyle="@(value ? BadgeStyle.Info : BadgeStyle.Danger )" Text="@(value ? "ON" : "OFF" )" Shade="Shade.Lighter" />
+        </ElliciumStack>
+    </ElliciumCard>
+</ElliciumStack>
+
+@code {
+    bool value;
+
+    private void OnChange(bool newValue)
+    {        
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "ToggleButton Changed", Detail = $"{newValue}" });
+    }
+}

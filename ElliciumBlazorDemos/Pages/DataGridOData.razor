@@ -1,0 +1,147 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+
+<ElliciumDataGrid @ref="grid" @bind-Value=@selectedEmployees SelectionMode="DataGridSelectionMode.Multiple" KeyProperty="EmployeeID" IsLoading="@isLoading" Count="@count" Data="@employees" 
+    LoadData="@LoadData" FilterPopupRenderMode="PopupRenderMode.OnDemand" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" 
+    FilterMode="FilterMode.Advanced" AllowSorting="true" AllowFiltering="true" AllowPaging="true" PageSize="4" 
+    PagerHorizontalAlign="HorizontalAlign.Center" TItem="Employee" ColumnWidth="200px">
+    <Columns>
+        <ElliciumDataGridColumn TItem="Employee" Width="60px" Sortable="false" Filterable="false">
+            <HeaderTemplate>
+                <ElliciumCheckBox TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
+                                Value="@(selectedEmployees == null || selectedEmployees?.Any() != true ? false : !employees.All(i => selectedEmployees.Select(e => e.EmployeeID).Contains(i.EmployeeID)) ? null : employees.Any(i => selectedEmployees.Select(e => e.EmployeeID).Contains(i.EmployeeID)))"
+                                Change="@(args => selectedEmployees = args == true ? (selectedEmployees ?? Enumerable.Empty<Employee>()).Union(employees.Where(i => !(selectedEmployees ?? Enumerable.Empty<Employee>()).Select(e => e.EmployeeID).Contains(i.EmployeeID))).ToList() : null)" />
+            </HeaderTemplate>
+            <Template Context="data">
+                <ElliciumCheckBox TriState="false" Value="@(selectedEmployees != null && selectedEmployees.Select(e => e.EmployeeID).Contains(data.EmployeeID))" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select item" }})"
+                                TValue="bool" />
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="EmployeeID" Filterable="false" Title="ID" Frozen="true" Width="50px" TextAlign="TextAlign.Center" />
+        <ElliciumDataGridColumn TItem="Employee" Property="FirstName" Title="First Name">
+                <EditTemplate Context="employee">
+                    <ElliciumTextBox @bind-Value="employee.FirstName" />
+                </EditTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="LastName" Title="Last Name" Width="150px"/>
+        <ElliciumDataGridColumn TItem="Employee" Property="Title" Title="Title" 
+            Type="typeof(IEnumerable<string>)" FilterValue="@selectedTitles" FilterOperator="FilterOperator.Contains">
+            <FilterTemplate>
+                <ElliciumDropDown @bind-Value=@selectedTitles Style="width:100%" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select title" }})"
+                    Change=@OnSelectedTitlesChange Data="@(titles)" AllowClear="true" Multiple="true" />
+            </FilterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Title="Customers" Property="Orders" FilterProperty="Customer/CustomerID" Sortable=false
+                                  Type="typeof(IEnumerable<Customer>)" FilterValue="@selectedCustomers" FilterOperator="FilterOperator.In">
+            <FilterTemplate>
+                <ElliciumDropDown @bind-Value=@selectedCustomers Style="width:100%" TextProperty="CompanyName" ValueProperty="CustomerID" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select company" }})"
+                    Change=@OnSelectedCustomersChange Data="@(customers)" AllowSelectAll="false" Multiple="true" MaxSelectedLabels="2" />
+            </FilterTemplate>
+            <Template>
+                    @(string.Join(',', context.Orders != null ? context.Orders.Select(i => i.Customer.CompanyName) : Enumerable.Empty<string>()))
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="TitleOfCourtesy" Title="Title Of Courtesy" />
+        <ElliciumDataGridColumn TItem="Employee" Property="BirthDate" Title="Birth Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HireDate" Title="Hire Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Address" Title="Address" />
+        <ElliciumDataGridColumn TItem="Employee" Property="City" Title="City" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Region" Title="Region" />
+        <ElliciumDataGridColumn TItem="Employee" Property="PostalCode" Title="Postal Code" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Country" Title="Country" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HomePhone" Title="Home Phone" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Extension" Title="Extension" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Notes" Title="Notes" />
+            <ElliciumDataGridColumn TItem="Employee" Context="employee" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Width="156px">
+                <Template Context="employee">
+                    <ElliciumButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" 
+                        Click="@(args => grid.EditRow(employee))" @onclick:stopPropagation="true">
+                    </ElliciumButton>
+                </Template>
+            </ElliciumDataGridColumn>
+    </Columns>
+    <LoadingTemplate>
+        <ElliciumProgressBarCircular ProgressBarStyle="ProgressBarStyle.Primary" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+    </LoadingTemplate>
+</ElliciumDataGrid>
+
+<ElliciumCard class="mt-4">
+    <ElliciumText TextStyle="TextStyle.H6" TagName="TagName.H2" class="mb-3">Data-bind to a service</ElliciumText>
+        <ElliciumText TextStyle="TextStyle.Body1">
+            1. Set the Data and Count properties.
+        </ElliciumText>
+        <pre class="mt-3 p-3">
+            <code>&lt;ElliciumDataGrid Count="@@count" Data="@@employees"</code>
+        </pre>
+        <ElliciumText TextStyle="TextStyle.Body1">
+            2. Handle the LoadData event and update the Data and Count backing fields (<code>employees</code> and <code>count</code> in this case).
+        </ElliciumText>
+            
+        <pre class="mt-3 p-3">
+            <code>
+async Task LoadData(LoadDataArgs args)
+{
+    var result = await service.GetEmployees(filter: args.Filter, top: args.Top, skip: args.Skip, orderby: args.OrderBy, count: true);
+    employees = result.Value.AsODataEnumerable();
+    count = result.Count;
+}
+            </code>
+        </pre>
+</ElliciumCard>
+@code {
+    bool isLoading;
+    int count;
+    ODataEnumerable<Employee> employees;
+    IList<Employee> selectedEmployees;
+    ElliciumDataGrid<Employee> grid;
+
+    List<string> titles = new List<string> {"Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
+    IEnumerable<string> selectedTitles;
+
+    async Task OnSelectedTitlesChange(object value)
+    {
+        if (selectedTitles != null && !selectedTitles.Any())
+        {
+            selectedTitles = null;  
+        }
+
+        await grid.FirstPage();
+    }
+
+    IEnumerable<string> selectedCustomers;
+
+    async Task OnSelectedCustomersChange(object value)
+    {
+        if (selectedCustomers != null && !selectedCustomers.Any())
+        {
+            selectedCustomers = null;
+        }
+
+        await grid.FirstPage();
+    }
+
+    NorthwindODataService service = new NorthwindODataService("https://services.Ellicium.com/odata/Northwind/");
+
+    IEnumerable<Customer> customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var result = await service.GetCustomers();
+        customers = result.Value;
+    }
+
+    async Task LoadData(LoadDataArgs args)
+    {
+        isLoading = true;
+
+        var result = await service.GetEmployees(filter: args.Filter, top: args.Top, skip: args.Skip, orderby: args.OrderBy, count: true, expand: "NorthwindOrders($expand=Customer)");
+        // Update the Data property
+        employees = result.Value.AsODataEnumerable();
+        // Update the count
+        count = result.Count;
+
+        isLoading = false;
+    }
+}

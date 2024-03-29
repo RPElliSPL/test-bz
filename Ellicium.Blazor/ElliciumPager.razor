@@ -1,0 +1,46 @@
+﻿@inherits ElliciumComponent
+@if (GetVisible())
+{
+    <div @ref="@Element" @attributes="Attributes" class="@GetCssClass()" style="@Style" id="@GetId()" 
+         @onkeydown="@OnKeyDown" @onkeydown:preventDefault="preventKeyDown" @onkeydown:stopPropagation="true" tabindex=0
+         @onfocus=@OnFocus>
+        @if(ShowPagingSummary)
+        {
+        <span class="rz-paginator-summary">@((MarkupString)string.Format(PagingSummaryFormat, CurrentPage + 1, numberOfPages, Count))</span>        
+        }
+
+        <a class="rz-paginator-first rz-paginator-element @(skip > 0 ? "": "rz-state-disabled") @(focusedIndex == -2 ? "rz-state-focused": "")" @onclick:preventDefault="true" @onclick="@(() => FirstPage())" aria-label="@FirstPageAriaLabel" role="button" title="@FirstPageTitle">
+            <span class="rz-paginator-icon rzi rzi-step-backward"></span>
+        </a>
+        <a class="rz-paginator-prev rz-paginator-element @(skip > 0 ? "": "rz-state-disabled") @(focusedIndex == -1 ? "rz-state-focused": "")" @onclick:preventDefault="true" @onclick="@(() => PrevPage())" aria-label="@PrevPageAriaLabel" role="button" title="@PrevPageTitle">
+            <span class="rz-paginator-icon rzi rzi-caret-left"></span>
+            @if (PrevPageLabel != null)
+            {
+                <span class="rz-paginator-label">@PrevPageLabel</span>
+            }
+        </a>
+
+        <span class="rz-paginator-pages">
+            @foreach (var i in Enumerable.Range(startPage, Math.Min(endPage + 1, PageNumbersCount)))
+            {
+                <a class="rz-paginator-page rz-paginator-element @(i == CurrentPage ? "rz-state-active" : "") @(startPage + focusedIndex == i ? "rz-state-focused": "")" @onclick:preventDefault="true" @onclick="@(() => GoToPage(i))" aria-label="@string.Format(PageAriaLabelFormat, (i + 1).ToString())" role="button" title="@string.Format(PageTitleFormat, (i + 1).ToString())">@(i + 1)</a>
+            }
+        </span>
+        <a class="rz-paginator-next rz-paginator-element @((CurrentPage != numberOfPages - 1) ? "": "rz-state-disabled") @(focusedIndex == Math.Min(endPage + 1, PageNumbersCount)? "rz-state-focused": "")" @onclick:preventDefault="true" @onclick="@(() => NextPage())" aria-label="@NextPageAriaLabel" role="button" title="@NextPageTitle">
+            @if (NextPageLabel != null)
+            {
+                <span class="rz-paginator-label">@NextPageLabel</span>
+            }
+            <span class="rz-paginator-icon rzi rzi-caret-right"></span>
+        </a>
+        <a class="rz-paginator-last rz-paginator-element  @((CurrentPage != numberOfPages - 1) ? "": "rz-state-disabled") @(focusedIndex == Math.Min(endPage + 1, PageNumbersCount) + 1 ? "rz-state-focused": "")" @onclick:preventDefault="true" @onclick="@(() => LastPage())" aria-label="@LastPageAriaLabel" role="button" title="@LastPageTitle">
+            <span class="rz-paginator-icon rzi rzi-step-forward"></span>
+        </a>
+
+        @if(PageSizeOptions != null && PageSizeOptions.Any())
+        {
+            <ElliciumDropDown TValue="int" Data="@PageSizeOptions" Value="@PageSize" Change="@OnPageSizeChanged" />
+            <span class="rz-pagesize-text">@PageSizeText</span>
+        }
+    </div>
+}

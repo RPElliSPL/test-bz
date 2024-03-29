@@ -1,0 +1,13 @@
+﻿<ElliciumDialog @attributes="Attributes" />
+<ElliciumNotification @attributes="Attributes" />
+<ElliciumContextMenu @attributes="Attributes" />
+<ElliciumTooltip @attributes="Attributes" />
+
+@code {
+    /// <summary>
+    /// Specifies additional custom attributes that will be rendered by the component.
+    /// </summary>
+    /// <value>The attributes.</value>
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object> Attributes { get; set; }
+}

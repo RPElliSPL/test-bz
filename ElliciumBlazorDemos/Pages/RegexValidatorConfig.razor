@@ -1,0 +1,62 @@
+@using Ellicium
+@using System.Text.Json
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col">
+            <ElliciumCard class="w-100 mb-4" >
+            <ElliciumCheckBox @bind-Value=@popup Name="popup"></ElliciumCheckBox>
+                <ElliciumLabel Text="Display validators as popup" Component="popup" Style="margin-left: 8px; vertical-align: middle;" />
+            </ElliciumCard>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <ElliciumTemplateForm TItem="Model" Data=@model Submit=@OnSubmit InvalidSubmit=@OnInvalidSubmit>
+                <ElliciumFieldset Text="Personal information">
+                    <div class="row mb-5">
+                        <div class="col-md-4">
+                            <ElliciumLabel Text="ZIP" Component="ZIP" />
+                            <small style="display: block">(5 digit ZIP code)</small>
+                        </div>
+                        <div class="col">
+                            <ElliciumTextBox style="display: block" Name="ZIP" @bind-Value=@model.Zip class="w-100" />
+                            <ElliciumRequiredValidator Component="ZIP" Text="ZIP code is required" Popup=@popup Style="position: absolute"/>
+                            <ElliciumRegexValidator Component="ZIP" Text="ZIP code must be 5 digits" Pattern="\d{5}" Popup=@popup Style="position: absolute" />
+                        </div>
+                    </div>
+                    <ElliciumButton ButtonType="ButtonType.Submit" Text="Submit"></ElliciumButton>
+                </ElliciumFieldset>
+            </ElliciumTemplateForm>
+        </div>
+    </div>
+</div>
+
+<EventConsole @ref=@console />
+
+@code {
+    class Model
+    {
+        public string Zip { get; set; }
+    }
+
+    bool popup;
+
+    Model model = new Model();
+    EventConsole console;
+
+    void Log(string eventName, string value)
+    {
+        console.Log($"{eventName}: {value}");
+    }
+
+    void OnSubmit(Model model)
+    {
+        Log("Submit", JsonSerializer.Serialize(model, new JsonSerializerOptions() {  WriteIndented = true }));
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        Log("InvalidSubmit", JsonSerializer.Serialize(args, new JsonSerializerOptions() {  WriteIndented = true }));
+    }
+}

@@ -1,0 +1,66 @@
+﻿@page "/dialog"
+
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    Dialog
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    Demonstration and configuration of the Ellicium Blazor Dialog component.
+</ElliciumText>
+
+<HelpPrerequirements/>
+
+<ElliciumText Anchor="dialog#open-page-as-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-8 rz-mb-6">
+    Open page as a dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogWithPage" AdditionalSourceCodePages=@(new List<string>() { "DialogCardPage.razor" })>
+    <DialogWithPage />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#inline-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Inline Dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogInline">
+    <DialogInline />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#busy-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Busy Dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogBusy">
+    <DialogBusy />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#confirm-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Confirm Dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogConfirm">
+    <DialogConfirm />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#alert-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Alert Dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogAlert">
+    <DialogAlert />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#close-dialog-by-clicking-outside" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Close Dialog by clicking outside
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogOverlayClose">
+    <DialogOverlayClose />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#side-dialog" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Side Dialog
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogSide">
+    <DialogSide />
+</ElliciumExample>
+
+<ElliciumText Anchor="dialog#custom-css-classes" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Dialog with custom CSS classes
+</ElliciumText>
+<ElliciumExample ComponentName="Dialog" Example="DialogCss">
+    <DialogCss />
+</ElliciumExample>

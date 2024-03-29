@@ -1,0 +1,24 @@
+﻿@inject DialogService DialogService
+
+<div class="rz-p-12 rz-text-align-center">
+    <ElliciumButton Text="Dialog with inline Blazor content" ButtonStyle="ButtonStyle.Secondary" Click=@ShowInlineDialog />
+</div>
+
+@code {
+    int orderID = 10248;
+
+    async Task ShowInlineDialog()
+    {
+        var result = await DialogService.OpenAsync("Simple Dialog", ds =>
+        @<ElliciumStack Gap="1.5rem">
+            <p>Confirm Order ID <b>@orderID</b>?</p>
+            <ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+                <ElliciumStack Orientation="Orientation.Horizontal">
+                    <ElliciumButton Text="Ok" Click="() => ds.Close(true)" Style="width: 80px;" />
+                    <ElliciumButton Text="Cancel" Click="() => ds.Close(false)" ButtonStyle="ButtonStyle.Light" />
+                </ElliciumStack>
+                <ElliciumButton Text="Refresh" Click="(() => { orderID = 10249; ds.Refresh(); })" ButtonStyle="ButtonStyle.Light" />
+            </ElliciumStack>
+        </ElliciumStack>);
+    }
+}

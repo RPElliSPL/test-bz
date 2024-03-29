@@ -1,0 +1,53 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+
+@inherits DbContextPage
+
+<ElliciumDataGrid AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" Data="@employees" TItem="Employee" 
+    ColumnWidth="140px" LogicalFilterOperator="LogicalFilterOperator.Or" Style="height:300px">
+    <Columns>
+        <ElliciumDataGridColumn TItem="Employee" Property="EmployeeID" Filterable="false" Title="ID" Frozen="true" Width="5rem" TextAlign="TextAlign.Center" />
+        <ElliciumDataGridColumn TItem="Employee" Title="Photo" Sortable="false" Filterable="false" Frozen="@frozen" Width="80px" TextAlign="TextAlign.Center">
+            <HeaderTemplate>
+                <ElliciumCheckBox @bind-Value="frozen" title="Pin/Unpin this column" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Pin/Unpin Photo column" }})" />
+            </HeaderTemplate>
+            <Template Context="data">
+                <ElliciumImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="FirstName" Title="First Name" Frozen="true">
+            <FooterTemplate>
+                Total employees: <b>@employees.Count()</b>
+            </FooterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="LastName" Title="Last Name">
+                <FooterTemplate>
+                Footer
+            </FooterTemplate>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Employee" Property="Title" Title="Title" Width="200px" />
+        <ElliciumDataGridColumn TItem="Employee" Property="BirthDate" Title="Birth Date" FormatString="{0:d}" Frozen="true" FrozenPosition="FrozenColumnPosition.Left"/>
+        <ElliciumDataGridColumn TItem="Employee" Property="HireDate" Title="Hire Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Address" Title="Address" />
+        <ElliciumDataGridColumn TItem="Employee" Property="City" Title="City" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Region" Title="Region" />
+        <ElliciumDataGridColumn TItem="Employee" Property="PostalCode" Title="Postal Code" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Country" Title="Country" />
+        <ElliciumDataGridColumn TItem="Employee" Property="HomePhone" Title="Home Phone" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Extension" Title="Extension" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" />
+        <ElliciumDataGridColumn TItem="Employee" Property="Notes" Title="Notes" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" />
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    IEnumerable<Employee> employees;
+    bool frozen;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        employees = dbContext.Employees;
+    }
+}

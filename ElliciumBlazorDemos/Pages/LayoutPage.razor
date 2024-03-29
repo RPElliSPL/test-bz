@@ -1,0 +1,70 @@
+@page "/layout"
+<style>
+    .example-tabs .rz-layout {
+        height: 300px;
+    }
+</style>
+<ElliciumText TextStyle="TextStyle.H2" TagName="TagName.H1" class="rz-pt-8">
+    Layout
+</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-pb-4">
+    <strong>ElliciumLayout</strong> allows you to define the global layout of your application (usually used in MainLayout.razor).
+    It has header, sidebar, body and footer sections which correspond to the <code>ElliciumHeader</code>, <code>ElliciumSidebar</code>, <code>ElliciumBody</code> and <code>ElliciumFooter</code> components.
+    Sections are optional and can be omitted.
+</ElliciumText>
+
+<ElliciumText Anchor="layout#sidebar-header-footer" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-8 rz-mb-6">
+    Sidebar, Header and Footer
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutSidebarHeaderFooter" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutSidebarHeaderFooter />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#full-height-sidebar" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Full height Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutFullHeightSidebar" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutFullHeightSidebar />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#overlay" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Overlay Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutSidebarOverlay" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutSidebarOverlay />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#overlay-full" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Full height overlay Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutSidebarFullHeightOverlay" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutSidebarFullHeightOverlay />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#right-sidebar" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Right Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutRightSidebar" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutRightSidebar />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#right-full-height-sidebar" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Right full height Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutRightFullHeightSidebar" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutRightFullHeightSidebar />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#right-left-sidebar" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Right and Left Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutRightLeftSidebar" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutRightLeftSidebar />
+</ElliciumExample>
+
+<ElliciumText Anchor="layout#icon-sidebar" TextStyle="TextStyle.H5" TagName="TagName.H2" class="rz-pt-12 rz-mb-6">
+    Icon Sidebar
+</ElliciumText>
+<ElliciumExample ComponentName="Layout" Example="LayoutIconSidebar" Documentation="false" Heading="false" Source="https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/ElliciumLayout.cs">
+    <LayoutIconSidebar />
+</ElliciumExample>

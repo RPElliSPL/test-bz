@@ -1,0 +1,70 @@
+@using Ellicium
+@using System.Text.Json
+
+<ElliciumStack Class="rz-p-0 rz-p-md-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" Class="rz-p-4 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <ElliciumCheckBox @bind-Value=@popup Name="popup"></ElliciumCheckBox>
+        <ElliciumLabel Text="Display validators as popup" Component="popup" />
+    </ElliciumStack>
+
+    <ElliciumTemplateForm TItem="Model" Data=@model Submit=@OnSubmit InvalidSubmit=@OnInvalidSubmit>
+        <ElliciumFieldset Text="Password">
+            <ElliciumStack Gap="2rem" Class="rz-p-4 rz-p-md-12">
+                <ElliciumRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                    <ElliciumColumn Size="12" SizeMD="4" Class="rz-text-align-start rz-text-align-md-end">
+                        <ElliciumLabel Text="Password" Component="Password" />
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeMD="8">
+                        <ElliciumPassword Name="Password" @bind-Value=@model.Password Style="display: block; width: 100%" />
+                        <ElliciumRequiredValidator Component="Password" Text="Enter password" Popup="@popup" Style="position: absolute" />
+                    </ElliciumColumn>
+                </ElliciumRow>
+                <ElliciumRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                    <ElliciumColumn Size="12" SizeMD="4" Class="rz-text-align-start rz-text-align-md-end">
+                        <ElliciumLabel Text="Repeat Password" Component="RepeatPassword" />
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeMD="8">
+                        <ElliciumPassword Name="RepeatPassword" @bind-Value=@model.RepeatPassword Style="display: block; width: 100%" />
+                        <ElliciumRequiredValidator Component="RepeatPassword" Text="Repeat your password" Popup=@popup Style="position: absolute" />
+                        <ElliciumCompareValidator Visible=@(!string.IsNullOrEmpty(model.RepeatPassword)) Value=@model.Password Component="RepeatPassword" Text="Passwords should be the same" Popup=@popup Style="position: absolute" />
+                    </ElliciumColumn>
+                </ElliciumRow>
+                <ElliciumRow AlignItems="AlignItems.Center" Class="rz-mt-4">
+                    <ElliciumColumn Size="12" Offset="0" SizeMD="8" OffsetMD="4">
+                        <ElliciumButton ButtonType="ButtonType.Submit" Text="Submit"></ElliciumButton>
+                    </ElliciumColumn>
+                </ElliciumRow>
+            </ElliciumStack>
+        </ElliciumFieldset>
+    </ElliciumTemplateForm>
+
+    <EventConsole @ref=@console />
+</ElliciumStack>
+
+@code {
+    class Model
+    {
+        public string Password { get; set; }
+        public string RepeatPassword { get; set; }
+    }
+
+    bool popup;
+
+    Model model = new Model();
+    EventConsole console;
+
+    void Log(string eventName, string value)
+    {
+        console.Log($"{eventName}: {value}");
+    }
+
+    void OnSubmit(Model model)
+    {
+        Log("Submit", JsonSerializer.Serialize(model, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        Log("InvalidSubmit", JsonSerializer.Serialize(args, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+}

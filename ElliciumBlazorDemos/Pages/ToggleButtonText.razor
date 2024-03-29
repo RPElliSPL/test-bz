@@ -1,0 +1,61 @@
+@inject NotificationService NotificationService
+
+
+<ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Primary" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Secondary button")) Text="Secondary" ButtonStyle="ButtonStyle.Secondary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Secondary" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Info button")) Text="Info" ButtonStyle="ButtonStyle.Info" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Info" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Success button ")) Text="Success" ButtonStyle="ButtonStyle.Success" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Success" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Warning button ")) Text="Warning" ButtonStyle="ButtonStyle.Warning" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Warning" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Danger button")) Text="Danger" ButtonStyle="ButtonStyle.Danger" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Danger" }})" />
+</ElliciumStack>
+
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.H3" class="rz-mt-4">Text Shades</ElliciumText>
+<ElliciumStack Gap="1rem">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Primary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Secondary button")) Text="Secondary" ButtonStyle="ButtonStyle.Secondary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Secondary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Info button")) Text="Info" ButtonStyle="ButtonStyle.Info" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Info" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Success button ")) Text="Success" ButtonStyle="ButtonStyle.Success" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Success" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Warning button ")) Text="Warning" ButtonStyle="ButtonStyle.Warning" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Warning" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Lighter" Click=@(args => OnClick("Danger button")) Text="Danger" ButtonStyle="ButtonStyle.Danger" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Lighter Danger" }})" />
+    </ElliciumStack>
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Primary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Secondary button")) Text="Secondary" ButtonStyle="ButtonStyle.Secondary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Secondary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Info button")) Text="Info" ButtonStyle="ButtonStyle.Info" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Info" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Success button ")) Text="Success" ButtonStyle="ButtonStyle.Success" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Success" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Warning button ")) Text="Warning" ButtonStyle="ButtonStyle.Warning" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Warning" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Light" Click=@(args => OnClick("Danger button")) Text="Danger" ButtonStyle="ButtonStyle.Danger" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light Danger" }})" />
+    </ElliciumStack>
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Primary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Secondary button")) Text="Secondary" ButtonStyle="ButtonStyle.Secondary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Secondary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Info button")) Text="Info" ButtonStyle="ButtonStyle.Info" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Info" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Success button ")) Text="Success" ButtonStyle="ButtonStyle.Success" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Success" }})"/>
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Warning button ")) Text="Warning" ButtonStyle="ButtonStyle.Warning" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Warning" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Dark" Click=@(args => OnClick("Danger button")) Text="Danger" ButtonStyle="ButtonStyle.Danger" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark Danger" }})"/>
+    </ElliciumStack>
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Primary button")) Text="Primary" ButtonStyle="ButtonStyle.Primary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Primary" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Secondary button")) Text="Secondary" ButtonStyle="ButtonStyle.Secondary" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Secondary" }})"/>
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Info button")) Text="Info" ButtonStyle="ButtonStyle.Info" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Info" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Success button ")) Text="Success" ButtonStyle="ButtonStyle.Success" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Success" }})"/>
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Warning button ")) Text="Warning" ButtonStyle="ButtonStyle.Warning" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Warning" }})" />
+        <ElliciumToggleButton Variant="Variant.Text" Shade="Shade.Darker" Click=@(args => OnClick("Danger button")) Text="Danger" ButtonStyle="ButtonStyle.Danger" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Darker Danger" }})" />
+    </ElliciumStack>
+</ElliciumStack>
+
+<ElliciumText TextStyle="TextStyle.Subtitle1" TagName="TagName.H3" class="rz-mt-4">Text Light and Dark</ElliciumText>
+<ElliciumText TextStyle="TextStyle.Body2" class="rz-mb-4">Light and Dark button styles don't have Shades</ElliciumText>
+<ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap" class="rz-background-color-base-500 rz-p-4">
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Light button")) Text="Light" ButtonStyle="ButtonStyle.Light" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Light button" }})" />
+    <ElliciumToggleButton Variant="Variant.Text" Click=@(args => OnClick("Dark button")) Text="Dark" ButtonStyle="ButtonStyle.Dark" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Dark button" }})" />
+</ElliciumStack>
+
+@code {
+    private void OnClick(string text)
+    {
+        NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "ToggleButton Clicked", Detail = text });
+    }
+}

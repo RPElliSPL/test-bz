@@ -1,0 +1,12 @@
+﻿@inject TooltipService tooltipService
+
+<ElliciumStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Class="rz-p-12">
+    <ElliciumButton Text="Left" MouseEnter="@(args => ShowTooltip(args, new TooltipOptions(){ Position = TooltipPosition.Left }))" />
+    <ElliciumButton Text="Top" MouseEnter="@(args => ShowTooltip(args, new TooltipOptions(){ Position = TooltipPosition.Top }))" />
+    <ElliciumButton Text="Bottom" MouseEnter="@(args => ShowTooltip(args, new TooltipOptions(){ Position = TooltipPosition.Bottom }))" />
+    <ElliciumButton Text="Right" MouseEnter="@(args => ShowTooltip(args, new TooltipOptions(){ Position = TooltipPosition.Right }))" />
+</ElliciumStack>
+
+@code {
+    void ShowTooltip(ElementReference elementReference, TooltipOptions options = null) => tooltipService.Open(elementReference, "Some content", options);
+}

@@ -1,0 +1,90 @@
+@using System.Globalization
+
+<div class="container">
+    <ElliciumCard class="mt-4 w-100 mb-4 d-flex align-items-center" >
+        <ElliciumLabel Text="Color scheme:" Style="margin-right: 8px; vertical-align: middle;" Component="ColorScheme" />
+        <ElliciumDropDown Data="@colorSchemes" @bind-Value="@colorScheme" Name="ColorScheme">
+            <Template>
+                @Enum.GetName(typeof(ColorScheme), context)
+            </Template>
+        </ElliciumDropDown>
+    </ElliciumCard>
+    <div class="row my-5">
+        <div class="col-sm-12 col-lg-8">
+            <ElliciumChart ColorScheme="@colorScheme">
+                @for (var year = 2017; year <= 2024; year++)
+                {
+                    var currentYearRevenue = revenue.Where(r => r.Year == year).ToList();
+                    <ElliciumColumnSeries Data="@currentYearRevenue" CategoryProperty="Quarter" Title="@year.ToString()" ValueProperty="Revenue" />
+                }
+                <ElliciumColumnOptions Margin="0" />
+                <ElliciumValueAxis Formatter="@FormatAsUSD" />
+            </ElliciumChart>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <ElliciumChart ColorScheme="@colorScheme">
+                <ElliciumPieSeries Data="@revenue.Where(r => r.Year == 2020)" Title="Revenue" CategoryProperty="Quarter" ValueProperty="Revenue" />
+            </ElliciumChart>
+        </div>
+    </div>
+    <ElliciumText TextStyle="TextStyle.H5" TagName="TagName.H3">Custom colors and styling</ElliciumText>
+    <div class="row my-5">
+        <div class="col-sm-12">
+            <ElliciumChart>
+                <ElliciumAreaSeries Stroke="rgb(236,72,127)" StrokeWidth="2" Fill="rgba(236,72,127,.5)" Data="@revenue.Where(r => r.Year == 2020)" CategoryProperty="Quarter" ValueProperty="Revenue">
+                    <ChildContent>
+                        <ElliciumMarkers MarkerType="MarkerType.Circle" Fill="#fff" Stroke="rgba(236,72,127)" StrokeWidth="2" Size="8" />
+                    </ChildContent>
+                    <TooltipTemplate Context="data">
+                        Revenue for <span>@data.Quarter</span> 2020: <strong>@data.Revenue.ToString("C0", CultureInfo.CreateSpecificCulture("en-US"))</strong>
+                    </TooltipTemplate>
+                </ElliciumAreaSeries>
+                <ElliciumCategoryAxis>
+                    <ElliciumGridLines Visible="true" Stroke="#ccc" LineType="LineType.Dashed" />
+                </ElliciumCategoryAxis>
+                <ElliciumValueAxis>
+                    <ElliciumGridLines Visible="true" />
+                </ElliciumValueAxis>
+                <ElliciumChartTooltipOptions Style="border: 1px solid rgb(236,72,127); background: #eee; color: #000;" />
+                <ElliciumLegend Visible="false" />
+            </ElliciumChart>
+        </div>
+    </div>
+</div>
+
+@code {
+    IEnumerable<ColorScheme> colorSchemes = Enum.GetValues(typeof(ColorScheme)).Cast<ColorScheme>();
+    ColorScheme colorScheme = ColorScheme.Palette;
+
+    class DataItem
+    {
+        public int Year { get; set; }
+        public string Quarter { get; set; }
+        public double Revenue { get; set; }
+    }
+
+    string FormatAsUSD(object value)
+    {
+        return ((double)value).ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+    }
+
+    IList<DataItem> revenue = new List<DataItem>();
+
+    protected override void OnInitialized()
+    {
+        var random = new Random();
+
+        for (var year = 2017; year <= 2024; year++)
+        {
+            for (var quarter = 1; quarter <= 4; quarter++)
+            {
+                revenue.Add(new DataItem
+                {
+                    Year = year,
+                    Quarter = $"Q{quarter}",
+                    Revenue = random.NextDouble() * 200000
+                });
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+﻿<ElliciumStack AlignItems="AlignItems.Center" Class="rz-p-12">
+    <ElliciumStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+        <div style="white-space:nowrap; margin-right: 16px">DisplayStyle:</div>
+        <ElliciumSelectBar @bind-Value="@DisplayStyle" TextProperty="Text" ValueProperty="Value"
+                         Data="@(Enum.GetValues(typeof(MenuItemDisplayStyle)).Cast<MenuItemDisplayStyle>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+
+        <ElliciumCheckBox @bind-Value=@isShowArrow Name="CheckBox2" TValue="bool" />
+        <ElliciumLabel Text="Show Arrow" Component="CheckBox2" />
+        <ElliciumCheckBox @bind-Value=@changeOnOver Name="CheckBox3" TValue="bool" />
+        <ElliciumLabel Text="Change style on mouse over" Component="CheckBox3" />
+    </ElliciumStack>
+
+    <ElliciumPanelMenu DisplayStyle="@DisplayStyle" ShowArrow="@isShowArrow" Multiple=false
+                     @onmouseover="@(args => { if(changeOnOver) { DisplayStyle = MenuItemDisplayStyle.IconAndText; } })"
+                     @onmouseout="@(args => { if(changeOnOver) { DisplayStyle = MenuItemDisplayStyle.Icon; } })">
+        <ElliciumPanelMenuItem Text="General" Icon="home">
+            <ElliciumPanelMenuItem Text="Buttons" Path="buttons" Icon="account_circle"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Menu" Path="menu" Icon="line_weight"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="FileInput" Path="fileinput" Icon="attach_file"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Dialog" Path="dialog" Icon="perm_media"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Notification" Path="notification" Icon="announcement"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Inputs" Icon="payment">
+            <ElliciumPanelMenuItem Text="CheckBox" Path="checkbox" Icon="check_circle"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TextBox" Path="textbox" Icon="input"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TextArea" Path="textarea" Icon="description"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Password" Path="password" Icon="payment"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Numeric" Path="numeric" Icon="aspect_ratio"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DatePicker" Path="datepicker" Icon="date_range"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Data" Icon="save">
+            <ElliciumPanelMenuItem Text="DataGrid" Path="datagrid" Icon="grid_on"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DataList" Path="datalist" Icon="list"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DropDown" Path="dropdown" Icon="dns"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="DropDownDataGrid" Path="dropdown-datagrid" Icon="receipt"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="ListBox" Path="listbox" Icon="view_list"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="TemplateForm" Path="templateform" Icon="line_style"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+        <ElliciumPanelMenuItem Text="Containers" Icon="account_box">
+            <ElliciumPanelMenuItem Text="Tabs" Path="tabs" Icon="tab"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Panel" Path="panel" Icon="content_paste"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Fieldset" Path="fieldset" Icon="account_balance_wallet"></ElliciumPanelMenuItem>
+            <ElliciumPanelMenuItem Text="Card" Path="card" Icon="line_style"></ElliciumPanelMenuItem>
+        </ElliciumPanelMenuItem>
+    </ElliciumPanelMenu>
+
+</ElliciumStack>
+
+@code {
+    MenuItemDisplayStyle DisplayStyle = MenuItemDisplayStyle.IconAndText;
+
+    bool isShowArrow = true;
+    bool changeOnOver;
+}

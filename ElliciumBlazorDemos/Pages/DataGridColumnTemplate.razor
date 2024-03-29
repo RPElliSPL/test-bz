@@ -1,0 +1,57 @@
+﻿@using ElliciumBlazorDemos.Data
+@using ElliciumBlazorDemos.Models.Northwind
+@using Microsoft.EntityFrameworkCore
+@using System.Linq 
+
+@inherits DbContextPage
+
+@inject DialogService DialogService
+
+<ElliciumDataGrid @ref="ordersGrid" AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" AllowPaging="true" PageSize="5" AllowSorting="true" 
+            Data="@orders" TItem="Order">
+    <Columns>
+        <ElliciumDataGridColumn Width="50px" TItem="Order" Title="#" Filterable="false" Sortable="false" TextAlign="TextAlign.Center">
+            <Template Context="data">
+                @(orders.IndexOf(data) + 1)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="Employee.LastName" Title="Employee">
+            <Template Context="order">
+                <ElliciumImage Path="@order.Employee?.Photo" style="width: 40px; height: 40px; border-radius: 8px; margin-right: 8px; float: left;" AlternateText="@(order.Employee?.FirstName + " " + order.Employee?.LastName)" />
+                <ElliciumText TextStyle="TextStyle.Subtitle2" class="mb-0">@order.Employee?.FirstName @order.Employee?.LastName</ElliciumText>
+                <ElliciumText TextStyle="TextStyle.Caption">@order.Customer?.CompanyName</ElliciumText>
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="OrderDate" Title="Order Date" FormatString="{0:d}" />
+        <ElliciumDataGridColumn TItem="Order" Property="Freight" Title="Freight">
+            <Template Context="order">
+                @String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", order.Freight)
+            </Template>
+        </ElliciumDataGridColumn>
+        <ElliciumDataGridColumn TItem="Order" Property="ShipCountry" Title="ShipCountry" />
+        <ElliciumDataGridColumn Width="160px" TItem="Order" Property="OrderID" Title="Order Details">
+            <Template Context="data">
+                <ElliciumButton ButtonStyle="ButtonStyle.Info" Variant="Variant.Flat" Shade="Shade.Lighter" Icon="info" class="m-1" Click=@(() => OpenOrder(data.OrderID)) Text="@data.OrderID.ToString()" />
+            </Template>
+        </ElliciumDataGridColumn>
+    </Columns>
+</ElliciumDataGrid>
+
+@code {
+    ElliciumDataGrid<Order> ordersGrid;
+    IList<Order> orders;
+
+    async Task OpenOrder(int orderId)
+    {
+         await DialogService.OpenAsync<DialogCardPage>($"Order {orderId}",
+               new Dictionary<string, object>() { { "OrderID", orderId } },
+               new DialogOptions() { Width = "700px", Height = "520px" });
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        orders = dbContext.Orders.Include("Customer").Include("Employee").ToList();
+    }
+}

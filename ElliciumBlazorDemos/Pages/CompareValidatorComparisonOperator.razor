@@ -1,0 +1,71 @@
+@using Ellicium
+@using System.Text.Json
+
+<ElliciumStack Class="rz-p-0 rz-p-md-12">
+    <ElliciumTemplateForm TItem="Model" Data=@model Submit=@OnSubmit InvalidSubmit=@OnInvalidSubmit>
+        <ElliciumFieldset Text="Comparison operator">
+            <ElliciumStack Gap="2rem" Class="rz-p-4 rz-p-md-12">
+                <ElliciumRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                    <ElliciumColumn Size="12" SizeMD="4" Class="rz-text-align-start rz-text-align-md-end">
+                        <ElliciumLabel Text="Operator" Component="Operator" />
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeMD="8">
+                        <ElliciumDropDown Name="Operator" @bind-Value=@compareOperator Data=@(Enum.GetValues(typeof(CompareOperator)).Cast<CompareOperator>()) Style="width: 100%" />
+                    </ElliciumColumn>
+                </ElliciumRow>
+                <ElliciumRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                    <ElliciumColumn Size="12" SizeMD="4" Class="rz-text-align-start rz-text-align-md-end">
+                        <ElliciumLabel Text="Value to compare with" Component="targetValue" />
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeMD="8">
+                        <ElliciumNumeric @bind-Value=@targetValue Style="width: 100%" Name="targetValue" />
+                    </ElliciumColumn>
+                </ElliciumRow>
+                <ElliciumRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                    <ElliciumColumn Size="12" SizeMD="4" Class="rz-text-align-start rz-text-align-md-end">
+                        <ElliciumLabel Text="Value" Component="Value" />
+                    </ElliciumColumn>
+                    <ElliciumColumn Size="12" SizeMD="8">
+                        <ElliciumNumeric @bind-Value=@model.Value Name="Value" style="display: block; width: 100%;" />
+                        <ElliciumCompareValidator Value=@targetValue Component="Value" Style="position: absolute" Operator=@compareOperator />
+                    </ElliciumColumn>
+                </ElliciumRow>
+                <ElliciumRow AlignItems="AlignItems.Center" Class="rz-mt-4">
+                    <ElliciumColumn Size="12" Offset="0" SizeMD="8" OffsetMD="4">
+                        <ElliciumButton ButtonType="ButtonType.Submit" Text="Validate"></ElliciumButton>
+                    </ElliciumColumn>
+                </ElliciumRow>
+            </ElliciumStack>
+        </ElliciumFieldset>
+    </ElliciumTemplateForm>
+    <EventConsole @ref=@console />
+</ElliciumStack>
+
+@code {
+    class Model
+    {
+        public double Value { get; set; }
+    }
+
+    double targetValue = 1;
+
+    CompareOperator compareOperator = CompareOperator.Equal;
+
+    Model model = new Model();
+    EventConsole console;
+
+    void Log(string eventName, string value)
+    {
+        console.Log($"{eventName}: {value}");
+    }
+
+    void OnSubmit(Model model)
+    {
+        Log("Submit", JsonSerializer.Serialize(model, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        Log("InvalidSubmit", JsonSerializer.Serialize(args, new JsonSerializerOptions() { WriteIndented = true }));
+    }
+}
