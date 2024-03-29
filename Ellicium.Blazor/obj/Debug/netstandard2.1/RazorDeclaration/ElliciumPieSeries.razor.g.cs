@@ -13,14 +13,14 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -28,7 +28,7 @@ using Ellicium.Blazor.Rendering;
 #nullable disable
     public partial class ElliciumPieSeries<
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
 TItem
 
 #line default
@@ -42,7 +42,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 9 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
        
     public override CoordinateSystem CoordinateSystem => CoordinateSystem.Polar;
 
@@ -63,7 +63,7 @@ TItem
             __builder2.OpenElement(0, "g");
             __builder2.AddAttribute(1, "class", 
 #nullable restore
-#line 20 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 20 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                     className
 
 #line default
@@ -72,7 +72,7 @@ TItem
             );
             __builder2.AddMarkupContent(2, "\n");
 #nullable restore
-#line 21 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 21 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
              if (PositiveItems.Any())
                 {
                     var sum = PositiveItems.Sum(Value);
@@ -84,7 +84,7 @@ TItem
 #line hidden
 #nullable disable
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                  foreach (var data in PositiveItems)
                     {
                         var value = Value(data);
@@ -108,7 +108,7 @@ TItem
             __builder2.OpenElement(4, "g");
             __builder2.AddAttribute(5, "class", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                    arcClassName
 
 #line default
@@ -117,7 +117,7 @@ TItem
             );
             __builder2.AddMarkupContent(6, "\n");
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                              if (sweepAngle > 0)
                             {
 
@@ -128,7 +128,7 @@ TItem
             __builder2.OpenElement(8, "Path");
             __builder2.AddAttribute(9, "D", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                           d
 
 #line default
@@ -137,7 +137,7 @@ TItem
             );
             __builder2.AddAttribute(10, "Fill", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                                     fill
 
 #line default
@@ -146,7 +146,7 @@ TItem
             );
             __builder2.AddAttribute(11, "StrokeWidth", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                                                         StrokeWidth
 
 #line default
@@ -155,7 +155,7 @@ TItem
             );
             __builder2.AddAttribute(12, "Stroke", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                                                                               stroke
 
 #line default
@@ -165,7 +165,7 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(13, "\n");
 #nullable restore
-#line 45 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 45 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                             }
 
 #line default
@@ -175,14 +175,14 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(15, "\n");
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                     }
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                      
                 }
                 else
@@ -199,7 +199,7 @@ TItem
             __builder2.OpenElement(17, "g");
             __builder2.AddAttribute(18, "class", 
 #nullable restore
-#line 55 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 55 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                arcClassName
 
 #line default
@@ -210,7 +210,7 @@ TItem
             __builder2.OpenElement(20, "Path");
             __builder2.AddAttribute(21, "D", 
 #nullable restore
-#line 56 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 56 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                   d
 
 #line default
@@ -219,7 +219,7 @@ TItem
             );
             __builder2.AddAttribute(22, "Fill", 
 #nullable restore
-#line 56 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 56 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                             fill
 
 #line default
@@ -228,7 +228,7 @@ TItem
             );
             __builder2.AddAttribute(23, "StrokeWidth", 
 #nullable restore
-#line 56 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 56 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                                                 StrokeWidth
 
 #line default
@@ -237,7 +237,7 @@ TItem
             );
             __builder2.AddAttribute(24, "Stroke", 
 #nullable restore
-#line 56 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 56 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                                                                                       stroke
 
 #line default
@@ -249,7 +249,7 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(26, "\n");
 #nullable restore
-#line 58 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 58 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
                 }
 
 #line default
@@ -259,7 +259,7 @@ TItem
             __builder2.CloseElement();
         }
 #nullable restore
-#line 59 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumPieSeries.razor"
+#line 59 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumPieSeries.razor"
             ;
     }
 

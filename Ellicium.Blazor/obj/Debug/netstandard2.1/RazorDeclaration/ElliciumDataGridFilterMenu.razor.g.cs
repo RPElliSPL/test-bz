@@ -13,21 +13,21 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
 using Microsoft.JSInterop;
 
 #line default
@@ -35,7 +35,7 @@ using Microsoft.JSInterop;
 #nullable disable
     public partial class ElliciumDataGridFilterMenu<
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
 TItem
 
 #line default
@@ -49,7 +49,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 113 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
+#line 113 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFilterMenu.razor"
        
     [Parameter]
     public ElliciumDataGridColumn<TItem> Column { get; set; }

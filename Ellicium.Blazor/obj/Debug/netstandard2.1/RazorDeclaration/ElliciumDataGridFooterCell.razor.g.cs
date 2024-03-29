@@ -13,7 +13,7 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Components.Web;
 #nullable disable
     public partial class ElliciumDataGridFooterCell<
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFooterCell.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFooterCell.razor"
 TItem
 
 #line default
@@ -35,7 +35,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGridFooterCell.razor"
+#line 22 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGridFooterCell.razor"
        
     [Parameter(CaptureUnmatchedValues = true)]
     public IReadOnlyDictionary<string, object> Attributes { get; set; }

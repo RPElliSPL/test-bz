@@ -18,7 +18,7 @@ using System.Reflection;
     "id, Scheduler, Charts and robust theming including Material design and Fluent UI" +
     ".")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("4.28.8.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("4.28.8+d25e4c94d72208cf4eff20b1cfb54824bfeac4df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("4.28.8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ellicium.Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ellicium.Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("4.28.8.0")]

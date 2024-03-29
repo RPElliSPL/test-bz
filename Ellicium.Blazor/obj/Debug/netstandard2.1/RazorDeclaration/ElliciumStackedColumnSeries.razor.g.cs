@@ -13,21 +13,21 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
 using Ellicium.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -35,7 +35,7 @@ using Ellicium.Blazor.Rendering;
 #nullable disable
     public partial class ElliciumStackedColumnSeries<
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
 TItem
 
 #line default
@@ -49,7 +49,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 10 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
        
     public override RenderFragment Render(ScaleBase categoryScale, ScaleBase valueScale)
     {
@@ -72,7 +72,7 @@ TItem
             __builder2.OpenElement(0, "g");
             __builder2.AddAttribute(1, "class", 
 #nullable restore
-#line 23 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 23 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                     className
 
 #line default
@@ -81,7 +81,7 @@ TItem
             );
             __builder2.AddMarkupContent(2, "\n");
 #nullable restore
-#line 24 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 24 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
              foreach(var data in Items)
             {
                 var x = GetColumnLeft(data, category);
@@ -113,7 +113,7 @@ TItem
             __builder2.OpenElement(4, "Path");
             __builder2.AddAttribute(5, "@key", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                              path
 
 #line default
@@ -122,7 +122,7 @@ TItem
             );
             __builder2.AddAttribute(6, "D", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                        path
 
 #line default
@@ -131,7 +131,7 @@ TItem
             );
             __builder2.AddAttribute(7, "Stroke", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                                       stroke
 
 #line default
@@ -140,7 +140,7 @@ TItem
             );
             __builder2.AddAttribute(8, "StrokeWidth", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                                                             StrokeWidth
 
 #line default
@@ -149,7 +149,7 @@ TItem
             );
             __builder2.AddAttribute(9, "Fill", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                                                                                 fill
 
 #line default
@@ -158,7 +158,7 @@ TItem
             );
             __builder2.AddAttribute(10, "LineType", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                                                                                                  LineType
 
 #line default
@@ -167,7 +167,7 @@ TItem
             );
             __builder2.AddAttribute(11, "Style", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
                                                                                                                                    style
 
 #line default
@@ -177,7 +177,7 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(12, "\n");
 #nullable restore
-#line 48 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 48 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
             }
 
 #line default
@@ -187,7 +187,7 @@ TItem
             __builder2.CloseElement();
         }
 #nullable restore
-#line 49 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
+#line 49 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedColumnSeries.razor"
             ;
     }
 

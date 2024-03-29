@@ -13,21 +13,21 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
 using Ellicium;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
 using Microsoft.JSInterop;
 
 #line default
@@ -41,7 +41,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 45 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
        
 #if NET5_0_OR_GREATER
         RenderFragment RenderInput()
@@ -54,7 +54,7 @@ using Microsoft.JSInterop;
 #nullable disable
         __builder.AddMarkupContent(0, "\n");
 #nullable restore
-#line 51 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 51 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                      if(!string.IsNullOrEmpty(Url))
                     {
 
@@ -65,7 +65,7 @@ using Microsoft.JSInterop;
         __builder.OpenElement(2, "input");
         __builder.AddAttribute(3, "id", 
 #nullable restore
-#line 53 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 53 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                      Name ?? GetId()
 
 #line default
@@ -74,7 +74,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(4, "@ref", 
 #nullable restore
-#line 53 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 53 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                               fileUpload
 
 #line default
@@ -85,7 +85,7 @@ using Microsoft.JSInterop;
         __builder.AddAttribute(6, "type", "file");
         __builder.AddAttribute(7, "multiple", 
 #nullable restore
-#line 53 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 53 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                Multiple
 
 #line default
@@ -94,7 +94,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(8, "accept", 
 #nullable restore
-#line 53 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 53 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                   Accept
 
 #line default
@@ -103,7 +103,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(9, "disabled", 
 #nullable restore
-#line 53 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 53 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                                      Disabled
 
 #line default
@@ -112,7 +112,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(10, "onchange", "Ellicium.uploadInputChange(event," + " \'" + (
 #nullable restore
-#line 54 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 54 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                          Url
 
 #line default
@@ -120,7 +120,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "\'," + " " + (
 #nullable restore
-#line 54 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 54 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                 Auto.ToString().ToLower()
 
 #line default
@@ -128,7 +128,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "," + " " + (
 #nullable restore
-#line 54 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 54 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                             Multiple.ToString().ToLower()
 
 #line default
@@ -136,7 +136,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "," + " true," + " \'" + (
 #nullable restore
-#line 54 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 54 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                    ParameterName
 
 #line default
@@ -148,7 +148,7 @@ using Microsoft.JSInterop;
         __builder.CloseElement();
         __builder.AddMarkupContent(13, "\n");
 #nullable restore
-#line 55 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 55 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                     }
                     else
                     {
@@ -160,7 +160,7 @@ using Microsoft.JSInterop;
         __builder.OpenElement(15, "Microsoft.AspNetCore.Components.Forms.InputFile");
         __builder.AddAttribute(16, "id", 
 #nullable restore
-#line 58 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 58 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                Name ?? GetId()
 
 #line default
@@ -170,7 +170,7 @@ using Microsoft.JSInterop;
         __builder.AddAttribute(17, "@attributes", "InputAttributes");
         __builder.AddAttribute(18, "multiple", 
 #nullable restore
-#line 58 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 58 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                           Multiple
 
 #line default
@@ -179,7 +179,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(19, "accept", 
 #nullable restore
-#line 58 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 58 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                              Accept
 
 #line default
@@ -188,7 +188,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(20, "disabled", 
 #nullable restore
-#line 58 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 58 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                                                 Disabled
 
 #line default
@@ -199,7 +199,7 @@ using Microsoft.JSInterop;
         __builder.AddAttribute(22, "onkeydown", "event.stopPropagation()");
         __builder.AddAttribute(23, "OnChange", 
 #nullable restore
-#line 59 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 59 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                          OnInputChange
 
 #line default
@@ -209,7 +209,7 @@ using Microsoft.JSInterop;
         __builder.CloseElement();
         __builder.AddMarkupContent(24, "\n");
 #nullable restore
-#line 60 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 60 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                     }
 
 #line default
@@ -217,7 +217,7 @@ using Microsoft.JSInterop;
 #nullable disable
         __builder.AddContent(25, "                ");
 #nullable restore
-#line 61 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 61 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                        
              };
         }
@@ -234,7 +234,7 @@ using Microsoft.JSInterop;
         __builder.OpenElement(27, "input");
         __builder.AddAttribute(28, "id", 
 #nullable restore
-#line 69 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 69 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                  Name ?? GetId()
 
 #line default
@@ -243,7 +243,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(29, "@ref", 
 #nullable restore
-#line 69 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 69 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                           fileUpload
 
 #line default
@@ -254,7 +254,7 @@ using Microsoft.JSInterop;
         __builder.AddAttribute(31, "type", "file");
         __builder.AddAttribute(32, "multiple", 
 #nullable restore
-#line 69 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 69 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                            Multiple
 
 #line default
@@ -263,7 +263,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(33, "accept", 
 #nullable restore
-#line 69 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 69 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                               Accept
 
 #line default
@@ -272,7 +272,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(34, "disabled", 
 #nullable restore
-#line 69 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 69 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                                  Disabled
 
 #line default
@@ -281,7 +281,7 @@ using Microsoft.JSInterop;
         );
         __builder.AddAttribute(35, "onchange", "Ellicium.uploadInputChange(event," + " \'" + (
 #nullable restore
-#line 70 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 70 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                          Url
 
 #line default
@@ -289,7 +289,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "\'," + " " + (
 #nullable restore
-#line 70 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 70 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                 Auto.ToString().ToLower()
 
 #line default
@@ -297,7 +297,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "," + " " + (
 #nullable restore
-#line 70 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 70 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                             Multiple.ToString().ToLower()
 
 #line default
@@ -305,7 +305,7 @@ using Microsoft.JSInterop;
 #nullable disable
         ) + "," + " true," + " \'" + (
 #nullable restore
-#line 70 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 70 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                                                                                                                                                    ParameterName
 
 #line default
@@ -317,7 +317,7 @@ using Microsoft.JSInterop;
         __builder.CloseElement();
         __builder.AddMarkupContent(38, "\n                ");
 #nullable restore
-#line 71 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumUpload.razor"
+#line 71 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumUpload.razor"
                        
              };
         }

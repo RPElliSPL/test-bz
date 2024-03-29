@@ -13,35 +13,35 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 using System.Linq.Dynamic.Core;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 4 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 using Ellicium;
 
 #line default
@@ -49,7 +49,7 @@ using Ellicium;
 #nullable disable
     public partial class ElliciumDataGrid<
 #nullable restore
-#line 5 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 5 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 TItem
 
 #line default
@@ -63,7 +63,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 439 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 439 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
        
     internal void SetAttribute(Dictionary<string, object> attributes, string attributeName, object attributeValue)
     {
@@ -142,7 +142,7 @@ TItem
 #nullable disable
         __builder.AddMarkupContent(0, "\n");
 #nullable restore
-#line 511 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 511 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
              if (this.AllowCompositeDataCells ? RowIndex == column.GetLevel() : (column.Parent != null && RowIndex == column.GetLevel() || column.Columns == null))
             {
 
@@ -153,7 +153,7 @@ TItem
         __builder.OpenElement(2, "td");
         __builder.AddAttribute(3, "@attributes", 
 #nullable restore
-#line 513 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 513 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                   CellAttributes
 
 #line default
@@ -162,7 +162,7 @@ TItem
         );
         __builder.AddAttribute(4, "@oncontextmenu:preventDefault", 
 #nullable restore
-#line 513 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 513 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                                   this.CellContextMenu.HasDelegate
 
 #line default
@@ -172,7 +172,7 @@ TItem
         __builder.AddAttribute(5, "@onkeydown:stopPropagation", true);
         __builder.AddMarkupContent(6, "\n");
 #nullable restore
-#line 514 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 514 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                      if (this.Responsive)
                     {
 
@@ -184,7 +184,7 @@ TItem
         __builder.AddAttribute(9, "class", "rz-column-title");
         __builder.AddMarkupContent(10, "\n");
 #nullable restore
-#line 517 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 517 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                              if (column.HeaderTemplate != null)
                             {
                                 
@@ -193,14 +193,14 @@ TItem
 #line hidden
 #nullable disable
 #nullable restore
-#line (519,34)-(519,55) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (519,34)-(519,55) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(11, column.HeaderTemplate);
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 519 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 519 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                       
                             }
                             else
@@ -211,14 +211,14 @@ __builder.AddContent(11, column.HeaderTemplate);
 #line hidden
 #nullable disable
 #nullable restore
-#line (523,34)-(523,51) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (523,34)-(523,51) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(12, column.GetTitle());
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 523 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 523 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                   
                             }
 
@@ -229,14 +229,14 @@ __builder.AddContent(12, column.GetTitle());
         __builder.CloseElement();
         __builder.AddMarkupContent(14, "\n");
 #nullable restore
-#line 526 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 526 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                     }
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 527 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 527 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                      if (this.LoadChildData.HasDelegate && this.ShowExpandColumn && this.allColumns.IndexOf(column) == 0)
                     {
 
@@ -250,7 +250,7 @@ __builder.AddContent(12, column.GetTitle());
         __builder.OpenElement(19, "a");
         __builder.AddAttribute(20, "aria-label", 
 #nullable restore
-#line 530 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 530 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                             ExpandChildItemAriaLabel
 
 #line default
@@ -259,7 +259,7 @@ __builder.AddContent(12, column.GetTitle());
         );
         __builder.AddAttribute(21, "class", 
 #nullable restore
-#line 530 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 530 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                                getExpandIconCssClass(this, Item)
 
 #line default
@@ -268,7 +268,7 @@ __builder.AddContent(12, column.GetTitle());
         );
         __builder.AddAttribute(22, "style", 
 #nullable restore
-#line 530 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 530 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                                                                             getExpandIconStyle(this, Item, rowArgs.Item1.Expandable)
 
 #line default
@@ -282,7 +282,7 @@ __builder.AddContent(12, column.GetTitle());
         __builder.OpenElement(27, "span");
         __builder.AddAttribute(28, "class", 
 #nullable restore
-#line 531 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 531 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                this.ExpandedItemStyle(Item)
 
 #line default
@@ -297,7 +297,7 @@ __builder.AddContent(12, column.GetTitle());
         __builder.AddAttribute(32, "class", "rz-cell-data");
         __builder.AddAttribute(33, "@attributes", 
 #nullable restore
-#line 533 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 533 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                      spanAttributes
 
 #line default
@@ -306,7 +306,7 @@ __builder.AddContent(12, column.GetTitle());
         );
         __builder.AddMarkupContent(34, "\n");
 #nullable restore
-#line 534 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 534 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                  if (Item != null)
                                 {
                                     
@@ -315,7 +315,7 @@ __builder.AddContent(12, column.GetTitle());
 #line hidden
 #nullable disable
 #nullable restore
-#line 536 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 536 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                      if (this.IsRowInEditMode(Item) && column.EditTemplate != null)
                                     {
                                         
@@ -324,14 +324,14 @@ __builder.AddContent(12, column.GetTitle());
 #line hidden
 #nullable disable
 #nullable restore
-#line (538,42)-(538,67) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (538,42)-(538,67) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(35, column.EditTemplate(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 538 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 538 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                   
                                     }
                                     else if (column.Template != null)
@@ -342,14 +342,14 @@ __builder.AddContent(35, column.EditTemplate(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (542,42)-(542,63) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (542,42)-(542,63) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(36, column.Template(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 542 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 542 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                               
                                     }
                                     else
@@ -360,14 +360,14 @@ __builder.AddContent(36, column.Template(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (546,42)-(546,63) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (546,42)-(546,63) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(37, column.GetValue(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 546 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 546 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                               
                                     }
 
@@ -375,7 +375,7 @@ __builder.AddContent(37, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line 547 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 547 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                      
                                 }
 
@@ -388,7 +388,7 @@ __builder.AddContent(37, column.GetValue(Item));
         __builder.CloseElement();
         __builder.AddMarkupContent(40, "\n");
 #nullable restore
-#line 551 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 551 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                     }
                     else
                     {
@@ -401,7 +401,7 @@ __builder.AddContent(37, column.GetValue(Item));
         __builder.AddAttribute(43, "class", "rz-cell-data");
         __builder.AddAttribute(44, "@attributes", 
 #nullable restore
-#line 554 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 554 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                  spanAttributes
 
 #line default
@@ -410,7 +410,7 @@ __builder.AddContent(37, column.GetValue(Item));
         );
         __builder.AddMarkupContent(45, "\n");
 #nullable restore
-#line 555 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 555 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                              if (Item != null)
                             {
                                 
@@ -419,7 +419,7 @@ __builder.AddContent(37, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line 557 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 557 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                  if (this.IsRowInEditMode(Item) && column.EditTemplate != null)
                                 {
                                     
@@ -428,14 +428,14 @@ __builder.AddContent(37, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (559,38)-(559,63) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (559,38)-(559,63) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(46, column.EditTemplate(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 559 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 559 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                               
                                 }
                                 else if (column.Template != null)
@@ -446,14 +446,14 @@ __builder.AddContent(46, column.EditTemplate(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (563,38)-(563,59) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (563,38)-(563,59) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(47, column.Template(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 563 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 563 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                           
                                 }
                                 else
@@ -464,14 +464,14 @@ __builder.AddContent(47, column.Template(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (567,38)-(567,59) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (567,38)-(567,59) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(48, column.GetValue(Item));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 567 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 567 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                           
                                 }
 
@@ -479,7 +479,7 @@ __builder.AddContent(48, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line 568 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 568 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                  
                             }
 
@@ -490,7 +490,7 @@ __builder.AddContent(48, column.GetValue(Item));
         __builder.CloseElement();
         __builder.AddMarkupContent(50, "\n");
 #nullable restore
-#line 571 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 571 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                     }
 
 #line default
@@ -500,7 +500,7 @@ __builder.AddContent(48, column.GetValue(Item));
         __builder.CloseElement();
         __builder.AddMarkupContent(52, "\n");
 #nullable restore
-#line 573 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 573 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
             }
             else
             {
@@ -510,7 +510,7 @@ __builder.AddContent(48, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line 576 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 576 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                  foreach (var c in this.childColumns.Where(c => c.GetVisible() && c.Parent == column))
                 {
                     
@@ -519,14 +519,14 @@ __builder.AddContent(48, column.GetValue(Item));
 #line hidden
 #nullable disable
 #nullable restore
-#line (578,22)-(578,90) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line (578,22)-(578,90) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
 __builder.AddContent(53, RenderCell(c, Item, this.CellAttributes(Item, c), rowArgs, RowIndex));
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 578 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 578 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                                                                                          
                 }
 
@@ -534,7 +534,7 @@ __builder.AddContent(53, RenderCell(c, Item, this.CellAttributes(Item, c), rowAr
 #line hidden
 #nullable disable
 #nullable restore
-#line 579 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 579 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                  
             }
 
@@ -543,7 +543,7 @@ __builder.AddContent(53, RenderCell(c, Item, this.CellAttributes(Item, c), rowAr
 #nullable disable
         __builder.AddContent(54, "        ");
 #nullable restore
-#line 581 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDataGrid.razor"
+#line 581 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDataGrid.razor"
                
         };
     }

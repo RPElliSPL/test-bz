@@ -13,14 +13,14 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -28,7 +28,7 @@ using Ellicium.Blazor.Rendering;
 #nullable disable
     public partial class ElliciumDonutSeries<
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
 TItem
 
 #line default
@@ -42,7 +42,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 10 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
        
     public RenderFragment RenderTitle(double x, double y)
     {
@@ -68,7 +68,7 @@ TItem
             __builder2.OpenElement(0, "div");
             __builder2.AddAttribute(1, "style", "position:" + " absolute;left:" + " " + (
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                      left
 
 #line default
@@ -76,7 +76,7 @@ TItem
 #nullable disable
             ) + "px;top:" + " " + (
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                     top
 
 #line default
@@ -84,7 +84,7 @@ TItem
 #nullable disable
             ) + "px;width:" + " " + (
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                                     width.ToInvariantString()
 
 #line default
@@ -92,7 +92,7 @@ TItem
 #nullable disable
             ) + "px;" + " height:" + " " + (
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                                                                             height.ToInvariantString()
 
 #line default
@@ -101,7 +101,7 @@ TItem
             ) + "px;");
             __builder2.AddMarkupContent(2, "\n                ");
 #nullable restore
-#line (27,18)-(27,31) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line (27,18)-(27,31) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
 __builder2.AddContent(3, TitleTemplate);
 
 #line default
@@ -112,7 +112,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.AddMarkupContent(5, "\n");
         }
 #nullable restore
-#line 29 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 29 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
       ;
     }
 
@@ -135,7 +135,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.OpenElement(8, "g");
             __builder2.AddAttribute(9, "class", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                        className
 
 #line default
@@ -144,7 +144,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddMarkupContent(10, "\n");
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                  if (PositiveItems.Any())
                 {
                     var sum = PositiveItems.Sum(Value);
@@ -156,7 +156,7 @@ __builder2.AddContent(3, TitleTemplate);
 #line hidden
 #nullable disable
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                      foreach (var data in PositiveItems)
                     {
                         var value = Value(data);
@@ -180,7 +180,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.OpenElement(12, "g");
             __builder2.AddAttribute(13, "class", 
 #nullable restore
-#line 62 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 62 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                    arcClassName
 
 #line default
@@ -191,7 +191,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.OpenElement(15, "Path");
             __builder2.AddAttribute(16, "D", 
 #nullable restore
-#line 63 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 63 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                       d
 
 #line default
@@ -200,7 +200,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(17, "Fill", 
 #nullable restore
-#line 63 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 63 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                 fill
 
 #line default
@@ -209,7 +209,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(18, "StrokeWidth", 
 #nullable restore
-#line 63 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 63 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                     StrokeWidth
 
 #line default
@@ -218,7 +218,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(19, "Stroke", 
 #nullable restore
-#line 63 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 63 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                                           stroke
 
 #line default
@@ -230,14 +230,14 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.CloseElement();
             __builder2.AddMarkupContent(21, "\n");
 #nullable restore
-#line 65 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 65 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                     }
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 65 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 65 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                      
                 }
                 else
@@ -254,7 +254,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.OpenElement(23, "g");
             __builder2.AddAttribute(24, "class", 
 #nullable restore
-#line 73 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 73 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                arcClassName
 
 #line default
@@ -265,7 +265,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.OpenElement(26, "Path");
             __builder2.AddAttribute(27, "D", 
 #nullable restore
-#line 74 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 74 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                   d
 
 #line default
@@ -274,7 +274,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(28, "Fill", 
 #nullable restore
-#line 74 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 74 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                             fill
 
 #line default
@@ -283,7 +283,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(29, "StrokeWidth", 
 #nullable restore
-#line 74 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 74 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                 StrokeWidth
 
 #line default
@@ -292,7 +292,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(30, "Stroke", 
 #nullable restore
-#line 74 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 74 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                                       stroke
 
 #line default
@@ -304,7 +304,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.CloseElement();
             __builder2.AddMarkupContent(32, "\n");
 #nullable restore
-#line 76 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 76 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                 }
 
 #line default
@@ -314,7 +314,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.CloseElement();
             __builder2.AddMarkupContent(34, "\n\n");
 #nullable restore
-#line 79 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 79 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
          if (!string.IsNullOrEmpty(Title) && TitleTemplate == null)
         {
 
@@ -329,7 +329,7 @@ __builder2.AddContent(3, TitleTemplate);
             __builder2.AddAttribute(40, "class", "rz-donut-title");
             __builder2.AddAttribute(41, "x", 
 #nullable restore
-#line 82 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 82 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                  CenterX.ToInvariantString()
 
 #line default
@@ -338,7 +338,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddAttribute(42, "y", 
 #nullable restore
-#line 82 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 82 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
                                                                                   CenterY.ToInvariantString()
 
 #line default
@@ -347,7 +347,7 @@ __builder2.AddContent(3, TitleTemplate);
             );
             __builder2.AddMarkupContent(43, "\n                    ");
 #nullable restore
-#line (83,22)-(83,27) 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line (83,22)-(83,27) 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
 __builder2.AddContent(44, Title);
 
 #line default
@@ -359,7 +359,7 @@ __builder2.AddContent(44, Title);
             __builder2.CloseElement();
             __builder2.AddMarkupContent(47, "\n");
 #nullable restore
-#line 86 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 86 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
         }
 
 #line default
@@ -369,7 +369,7 @@ __builder2.AddContent(44, Title);
             __builder2.CloseElement();
         }
 #nullable restore
-#line 87 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumDonutSeries.razor"
+#line 87 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumDonutSeries.razor"
             ;
     }
 

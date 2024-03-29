@@ -13,14 +13,14 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -34,7 +34,7 @@ using Ellicium.Blazor.Rendering;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 5 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 5 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
        
     IChartSeries series;
 
@@ -76,7 +76,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(2, "Text");
             __builder2.AddAttribute(3, "@key", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
                                               $"{label.Position}-{Chart.Series.IndexOf(series)}"
 
 #line default
@@ -85,7 +85,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(4, "Value", 
 #nullable restore
-#line 37 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 37 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
                                             label.Text
 
 #line default
@@ -94,7 +94,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(5, "Position", 
 #nullable restore
-#line 37 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 37 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
                                                                    label.Position
 
 #line default
@@ -103,7 +103,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(6, "TextAnchor", 
 #nullable restore
-#line 37 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 37 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
                                                                                                 label.TextAnchor
 
 #line default
@@ -117,7 +117,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.AddMarkupContent(9, "\n");
         }
 #nullable restore
-#line 39 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
+#line 39 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesDataLabels.razor"
                     );
                 }
             }

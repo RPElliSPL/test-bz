@@ -13,28 +13,28 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
 using System.Text;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
 using Ellicium.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -42,7 +42,7 @@ using Ellicium.Blazor.Rendering;
 #nullable disable
     public partial class ElliciumLineSeries<
 #nullable restore
-#line 4 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 4 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
 TItem
 
 #line default
@@ -56,7 +56,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 9 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
        
   public override RenderFragment Render(ScaleBase categoryScale, ScaleBase valueScale)
   {
@@ -88,7 +88,7 @@ TItem
             __builder2.OpenElement(0, "g");
             __builder2.AddAttribute(1, "class", 
 #nullable restore
-#line 31 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 31 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                 className
 
 #line default
@@ -97,7 +97,7 @@ TItem
             );
             __builder2.AddMarkupContent(2, "\n");
 #nullable restore
-#line 32 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 32 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
        if (Items.Any())
       {
         var path = $"M {pathGenerator.Path(data)}";
@@ -110,7 +110,7 @@ TItem
             __builder2.OpenElement(4, "Path");
             __builder2.AddAttribute(5, "@key", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                     key
 
 #line default
@@ -119,7 +119,7 @@ TItem
             );
             __builder2.AddAttribute(6, "Style", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                 style
 
 #line default
@@ -128,7 +128,7 @@ TItem
             );
             __builder2.AddAttribute(7, "D", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                            path
 
 #line default
@@ -137,7 +137,7 @@ TItem
             );
             __builder2.AddAttribute(8, "StrokeWidth", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                StrokeWidth
 
 #line default
@@ -146,7 +146,7 @@ TItem
             );
             __builder2.AddAttribute(9, "Stroke", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                      Stroke
 
 #line default
@@ -155,7 +155,7 @@ TItem
             );
             __builder2.AddAttribute(10, "LineType", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                                         LineType
 
 #line default
@@ -166,7 +166,7 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(12, "\n");
 #nullable restore
-#line 37 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 37 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
       }
 
 #line default
@@ -176,7 +176,7 @@ TItem
             __builder2.OpenElement(14, "Markers");
             __builder2.AddAttribute(15, "Visible", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                          Markers.Visible
 
 #line default
@@ -185,7 +185,7 @@ TItem
             );
             __builder2.AddAttribute(16, "Series", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                    this
 
 #line default
@@ -194,7 +194,7 @@ TItem
             );
             __builder2.AddAttribute(17, "Data", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                 data
 
 #line default
@@ -203,7 +203,7 @@ TItem
             );
             __builder2.AddAttribute(18, "MarkerType", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                    MarkerType
 
 #line default
@@ -212,7 +212,7 @@ TItem
             );
             __builder2.AddAttribute(19, "Stroke", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                                         Markers.Stroke
 
 #line default
@@ -221,7 +221,7 @@ TItem
             );
             __builder2.AddAttribute(20, "Fill", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                                                                 Markers.Fill ?? Stroke
 
 #line default
@@ -230,7 +230,7 @@ TItem
             );
             __builder2.AddAttribute(21, "StrokeWidth", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                                                                                                        Markers.StrokeWidth
 
 #line default
@@ -239,7 +239,7 @@ TItem
             );
             __builder2.AddAttribute(22, "Size", 
 #nullable restore
-#line 38 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 38 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
                                                                                                                                                                                                    Markers.Size
 
 #line default
@@ -251,7 +251,7 @@ TItem
             __builder2.CloseElement();
         }
 #nullable restore
-#line 39 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumLineSeries.razor"
+#line 39 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumLineSeries.razor"
         ;
   }
 

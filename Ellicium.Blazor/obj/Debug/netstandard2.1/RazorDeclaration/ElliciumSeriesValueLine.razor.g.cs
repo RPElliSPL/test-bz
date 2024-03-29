@@ -13,14 +13,14 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -34,7 +34,7 @@ using Ellicium.Blazor.Rendering;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 5 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 5 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
        
     public ElliciumSeriesValueLine()
     {
@@ -106,7 +106,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(2, "Path");
             __builder2.AddAttribute(3, "@key", 
 #nullable restore
-#line 66 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 66 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
                       $"{path}-{Chart.Series.IndexOf(series)}"
 
 #line default
@@ -115,7 +115,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(4, "D", 
 #nullable restore
-#line 66 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 66 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
                                                                      path
 
 #line default
@@ -124,7 +124,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(5, "Stroke", 
 #nullable restore
-#line 66 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 66 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
                                                                                     Stroke
 
 #line default
@@ -133,7 +133,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(6, "StrokeWidth", 
 #nullable restore
-#line 66 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 66 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
                                                                                                           StrokeWidth
 
 #line default
@@ -142,7 +142,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(7, "LineType", 
 #nullable restore
-#line 66 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 66 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
                                                                                                                                   LineType
 
 #line default
@@ -155,7 +155,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.AddMarkupContent(9, "\n");
         }
 #nullable restore
-#line 68 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
+#line 68 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumSeriesValueLine.razor"
     ;
     }
 

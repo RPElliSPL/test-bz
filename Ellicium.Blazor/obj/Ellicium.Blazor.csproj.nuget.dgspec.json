@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\Ellicium.Blazor\\Ellicium.Blazor.csproj": {}
+    "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\Ellicium.Blazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\Ellicium.Blazor\\Ellicium.Blazor.csproj": {
+    "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\Ellicium.Blazor.csproj": {
       "version": "4.28.8",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\Ellicium.Blazor\\Ellicium.Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\Ellicium.Blazor.csproj",
         "projectName": "Ellicium.Blazor",
-        "projectPath": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\Ellicium.Blazor\\Ellicium.Blazor.csproj",
+        "projectPath": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\Ellicium.Blazor.csproj",
         "packagesPath": "C:\\Users\\Rishabh_Patil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\Ellicium.Blazor\\obj\\",
+        "outputPath": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

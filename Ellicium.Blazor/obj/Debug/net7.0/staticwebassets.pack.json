@@ -1,0 +1,177 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\Ellicium.Blazor.js",
+      "PackagePath": "staticwebassets\\Ellicium.Blazor.js"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\dark-base.css",
+      "PackagePath": "staticwebassets\\css\\dark-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\dark-wcag.css",
+      "PackagePath": "staticwebassets\\css\\dark-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\dark.css",
+      "PackagePath": "staticwebassets\\css\\dark.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\default-base.css",
+      "PackagePath": "staticwebassets\\css\\default-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\default-wcag.css",
+      "PackagePath": "staticwebassets\\css\\default-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\default.css",
+      "PackagePath": "staticwebassets\\css\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\humanistic-base.css",
+      "PackagePath": "staticwebassets\\css\\humanistic-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\humanistic-wcag.css",
+      "PackagePath": "staticwebassets\\css\\humanistic-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\humanistic.css",
+      "PackagePath": "staticwebassets\\css\\humanistic.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\material-base.css",
+      "PackagePath": "staticwebassets\\css\\material-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\material-wcag.css",
+      "PackagePath": "staticwebassets\\css\\material-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\material.css",
+      "PackagePath": "staticwebassets\\css\\material.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\software-base.css",
+      "PackagePath": "staticwebassets\\css\\software-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\software-wcag.css",
+      "PackagePath": "staticwebassets\\css\\software-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\software.css",
+      "PackagePath": "staticwebassets\\css\\software.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\standard-base.css",
+      "PackagePath": "staticwebassets\\css\\standard-base.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\standard-wcag.css",
+      "PackagePath": "staticwebassets\\css\\standard-wcag.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\css\\standard.css",
+      "PackagePath": "staticwebassets\\css\\standard.css"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-Black.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Black.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-BlackIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-BoldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-ExtraLight.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-It.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-It.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-Light.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Light.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-LightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-Semibold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v15-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-300.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v15-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-700.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v15-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v30-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-300.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v30-latin-500.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-500.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v30-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-700.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rishabh_Patil\\source\\repos\\Blazor\\Ellicium Packages\\ellicium-blazor-master\\ellicium-blazor-master\\Ellicium.Blazor\\wwwroot\\fonts\\roboto-v30-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ellicium.Blazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Ellicium.Blazor.props",
+      "PackagePath": "build\\Ellicium.Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Ellicium.Blazor.props",
+      "PackagePath": "buildMultiTargeting\\Ellicium.Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Ellicium.Blazor.props",
+      "PackagePath": "buildTransitive\\Ellicium.Blazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

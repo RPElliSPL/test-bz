@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iBmF4qhR6TCSK95lNUcbk6YY6jRXKFa+y3BgHAE4NgY=",
+  "Source": "ElliciumBlazorDemos.Host",
+  "BasePath": "_content/ElliciumBlazorDemos.Host",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

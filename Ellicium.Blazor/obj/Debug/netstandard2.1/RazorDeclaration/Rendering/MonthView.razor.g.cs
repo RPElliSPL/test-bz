@@ -13,28 +13,28 @@ namespace Ellicium.Blazor.Rendering
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
 using Ellicium;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
 using Ellicium.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -48,7 +48,7 @@ using Ellicium.Blazor.Rendering;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 96 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 96 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
        
     [Parameter]
     public DateTime StartDate { get; set; }
@@ -147,7 +147,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(3, "CascadingValue");
             __builder2.AddAttribute(4, "Value", 
 #nullable restore
-#line 183 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 183 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
                                            Scheduler
 
 #line default
@@ -156,7 +156,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddMarkupContent(5, "\n");
 #nullable restore
-#line 184 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 184 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
                          foreach(var item in appointments)
                         {
 
@@ -167,7 +167,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(7, "Appointment");
             __builder2.AddAttribute(8, "Data", 
 #nullable restore
-#line 186 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 186 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
                                                item
 
 #line default
@@ -178,7 +178,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.CloseElement();
             __builder2.AddMarkupContent(10, "\n");
 #nullable restore
-#line 187 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 187 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
                         }
 
 #line default
@@ -191,7 +191,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.AddMarkupContent(13, "\n");
         }
 #nullable restore
-#line 190 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\Rendering\MonthView.razor"
+#line 190 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\Rendering\MonthView.razor"
             );
         }
     }

@@ -13,21 +13,21 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
 using Ellicium.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -35,7 +35,7 @@ using Ellicium.Blazor.Rendering;
 #nullable disable
     public partial class ElliciumStackedAreaSeries<
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
 TItem
 
 #line default
@@ -49,7 +49,7 @@ TItem
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 8 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
        
   public override RenderFragment Render(ScaleBase categoryScale, ScaleBase valueScale)
   {
@@ -78,7 +78,7 @@ TItem
             __builder2.OpenElement(0, "g");
             __builder2.AddAttribute(1, "class", 
 #nullable restore
-#line 27 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 27 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                 className
 
 #line default
@@ -87,7 +87,7 @@ TItem
             );
             __builder2.AddMarkupContent(2, "\n");
 #nullable restore
-#line 28 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 28 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
        if (Items.Any())
       {
         var x1 = category(Items.First()).ToInvariantString();
@@ -109,7 +109,7 @@ TItem
             __builder2.OpenElement(4, "path");
             __builder2.AddAttribute(5, "@key", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                      area
 
 #line default
@@ -118,7 +118,7 @@ TItem
             );
             __builder2.AddAttribute(6, "style", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                    style
 
 #line default
@@ -127,7 +127,7 @@ TItem
             );
             __builder2.AddAttribute(7, "d", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                               area
 
 #line default
@@ -136,7 +136,7 @@ TItem
             );
             __builder2.AddAttribute(8, "fill", 
 #nullable restore
-#line 41 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 41 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                            Fill
 
 #line default
@@ -149,7 +149,7 @@ TItem
             __builder2.OpenElement(11, "Path");
             __builder2.AddAttribute(12, "@key", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                      line
 
 #line default
@@ -158,7 +158,7 @@ TItem
             );
             __builder2.AddAttribute(13, "D", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                line
 
 #line default
@@ -167,7 +167,7 @@ TItem
             );
             __builder2.AddAttribute(14, "Stroke", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                               Stroke
 
 #line default
@@ -176,7 +176,7 @@ TItem
             );
             __builder2.AddAttribute(15, "StrokeWidth", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                     StrokeWidth
 
 #line default
@@ -185,7 +185,7 @@ TItem
             );
             __builder2.AddAttribute(16, "LineType", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                             LineType
 
 #line default
@@ -194,7 +194,7 @@ TItem
             );
             __builder2.AddAttribute(17, "Style", 
 #nullable restore
-#line 42 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 42 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                                               style
 
 #line default
@@ -205,7 +205,7 @@ TItem
             __builder2.CloseElement();
             __builder2.AddMarkupContent(19, "\n");
 #nullable restore
-#line 43 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 43 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
       }
 
 #line default
@@ -215,7 +215,7 @@ TItem
             __builder2.OpenElement(21, "Markers");
             __builder2.AddAttribute(22, "Visible", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                          Markers.Visible
 
 #line default
@@ -224,7 +224,7 @@ TItem
             );
             __builder2.AddAttribute(23, "Series", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                    this
 
 #line default
@@ -233,7 +233,7 @@ TItem
             );
             __builder2.AddAttribute(24, "Data", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                 topPoints
 
 #line default
@@ -242,7 +242,7 @@ TItem
             );
             __builder2.AddAttribute(25, "MarkerType", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                         MarkerType
 
 #line default
@@ -251,7 +251,7 @@ TItem
             );
             __builder2.AddAttribute(26, "Stroke", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                                              Markers.Stroke
 
 #line default
@@ -260,7 +260,7 @@ TItem
             );
             __builder2.AddAttribute(27, "Fill", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                                                                      Markers.Fill ?? Stroke
 
 #line default
@@ -269,7 +269,7 @@ TItem
             );
             __builder2.AddAttribute(28, "StrokeWidth", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                                                                                                             Markers.StrokeWidth
 
 #line default
@@ -278,7 +278,7 @@ TItem
             );
             __builder2.AddAttribute(29, "Size", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
                                                                                                                                                                                                         Markers.Size
 
 #line default
@@ -290,7 +290,7 @@ TItem
             __builder2.CloseElement();
         }
 #nullable restore
-#line 45 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
+#line 45 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumStackedAreaSeries.razor"
         ;
   }
 

@@ -14,7 +14,7 @@
             <use xlink:href="images/quickstart.svg#quickstart"></use>
         </svg>
     </ElliciumColumn>
-    <ElliciumColumn Size="12" SizeLG="8">
+    @* <ElliciumColumn Size="12" SizeLG="8">
         <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">Quickstart Video</ElliciumText>
         <style>
             .embed-container {
@@ -38,7 +38,7 @@
     <div class="embed-container">
         <iframe src="https://www.youtube.com/embed/q6PDQ-mXtf8?loop=0&rel=0" frameborder="0" allowfullscreen=""></iframe>
     </div>
-    </ElliciumColumn>
+    </ElliciumColumn> *@
 </ElliciumRow>
 
 <ElliciumRow class="docu">
@@ -49,7 +49,7 @@
     </ElliciumColumn>
     <ElliciumColumn Size="12" SizeLG="8">
         <ElliciumText TextStyle="TextStyle.H4" TagName="TagName.H2" class="rz-mt-8 rz-mb-4">1. Install</ElliciumText>
-        <ElliciumText>
+        @* <ElliciumText>
             Ellicium Blazor Components are distributed as the <a href="https://www.nuget.org/packages/Ellicium.Blazor/">Ellicium.Blazor</a> nuget package.
         </ElliciumText>
         <ElliciumText>
@@ -59,7 +59,7 @@
             <li>Install the package from command line by running <code>dotnet add package Ellicium.Blazor</code></li>
             <li>Add the project from the Visual Nuget Package Manager <img class="rz-ml-0" src="images/nuget-explorer.png" alt="NuGet explorer"></li>
             <li>Manually edit the .csproj file and add a project reference <code></code></li>
-        </ul>
+        </ul> *@
         <ElliciumAlert AlertStyle="AlertStyle.Info" Shade="Shade.Lighter">
             If you want to use the Ellicium.Blazor components in Blazor 8 static rendering mode (SSR) you should be aware that:
             <ul>

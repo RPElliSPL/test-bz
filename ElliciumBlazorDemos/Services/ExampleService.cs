@@ -13,14 +13,14 @@ namespace ElliciumBlazorDemos
             Path = "/",
             Icon = "&#xe88a"
         },
-        new Example()
-        {
-            Name = "Dashboard",
-            Path = "/dashboard",
-            Title = "Sample Dashboard | Free UI Components by Ellicium",
-            Description = "Rich dashboard created with the Ellicium Blazor Components library.",
-            Icon = "&#xe871"
-        },
+        //new Example()
+        //{
+        //    Name = "Dashboard",
+        //    Path = "/dashboard",
+        //    Title = "Sample Dashboard | Free UI Components by Ellicium",
+        //    Description = "Rich dashboard created with the Ellicium Blazor Components library.",
+        //    Icon = "&#xe871"
+        //},
         new Example
         {
             Name = "Get Started",
@@ -29,14 +29,14 @@ namespace ElliciumBlazorDemos
             Description = "How to get started with the Ellicium Blazor Components library.",
             Icon = "&#xe037"
         },
-        new Example
-        {
-            Name = "Support",
-            Path = "/support",
-            Title = "Support | Free UI Components by Ellicium",
-            Description = "How to get support for the Ellicium Blazor Components library.",
-            Icon = "&#xe94c"
-        },
+        //new Example
+        //{
+        //    Name = "Support",
+        //    Path = "/support",
+        //    Title = "Support | Free UI Components by Ellicium",
+        //    Description = "How to get support for the Ellicium Blazor Components library.",
+        //    Icon = "&#xe94c"
+        //},
         new Example
         {
             Name = "Accessibility",

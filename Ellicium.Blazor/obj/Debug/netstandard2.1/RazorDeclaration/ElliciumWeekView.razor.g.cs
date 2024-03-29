@@ -13,21 +13,21 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
 using Ellicium.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
@@ -41,7 +41,7 @@ using Ellicium.Blazor.Rendering;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 6 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 6 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
        
     public override RenderFragment Render()
     {
@@ -56,7 +56,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(0, "CascadingValue");
             __builder2.AddAttribute(1, "Value", 
 #nullable restore
-#line 11 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 11 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                        Scheduler
 
 #line default
@@ -67,7 +67,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.OpenElement(3, "WeekView");
             __builder2.AddAttribute(4, "HeaderFormat", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                         HeaderFormat
 
 #line default
@@ -76,7 +76,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(5, "MinutesPerSlot", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                      MinutesPerSlot
 
 #line default
@@ -85,7 +85,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(6, "StartDate", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                StartDate
 
 #line default
@@ -94,7 +94,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(7, "EndDate", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                                   EndDate
 
 #line default
@@ -103,7 +103,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(8, "StartTime", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                                                      StartTime
 
 #line default
@@ -112,7 +112,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(9, "EndTime", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                                                                         EndTime
 
 #line default
@@ -121,7 +121,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(10, "Appointments", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                                                                                               appointments
 
 #line default
@@ -130,7 +130,7 @@ using Ellicium.Blazor.Rendering;
             );
             __builder2.AddAttribute(11, "TimeFormat", 
 #nullable restore
-#line 12 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 12 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                                                                                                                                                                                                         TimeFormat
 
 #line default
@@ -143,7 +143,7 @@ using Ellicium.Blazor.Rendering;
             __builder2.CloseElement();
         }
 #nullable restore
-#line 13 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumWeekView.razor"
+#line 13 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumWeekView.razor"
                              ;
     }
 

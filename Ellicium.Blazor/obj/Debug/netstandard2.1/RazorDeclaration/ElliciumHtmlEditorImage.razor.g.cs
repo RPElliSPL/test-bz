@@ -13,28 +13,28 @@ namespace Ellicium.Blazor
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\_Imports.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 1 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 using System.Text;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 2 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 using Ellicium.Blazor.Rendering;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 3 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 using Microsoft.JSInterop;
 
 #line default
@@ -48,7 +48,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 9 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
        
     protected override async Task OnClick()
     {
@@ -73,7 +73,7 @@ using Microsoft.JSInterop;
             __builder2.AddMarkupContent(5, "\n            ");
             __builder2.OpenElement(6, "label");
 #nullable restore
-#line (21,21)-(21,31) 25 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line (21,21)-(21,31) 25 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 __builder2.AddContent(7, SelectText);
 
 #line default
@@ -84,7 +84,7 @@ __builder2.AddContent(7, SelectText);
             __builder2.OpenElement(9, "ElliciumUpload");
             __builder2.AddAttribute(10, "ChooseText", 
 #nullable restore
-#line 22 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 22 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                             UploadChooseText
 
 #line default
@@ -93,7 +93,7 @@ __builder2.AddContent(7, SelectText);
             );
             __builder2.AddAttribute(11, "@ref", 
 #nullable restore
-#line 22 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 22 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                                    FileUpload
 
 #line default
@@ -102,7 +102,7 @@ __builder2.AddContent(7, SelectText);
             );
             __builder2.AddAttribute(12, "Url", 
 #nullable restore
-#line 22 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 22 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                                                    Editor.UploadUrl
 
 #line default
@@ -116,7 +116,7 @@ __builder2.AddContent(7, SelectText);
             __builder2.AddAttribute(17, "Error", "OnUploadError");
             __builder2.AddMarkupContent(18, "\n");
 #nullable restore
-#line 24 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 24 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                      foreach (var header in uploadHeaders)
                     {
 
@@ -127,7 +127,7 @@ __builder2.AddContent(7, SelectText);
             __builder2.OpenElement(20, "ElliciumUploadHeader");
             __builder2.AddAttribute(21, "Name", 
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                     header.Key
 
 #line default
@@ -136,7 +136,7 @@ __builder2.AddContent(7, SelectText);
             );
             __builder2.AddAttribute(22, "Value", 
 #nullable restore
-#line 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                                       header.Value
 
 #line default
@@ -146,7 +146,7 @@ __builder2.AddContent(7, SelectText);
             __builder2.CloseElement();
             __builder2.AddMarkupContent(23, "\n");
 #nullable restore
-#line 27 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 27 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                     }
 
 #line default
@@ -162,7 +162,7 @@ __builder2.AddContent(7, SelectText);
             __builder2.AddMarkupContent(29, "\n                    ");
             __builder2.OpenElement(30, "label");
 #nullable restore
-#line (31,29)-(31,38) 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line (31,29)-(31,38) 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 __builder2.AddContent(31, WidthText);
 
 #line default
@@ -173,7 +173,7 @@ __builder2.AddContent(31, WidthText);
             __builder2.OpenElement(33, "ElliciumTextBox");
             __builder2.AddAttribute(34, "@bind-Value", 
 #nullable restore
-#line 32 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 32 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                   Attributes.Width
 
 #line default
@@ -190,7 +190,7 @@ __builder2.AddContent(31, WidthText);
             __builder2.AddMarkupContent(40, "\n                    ");
             __builder2.OpenElement(41, "label");
 #nullable restore
-#line (35,29)-(35,39) 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line (35,29)-(35,39) 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 __builder2.AddContent(42, HeightText);
 
 #line default
@@ -201,7 +201,7 @@ __builder2.AddContent(42, HeightText);
             __builder2.OpenElement(44, "ElliciumTextBox");
             __builder2.AddAttribute(45, "@bind-Value", 
 #nullable restore
-#line 36 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 36 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                   Attributes.Height
 
 #line default
@@ -218,7 +218,7 @@ __builder2.AddContent(42, HeightText);
             __builder2.AddMarkupContent(51, "\n                    ");
             __builder2.OpenElement(52, "label");
 #nullable restore
-#line (39,29)-(39,36) 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line (39,29)-(39,36) 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 __builder2.AddContent(53, UrlText);
 
 #line default
@@ -229,7 +229,7 @@ __builder2.AddContent(53, UrlText);
             __builder2.OpenElement(55, "ElliciumTextBox");
             __builder2.AddAttribute(56, "@bind-Value", 
 #nullable restore
-#line 40 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 40 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                   Attributes.Src
 
 #line default
@@ -246,7 +246,7 @@ __builder2.AddContent(53, UrlText);
             __builder2.AddMarkupContent(62, "\n                    ");
             __builder2.OpenElement(63, "label");
 #nullable restore
-#line (43,29)-(43,36) 26 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line (43,29)-(43,36) 26 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
 __builder2.AddContent(64, AltText);
 
 #line default
@@ -257,7 +257,7 @@ __builder2.AddContent(64, AltText);
             __builder2.OpenElement(66, "ElliciumTextBox");
             __builder2.AddAttribute(67, "@bind-Value", 
 #nullable restore
-#line 44 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 44 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                                   Attributes.Alt
 
 #line default
@@ -275,7 +275,7 @@ __builder2.AddContent(64, AltText);
             __builder2.OpenElement(74, "ElliciumButton");
             __builder2.AddAttribute(75, "Text", 
 #nullable restore
-#line 47 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 47 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                           OkText
 
 #line default
@@ -288,7 +288,7 @@ __builder2.AddContent(64, AltText);
             __builder2.OpenElement(78, "ElliciumButton");
             __builder2.AddAttribute(79, "Text", 
 #nullable restore
-#line 48 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 48 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
                                           CancelText
 
 #line default
@@ -305,7 +305,7 @@ __builder2.AddContent(64, AltText);
             __builder2.AddMarkupContent(84, "\n");
         }
 #nullable restore
-#line 51 "C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
+#line 51 "C:\Users\Rishabh_Patil\source\repos\Blazor\Ellicium Packages\ellicium-blazor-master\ellicium-blazor-master\Ellicium.Blazor\ElliciumHtmlEditorImage.razor"
     );
     }
 
