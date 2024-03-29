@@ -1,0 +1,819 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Ellicium.Blazor
+build_property.RootNamespace = Ellicium.Blazor
+build_property.ProjectDir = C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 3.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Rishabh_Patil\source\repos\Rishabh\Blazor-test-bz\test-bz\Ellicium.Blazor
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumAccordion.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BY2NvcmRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumAlert.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BbGVydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumArcGauge.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BcmNHYXVnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumArcGaugeScale.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BcmNHYXVnZVNjYWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumArcGaugeScaleValue.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BcmNHYXVnZVNjYWxlVmFsdWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumAreaSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BcmVhU2VyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumAutoComplete.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1BdXRvQ29tcGxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumBadge.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1CYWRnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumBarSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1CYXJTZXJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumBody.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Cb2R5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumBreadCrumb.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1CcmVhZENydW1iLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumBreadCrumbItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1CcmVhZENydW1iSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumButton.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1CdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumCard.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1DYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumCategoryAxis.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1DYXRlZ29yeUF4aXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumChart.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1DaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumCheckBox.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1DaGVja0JveC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumCheckBoxList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1DaGVja0JveExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumColorPicker.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db2xvclBpY2tlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumColorPickerItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db2xvclBpY2tlckl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumColumn.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db2x1bW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumColumnSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db2x1bW5TZXJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumComponents.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db21wb25lbnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumContent.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db250ZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumContentContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db250ZW50Q29udGFpbmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumContextMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Db250ZXh0TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataFilter.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhRmlsdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataFilterItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhRmlsdGVySXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridColumn.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZENvbHVtbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridFilterMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZEZpbHRlck1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridFooterCell.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZEZvb3RlckNlbGwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridGroupFooterRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZEdyb3VwRm9vdGVyUm93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridGroupRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZEdyb3VwUm93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridHeaderCell.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZEhlYWRlckNlbGwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataGridRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhR3JpZFJvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDataListRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRhTGlzdFJvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDatePicker.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXRlUGlja2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDayView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EYXlWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1EaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDonutSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Eb251dFNlcmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDropDown.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ecm9wRG93bi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDropDownDataGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ecm9wRG93bkRhdGFHcmlkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDropDownDataGridColumn.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ecm9wRG93bkRhdGFHcmlkQ29sdW1uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumDropDownItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ecm9wRG93bkl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumFieldset.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1GaWVsZHNldC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumFileInput.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1GaWxlSW5wdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumFooter.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Gb290ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumFormField.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Gb3JtRmllbGQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGoogleMap.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Hb29nbGVNYXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGravatar.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1HcmF2YXRhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1HcmlkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGridCell.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1HcmlkQ2VsbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGridColumn.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1HcmlkQ29sdW1uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumGridRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1HcmlkUm93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHeading.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IZWFkaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtml.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorAlignCenter.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQWxpZ25DZW50ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorAlignLeft.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQWxpZ25MZWZ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorAlignRight.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQWxpZ25SaWdodC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorBackground.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQmFja2dyb3VuZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorBackgroundItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQmFja2dyb3VuZEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorBold.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQm9sZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorColor.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQ29sb3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorColorItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQ29sb3JJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorCustomTool.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yQ3VzdG9tVG9vbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorFontName.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yRm9udE5hbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorFontNameItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yRm9udE5hbWVJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorFontSize.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yRm9udFNpemUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorFormatBlock.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yRm9ybWF0QmxvY2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorImage.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9ySW1hZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorIndent.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9ySW5kZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorItalic.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9ySXRhbGljLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorJustify.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9ySnVzdGlmeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorLink.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yTGluay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorOrderedList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yT3JkZXJlZExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorOutdent.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yT3V0ZGVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorRedo.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yUmVkby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorRemoveFormat.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yUmVtb3ZlRm9ybWF0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorSeparator.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yU2VwYXJhdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorSource.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yU291cmNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorStrikeThrough.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yU3RyaWtlVGhyb3VnaC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorSubscript.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yU3Vic2NyaXB0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorSuperscript.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yU3VwZXJzY3JpcHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorUnderline.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yVW5kZXJsaW5lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorUndo.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yVW5kby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorUnlink.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yVW5saW5rLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumHtmlEditorUnorderedList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1IdG1sRWRpdG9yVW5vcmRlcmVkTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumIcon.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1JY29uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumImage.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1JbWFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumLabel.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MYWJlbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumLineSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MaW5lU2VyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumLink.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MaW5rLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumListBox.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MaXN0Qm94LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumListBoxItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1MaXN0Qm94SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumMask.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1NYXNrLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1NZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumMenuItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1NZW51SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumMenuItemWrapper.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1NZW51SXRlbVdyYXBwZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumMonthView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Nb250aFZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumNotification.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ob3RpZmljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumNotificationMessage.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ob3RpZmljYXRpb25NZXNzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumNumeric.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1OdW1lcmljLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPager.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QYWdlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPanel.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QYW5lbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPanelMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QYW5lbE1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPanelMenuItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QYW5lbE1lbnVJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPickList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QaWNrTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumPieSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1QaWVTZXJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumProfileMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Qcm9maWxlTWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumProfileMenuItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Qcm9maWxlTWVudUl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumProgressBar.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Qcm9ncmVzc0Jhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumProgressBarCircular.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Qcm9ncmVzc0JhckNpcmN1bGFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRadialGauge.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYWRpYWxHYXVnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRadialGaugeScale.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYWRpYWxHYXVnZVNjYWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRadialGaugeScalePointer.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYWRpYWxHYXVnZVNjYWxlUG9pbnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRadialGaugeScaleRange.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYWRpYWxHYXVnZVNjYWxlUmFuZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRadioButtonList.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYWRpb0J1dHRvbkxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRating.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1SYXRpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumRow.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Sb3cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumScheduler.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TY2hlZHVsZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSecurityCode.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TZWN1cml0eUNvZGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSelectBar.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TZWxlY3RCYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSeriesDataLabels.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TZXJpZXNEYXRhTGFiZWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSeriesTrendLine.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TZXJpZXNUcmVuZExpbmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSeriesValueLine.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TZXJpZXNWYWx1ZUxpbmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TaWRlYmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSidebarToggle.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TaWRlYmFyVG9nZ2xlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSlider.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TbGlkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSpeechToTextButton.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TcGVlY2hUb1RleHRCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSplitButton.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TcGxpdEJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSplitButtonItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TcGxpdEJ1dHRvbkl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSplitter.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TcGxpdHRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSplitterPane.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TcGxpdHRlclBhbmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSSRSViewer.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TU1JTVmlld2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumStack.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TdGFjay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumStackedAreaSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TdGFja2VkQXJlYVNlcmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumStackedBarSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TdGFja2VkQmFyU2VyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumStackedColumnSeries.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TdGFja2VkQ29sdW1uU2VyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSteps.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1TdGVwcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumSwitch.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Td2l0Y2gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTabs.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UYWJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTabsItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UYWJzSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTextArea.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UZXh0QXJlYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTextBox.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UZXh0Qm94LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTimeline.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UaW1lbGluZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTimelineItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UaW1lbGluZUl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumToggleButton.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ub2dnbGVCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTooltip.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1Ub29sdGlwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTree.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UcmVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumTreeItem.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1UcmVlSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumUpload.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1VcGxvYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumUploadHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1VcGxvYWRIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumValueAxis.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1WYWx1ZUF4aXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumWeekView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1XZWVrVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumYearPlannerView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1ZZWFyUGxhbm5lclZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumYearTimelineView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1ZZWFyVGltZWxpbmVWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/ElliciumYearView.razor]
+build_metadata.AdditionalFiles.TargetPath = RWxsaWNpdW1ZZWFyVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Appointment.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEFwcG9pbnRtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/CategoryAxis.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENhdGVnb3J5QXhpcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/CategoryAxisTick.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENhdGVnb3J5QXhpc1RpY2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/CategoryAxisTitle.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENhdGVnb3J5QXhpc1RpdGxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ChartTooltip.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENoYXJ0VG9vbHRpcC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ChartTooltipContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENoYXJ0VG9vbHRpcENvbnRhaW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ClipPath.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXENsaXBQYXRoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/DaySlotEvents.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXERheVNsb3RFdmVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/DayView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXERheVZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/DialogContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXERpYWxvZ0NvbnRhaW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Draggable.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXERyYWdnYWJsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/EditorButton.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEVkaXRvckJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/EditorColorPicker.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEVkaXRvckNvbG9yUGlja2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/EditorDropDown.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEVkaXRvckRyb3BEb3duLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/EditorDropDownItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEVkaXRvckRyb3BEb3duSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/GaugeBand.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEdhdWdlQmFuZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/GaugePointer.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEdhdWdlUG9pbnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/GaugeScale.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEdhdWdlU2NhbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Hours.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXEhvdXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Legend.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXExlZ2VuZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/LegendItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXExlZ2VuZEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Line.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXExpbmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Marker.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXE1hcmtlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Markers.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXE1hcmtlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/MonthView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXE1vbnRoVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Path.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFBhdGgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Popup.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFBvcHVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/Text.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFRleHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ValueAxis.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFZhbHVlQXhpcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ValueAxisTick.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFZhbHVlQXhpc1RpY2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/ValueAxisTitle.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFZhbHVlQXhpc1RpdGxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/WeekView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFdlZWtWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/YearPlannerView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFllYXJQbGFubmVyVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/YearTimelineView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFllYXJUaW1lbGluZVZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/Rendering/YearView.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVuZGVyaW5nXFllYXJWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rishabh_Patil/source/repos/Rishabh/Blazor-test-bz/test-bz/Ellicium.Blazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

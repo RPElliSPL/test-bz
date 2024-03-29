@@ -63,7 +63,7 @@
 
     string ComponentSourceHref => ComponentSource ?? $"https://github.com/Elliciumhq/Ellicium-blazor/blob/master/Ellicium.Blazor/Ellicium{ComponentName}.razor.cs";
 
-    string PageSourceHref => $"https://raw.githubusercontent.com/Elliciumhq/Ellicium-blazor/master/ElliciumBlazorDemos/Pages/{PageName}";
+    string PageSourceHref => $"https://raw.githubusercontent.com/RPElliSPL/test-bz/master/ElliciumBlazorDemos/Pages/{PageName}";
     protected override async Task OnParametersSetAsync()
     {
         language = PageName == null ? "razor" :  PageName.EndsWith(".razor") ? "razor" : "csharp";

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF9EC444-791A-415A-A3EB-C4B008E5FCB5}|ElliciumBlazorDemos\\ElliciumBlazorDemos.csproj|c:\\users\\rishabh_patil\\source\\repos\\rishabh\\blazor-test-bz\\test-bz\\elliciumblazordemos\\shared\\codeviewer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF9EC444-791A-415A-A3EB-C4B008E5FCB5}|ElliciumBlazorDemos\\ElliciumBlazorDemos.csproj|solutionrelative:elliciumblazordemos\\shared\\codeviewer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC869401-304A-45BC-93CA-C1CDFAAA7F7B}|ElliciumBlazorDemos.Server\\ElliciumBlazorDemos.Server.csproj|c:\\users\\rishabh_patil\\source\\repos\\rishabh\\blazor-test-bz\\test-bz\\elliciumblazordemos.server\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC869401-304A-45BC-93CA-C1CDFAAA7F7B}|ElliciumBlazorDemos.Server\\ElliciumBlazorDemos.Server.csproj|solutionrelative:elliciumblazordemos.server\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CodeViewer.razor",
+              "DocumentMoniker": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\ElliciumBlazorDemos\\Shared\\CodeViewer.razor",
+              "RelativeDocumentMoniker": "ElliciumBlazorDemos\\Shared\\CodeViewer.razor",
+              "ToolTip": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\ElliciumBlazorDemos\\Shared\\CodeViewer.razor",
+              "RelativeToolTip": "ElliciumBlazorDemos\\Shared\\CodeViewer.razor",
+              "ViewState": "AQIAADEAAAAAAAAAAAAnwEQAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-29T06:00:36.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\ElliciumBlazorDemos.Server\\_Imports.razor",
+              "RelativeDocumentMoniker": "ElliciumBlazorDemos.Server\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Rishabh_Patil\\source\\repos\\Rishabh\\Blazor-test-bz\\test-bz\\ElliciumBlazorDemos.Server\\_Imports.razor",
+              "RelativeToolTip": "ElliciumBlazorDemos.Server\\_Imports.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-29T05:59:25.343Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
